@@ -1,5 +1,5 @@
 import unittest
-from AKDSFramework.linkedlist import SinglyLinkedList
+from AKDSFramework.structure.linkedlist import SinglyLinkedList
 
 
 class TestCases(unittest.TestCase):
@@ -9,7 +9,7 @@ class TestCases(unittest.TestCase):
     def test_add(self):
         self.linkedlist.add(2)
         self.assertEqual(len(self.linkedlist), 1)
-        self.assertEqual(self.linkedlist.get_head(), 2)
+        self.assertEqual(self.linkedlist.get_head().value, 2)
 
     def test_isEmpty(self):
         self.assertEqual(self.linkedlist.isEmpty(), True)
@@ -22,9 +22,9 @@ class TestCases(unittest.TestCase):
         self.assertEqual(len(self.linkedlist), 1)
 
     def test_get_head(self):
-        self.assertEqual(self.linkedlist.get_head(), None)
+        self.assertEqual(self.linkedlist.get_head().value, None)
         self.linkedlist.add(4)
-        self.assertEqual(self.linkedlist.get_head(), 4)
+        self.assertEqual(self.linkedlist.get_head().value, 4)
 
     def test_str(self):
         self.linkedlist = SinglyLinkedList()
@@ -33,7 +33,7 @@ class TestCases(unittest.TestCase):
         self.linkedlist.add(7102)
         self.linkedlist.add(773)
         self.linkedlist.add('Hello')
-        self.assertEqual(str(self.linkedlist), "['Hello', 773, 7102, 120, 20]")
+        self.assertEqual(str(self.linkedlist), 'Hello <-- 773 <-- 7102 <-- 120 <-- 20')
 
     def test_remove(self):
         self.linkedlist = SinglyLinkedList()

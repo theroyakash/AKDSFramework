@@ -1,1 +1,1 @@
-from . import linkedlist
+from . import structure
