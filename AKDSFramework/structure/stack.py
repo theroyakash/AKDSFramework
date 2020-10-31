@@ -1,4 +1,4 @@
-from AKDSFramework.linkedlist import SinglyLinkedList
+from AKDSFramework.structure.linkedlist import SinglyLinkedList
 
 
 class Stack:
@@ -23,10 +23,9 @@ class Stack:
             - Element that just popped off the stack
         """
         if self.stack.count() != 0:
-            return self.stack.remove()
+            return self.stack.removeAt(self.stack.count() - 1)
         else:
-            print('Not enough element to pop')
-            raise LookupError
+            raise LookupError('Not enough element to pop')
 
     def peak_top(self):
         """
