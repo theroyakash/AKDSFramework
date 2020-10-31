@@ -50,6 +50,27 @@ class SinglyLinkedList:
             self.head = new
             self.size += 1
 
+    def remove(self):
+        """
+        Remove any node from linked list
+        Returns:
+            value (Any): returns the value at the node
+        """
+        if self.size == 0:
+            return None
+        elif self.size == 1:
+            removed_node = self.head
+            self.sentinel.next = None
+            self.head = self.sentinel
+            self.size -= 1
+            return removed_node
+        else:
+            removed_node = self.head
+            self.sentinel.next = self.head.next
+            self.head = self.sentinel.next
+            self.size -= 1
+            return removed_node
+
     def get_head(self):
         """
         Get the head node value of the linked list

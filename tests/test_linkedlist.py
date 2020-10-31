@@ -34,3 +34,23 @@ class TestCases(unittest.TestCase):
         self.linkedlist.add(773)
         self.linkedlist.add('Hello')
         self.assertEqual(str(self.linkedlist), "['Hello', 773, 7102, 120, 20]")
+
+    def test_remove(self):
+        self.linkedlist = SinglyLinkedList()
+        self.linkedlist.add(20)
+        self.linkedlist.add(120)
+        self.linkedlist.add(7102)
+        self.linkedlist.add(773)
+
+        self.assertEqual(str(self.linkedlist), '[773, 7102, 120, 20]')
+        removed = self.linkedlist.remove()
+        self.assertEqual(removed.value, 773)
+        self.assertEqual(str(self.linkedlist), '[7102, 120, 20]')
+
+        removed = self.linkedlist.remove()
+        self.assertEqual(removed.value, 7102)
+        self.assertEqual(str(self.linkedlist), '[120, 20]')
+
+        removed = self.linkedlist.remove()
+        self.assertEqual(removed.value, 120)
+        self.assertEqual(str(self.linkedlist), '[20]')
