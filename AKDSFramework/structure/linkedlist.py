@@ -50,6 +50,12 @@ class SinglyLinkedList:
             self.head = new
             self.size += 1
 
+    def __iter__(self):
+        node = self.head
+        while node:
+            yield node.value
+            node = node.next
+
     def remove(self):
         """
         Remove any node from linked list
@@ -102,6 +108,13 @@ class SinglyLinkedList:
             Size of the linked list
         """
         return self.size
+
+    def __getitem__(self, index):
+        if not 0 <= index <= self.size:
+            raise IndexError
+        for y, node in enumerate(self):
+            if y == index:
+                return node
 
     def __str__(self):
         """
