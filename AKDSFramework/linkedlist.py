@@ -74,6 +74,14 @@ class SinglyLinkedList:
         """
         return True if self.size == 0 else False
 
+    def __len__(self):
+        """
+        Alternate way of getting the size of the linked list
+        Returns:
+            Size of the linked list
+        """
+        return self.size
+
     def __str__(self):
         """
         This is the string representation of the linked list values
