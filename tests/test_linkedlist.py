@@ -33,7 +33,7 @@ class TestCases(unittest.TestCase):
         self.linkedlist.add(7102)
         self.linkedlist.add(773)
         self.linkedlist.add('Hello')
-        self.assertEqual(str(self.linkedlist), 'Hello <-- 773 <-- 7102 <-- 120 <-- 20')
+        self.assertEqual(str(self.linkedlist), "20 --> 120 --> 7102 --> 773 --> Hello --> None")
 
     def test_remove(self):
         self.linkedlist = SinglyLinkedList()
@@ -42,15 +42,31 @@ class TestCases(unittest.TestCase):
         self.linkedlist.add(7102)
         self.linkedlist.add(773)
 
-        self.assertEqual(str(self.linkedlist), '773 <-- 7102 <-- 120 <-- 20')
-        removed = self.linkedlist.remove()
-        self.assertEqual(removed.value, 773)
-        self.assertEqual(str(self.linkedlist), '7102 <-- 120 <-- 20')
+        self.assertEqual(str(self.linkedlist), '20 --> 120 --> 7102 --> 773 --> None')
+        self.linkedlist.removeAt(0)
+        self.assertEqual(str(self.linkedlist), '120 --> 7102 --> 773 --> None')
 
-        removed = self.linkedlist.remove()
-        self.assertEqual(removed.value, 7102)
-        self.assertEqual(str(self.linkedlist), '120 <-- 20')
+        self.linkedlist.removeAt(self.linkedlist.count() - 1)
+        self.assertEqual(str(self.linkedlist), "120 --> 7102 --> None")
 
-        removed = self.linkedlist.remove()
-        self.assertEqual(removed.value, 120)
-        self.assertEqual(str(self.linkedlist), '20')
+    def test_length(self):
+        self.linkedlist = SinglyLinkedList()
+        self.linkedlist.add(20)
+        self.linkedlist.add(120)
+        self.linkedlist.add(7102)
+        self.linkedlist.add(773)
+
+        self.assertEqual(len(self.linkedlist), 4)
+        self.assertEqual(self.linkedlist.count(), 4)
+
+    def test_getitem(self):
+        self.linkedlist = SinglyLinkedList()
+        self.linkedlist.add(20)
+        self.linkedlist.add(120)
+        self.linkedlist.add(7102)
+        self.linkedlist.add(773)
+
+        self.assertEqual(self.linkedlist[0], 20)
+        self.assertEqual(self.linkedlist[1], 120)
+        self.assertEqual(self.linkedlist[2], 7102)
+        self.assertEqual(self.linkedlist[3], 773)

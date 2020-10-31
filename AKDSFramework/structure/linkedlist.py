@@ -30,24 +30,33 @@ class SinglyLinkedList:
         self.head = self.sentinel
         self.size = 0
 
-    def add(self, value):
+    def add(self, value, at_end=True, position=0):
         """
         Adds any element to the linked list
         Args:
-            value (Any): Put in the value you want to add.
+            - value (Any): Put in the value you want to add.
+            - at_end (bool): If you want to add to the end of the list leave this blank. Defaults to adding at the end.
+            - position (int): If you choose ``at_end`` = False then add the position where you want to add new value.
         """
         new = Node(value)
 
-        if self.size == 0:
-            # If there exists no element in the LinkedList
-            self.head.next = new
+        if at_end:
+            position = self.size
+        else:
+            position = position
+
+        if not 0 <= position <= self.size:
+            raise IndexError('Directed position out of bounds')
+        elif position == 0:
+            new.next = self.head
             self.head = new
             self.size += 1
         else:
-            # If there exists at least one/few element in the LinkedList
-            self.sentinel.next = new
-            new.next = self.head
-            self.head = new
+            temp = self.head
+            for _ in range(position - 1):
+                temp = temp.next
+            new.next = temp.next
+            temp.next = new
             self.size += 1
 
     def __iter__(self):
@@ -56,26 +65,27 @@ class SinglyLinkedList:
             yield node.value
             node = node.next
 
-    def remove(self):
+    def removeAt(self, index=0):
         """
         Remove any node from linked list
         Returns:
-            value (Any): returns the value at the node
+            - value (Any): returns the value at the node
         """
-        if self.size == 0:
-            return None
-        elif self.size == 1:
-            removed_node = self.head
-            self.sentinel.next = None
-            self.head = self.sentinel
+        if not 0 <= index <= self.size:
+            raise IndexError(f"Directed position {index} out of bounds")
+
+        delete_node = self.head
+        if index == 0:
+            self.head = self.head.next
             self.size -= 1
-            return removed_node
         else:
-            removed_node = self.head
-            self.sentinel.next = self.head.next
-            self.head = self.sentinel.next
+            temp = self.head
+            for _ in range(index - 1):
+                temp = temp.next
+            delete_node = temp.next
+            temp.next = temp.next.next
             self.size -= 1
-            return removed_node
+            return delete_node.value
 
     def get_head(self):
         """
@@ -101,6 +111,38 @@ class SinglyLinkedList:
         """
         return True if self.size == 0 else False
 
+    def __reversed__(self):
+        """
+        Returns:
+            - Reverses the defined linked list
+        """
+
+        previous = None
+        current = self.head
+
+        while current:
+            # Store the current node's next node in temporary variable
+            next_node = current.next
+            # Make the current node's next pointer pointing back
+            current.next = previous
+            # Make the previous node be the current node
+            previous = current
+            # progress the iteration
+            current = next_node
+
+        # return previous in order to put the head at the end
+        self.head = previous
+
+        self.removeAt(0)
+        noneNode = Node(None)
+        pointer = self.head
+
+        while pointer.next is not None:
+            pointer = pointer.next
+        pointer.next = noneNode
+
+        return self
+
     def __len__(self):
         """
         Alternate way of getting the size of the linked list
@@ -111,7 +153,7 @@ class SinglyLinkedList:
 
     def __getitem__(self, index):
         if not 0 <= index <= self.size:
-            raise IndexError
+            raise IndexError(f"You messed up boy. Index {index} is not available because it's out of bounds")
         for y, node in enumerate(self):
             if y == index:
                 return node
@@ -127,7 +169,7 @@ class SinglyLinkedList:
 
         while current:
             array.append(str(current.value))
-            array.append(' <-- ')
+            array.append(' --> ')
             current = current.next
 
         return ''.join(array[:-1])
