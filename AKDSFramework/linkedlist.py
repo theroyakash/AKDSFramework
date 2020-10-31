@@ -77,7 +77,7 @@ class SinglyLinkedList:
         Returns:
             - The node value for the head
         """
-        return self.head.value
+        return self.head
 
     def count(self):
         """
@@ -113,7 +113,8 @@ class SinglyLinkedList:
         current = self.head
 
         while current:
-            array.append(current.value)
+            array.append(str(current.value))
+            array.append(' <-- ')
             current = current.next
 
-        return str(array)
+        return ''.join(array[:-1])
