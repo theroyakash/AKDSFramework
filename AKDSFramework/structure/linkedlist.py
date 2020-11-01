@@ -13,8 +13,8 @@ class Node:
     def __init__(self, value):
         """
         Node class for linked list. Each element of a linked list is called a node.
-        Args:
-            value (Any): For each node this attribute will carry the value
+            Args:
+                - value (Any): For each node this attribute will carry the value
         """
         self.value = value
         self.next = None
@@ -33,10 +33,10 @@ class SinglyLinkedList:
     def add(self, value, at_end=True, position=0):
         """
         Adds any element to the linked list
-        Args:
-            - value (Any): Put in the value you want to add.
-            - at_end (bool): If you want to add to the end of the list leave this blank. Defaults to adding at the end.
-            - position (int): If you choose ``at_end`` = False then add the position where you want to add new value.
+            Args:
+                - value (Any): Put in the value you want to add.
+                - at_end (bool): If you want to add to the end of the list leave this blank. Defaults to adding at the end.
+                - position (int): If you choose ``at_end`` = False then add the position where you want to add new value.
         """
         new = Node(value)
 
@@ -68,8 +68,8 @@ class SinglyLinkedList:
     def removeAt(self, index=0):
         """
         Remove any node from linked list
-        Returns:
-            - value (Any): returns the value at the node
+            Returns:
+                - value (Any): returns the value at the node
         """
         if not 0 <= index <= self.size:
             raise IndexError(f"Directed position {index} out of bounds")
@@ -90,24 +90,24 @@ class SinglyLinkedList:
     def get_head(self):
         """
         Get the head node value of the linked list
-        Returns:
-            - The node value for the head
+            Returns:
+                - The node value for the head
         """
         return self.head
 
     def count(self):
         """
         Get the size of the linked list. How many Nodes are there in the linked list.
-        Returns:
-            - The number of nodes in the linked list.
+            Returns:
+                - The number of nodes in the linked list.
         """
         return self.size
 
     def isEmpty(self):
         """
         Checks if linked list is empty or not.
-        Returns:
-            - Bool: Return True if linkedlist is empty else False.
+            Returns:
+                - Bool: Return True if linkedlist is empty else False.
         """
         return True if self.size == 0 else False
 
@@ -146,8 +146,8 @@ class SinglyLinkedList:
     def __len__(self):
         """
         Alternate way of getting the size of the linked list
-        Returns:
-            Size of the linked list
+            Returns:
+                Size of the linked list
         """
         return self.size
 
@@ -161,8 +161,8 @@ class SinglyLinkedList:
     def __str__(self):
         """
         This is the string representation of the linked list values
-        Returns:
-            - String representation of the linked list values
+            Returns:
+                - String representation of the linked list values
         """
         array = []
         current = self.head
