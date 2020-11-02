@@ -8,6 +8,9 @@ We currently support singly linked list and doubly linked list.
 
 # Linked list helper class Node
 
+import os
+import pydot
+
 
 class Node:
     def __init__(self, value):
@@ -25,9 +28,7 @@ class SinglyLinkedList:
         """
         Initialization of Singly linked list.
         """
-        # Sentinel Means a soldier or guard whose job is to stand and keep watch.
-        self.sentinel = Node(None)
-        self.head = self.sentinel
+        self.head = Node(None)
         self.size = 0
 
     def add(self, value, at_end=True, position=0):
@@ -174,3 +175,23 @@ class SinglyLinkedList:
             current = current.next
 
         return ''.join(array[:-1])
+
+    def prettyprint(self):
+        # graph = pydot.Dot(graph_type='digraph')
+        # parent_node = pydot.Node(f'{self.get_head().value}')
+        # graph.add_node(parent_node)
+        #
+        # IMAGE = graph.create_png()
+        # return IMAGE
+
+        raise NotImplementedError
+
+
+if __name__ == '__main__':
+    l1 = SinglyLinkedList()
+    for i in range(10):
+        l1.add(i**3)
+
+    print(l1)
+    print(l1.isEmpty())
+    print(reversed(l1))
