@@ -70,3 +70,6 @@ class TestCases(unittest.TestCase):
         self.assertEqual(self.linkedlist[1], 120)
         self.assertEqual(self.linkedlist[2], 7102)
         self.assertEqual(self.linkedlist[3], 773)
+
+if __name__ == '__main__':
+    unittest.main()

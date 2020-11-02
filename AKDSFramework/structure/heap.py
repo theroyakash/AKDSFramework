@@ -19,33 +19,26 @@ class Heap:
     Base Heap class
     """
 
-    def __init__(self):
-        pass
-
-    def build(self):
-        raise NotImplementedError
-
-    def add(self, value):
-        raise NotImplementedError
-
-    def __str__(self):
-        raise NotImplementedError
-
-    def __len__(self):
-        raise NotImplementedError
-
-
-class MaxHeap(Heap):
     def __init__(self, array):
-        """
-        Heap Initialization with unsorted or sorted array whatever.
-            Args:
-                - array (list): Unsorted array to initialize the heap
-        """
-        super(MaxHeap, self).__init__()
         self.heap = array
         self.size = 0
-        self.__built = False
+        self.built = False
+
+    def add(self, value):
+        self.heap.append(value)
+        self.built = False
+        self.size += 1
+
+    def get_root(self):
+        """
+        Returning the root node value of the max heap in O(1) time.
+        Returns:
+            - The root node which is the maximum value in the heap.
+        """
+        if self.built:
+            return self.heap[0]
+        else:
+            raise HeapNotBuildError('Heap is not built yet. Call .build() method on the heap then get the root value.')
 
     def get_right_child(self, i):
         """
@@ -75,37 +68,6 @@ class MaxHeap(Heap):
 
         return None
 
-    def heapify(self, index):
-        if index < self.size:
-            largest = index
-            left_child = self.get_left_child(index)
-            right_child = self.get_right_child(index)
-
-            if left_child is not None and self.heap[left_child] > self.heap[largest]:
-                largest = left_child
-            if right_child is not None and self.heap[right_child] > self.heap[largest]:
-                largest = right_child
-
-            if largest != index:
-                self.heap[largest], self.heap[index] = self.heap[index], self.heap[largest]
-                self.heapify(largest)
-
-    def add(self, value):
-        self.heap.append(value)
-        self.__built = False
-        self.size += 1
-
-    def get_root(self):
-        """
-        Returning the root node value of the max heap in O(1) time.
-        Returns:
-            - The root node which is the maximum value in the heap.
-        """
-        if self.__built:
-            return self.heap[0]
-        else:
-            raise HeapNotBuildError('Heap is not built yet. Call .build() method on the heap then get the root value.')
-
     def __getitem__(self, index):
         return self.heap[index]
 
@@ -115,25 +77,10 @@ class MaxHeap(Heap):
     def __reversed__(self):
         raise InvalidOperationError('Invalid operation specified.')
 
-    def build(self):
-        """
-        Build operation is called when the heap violates the heap property, Such as
-        during adding new element at the end of heap with .add() method or initializing the heap
-        for the first time. This takes O(log N) time.
-        """
-        self.size = len(self.heap)
-        self.heap = list(self.heap)
-        if self.size <= 1:
-            return
-
-        for i in range(self.size // 2 - 1, -1, -1):
-            self.heapify(i)
-
-        self.__built = True
-
     def __str__(self):
-        if not self.__built:
-            raise HeapNotBuildError('The MaxHeap is not built yet, consider using the .build() method to build the heap first.')
+        if not self.built:
+            print('The MaxHeap has not built yet or may have changed after a successful build, consider using the .build() method to build the heap first.')
+            raise HeapNotBuildError
         else:
             return str(self.heap)
 
@@ -161,3 +108,98 @@ class MaxHeap(Heap):
 
         termtable = AsciiTable(table)
         print(termtable.table)
+
+
+class MaxHeap(Heap):
+    def __init__(self, array):
+        """
+        Heap Initialization with unsorted or sorted array whatever.
+            Args:
+                - array (list): Unsorted array to initialize the heap
+        """
+        super(MaxHeap, self).__init__(array)
+
+    def build(self):
+        """
+        Build operation is called when the heap violates the heap property, Such as
+        during adding new element at the end of heap with .add() method or initializing the heap
+        for the first time. This takes O(log N) time.
+        """
+        self.size = len(self.heap)
+        self.heap = list(self.heap)
+        if self.size <= 1:
+            return
+
+        for i in range(self.size // 2 - 1, -1, -1):
+            self.heapify(i)
+
+        self.built = True
+
+
+    def heapify(self, index):
+        if index < self.size:
+            largest = index
+            left_child = self.get_left_child(index)
+            right_child = self.get_right_child(index)
+
+            if left_child is not None and self.heap[left_child] > self.heap[largest]:
+                largest = left_child
+            if right_child is not None and self.heap[right_child] > self.heap[largest]:
+                largest = right_child
+
+            if largest != index:
+                self.heap[largest], self.heap[index] = self.heap[index], self.heap[largest]
+                self.heapify(largest)
+
+
+class MinHeap(Heap):
+    def __init__(self, array):
+        super(MinHeap, self).__init__(array)
+
+    def heapify(self, index):
+        if index < self.size:
+            smallest = index
+            left_child = self.get_left_child(index)
+            right_child = self.get_right_child(index)
+
+            if left_child is not None and self.heap[left_child] < self.heap[smallest]:
+                smallest = left_child
+            if right_child is not None and self.heap[right_child] < self.heap[smallest]:
+                smallest = right_child
+
+            if smallest != index:
+                self.heap[smallest], self.heap[index] = self.heap[index], self.heap[smallest]
+                self.heapify(smallest)
+
+    def build(self):
+        """
+        Build operation is called when the heap violates the heap property, Such as
+        during adding new element at the end of heap with .add() method or initializing the heap
+        for the first time. This takes O(log N) time.
+        """
+        self.size = len(self.heap)
+        self.heap = list(self.heap)
+        if self.size <= 1:
+            return
+
+        for i in range(self.size // 2 - 1, -1, -1):
+            self.heapify(i)
+
+        self.built = True
+
+
+mxheap = MaxHeap([data**3 for data in range(1, 15)])
+mxheap.add(12)
+mxheap.add(4)
+mxheap.build()
+print(mxheap)
+
+mxheap.prettyprint()
+print('#' * 25)
+mnheap = MinHeap([data**3 for data in range(1, 15)])
+mnheap.add(12)
+mnheap.add(4)
+mnheap.build()
+print(mnheap)
+
+print(len(mnheap), len(mxheap))
