@@ -8,9 +8,6 @@ We currently support singly linked list and doubly linked list.
 
 # Linked list helper class Node
 
-import os
-import pydot
-
 
 class Node:
     def __init__(self, value):
