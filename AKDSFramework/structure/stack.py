@@ -31,10 +31,7 @@ class Stack:
         return reversed(self.stack)
 
     def __iter__(self):
-        node = self.stack.head
-        while node:
-            yield node.value
-        # raise NotImplementedError('Iteration over the stack is not implemented yet')
+        raise NotImplementedError('Iteration over the stack is not implemented yet')
 
     def peak_top(self):
         """
