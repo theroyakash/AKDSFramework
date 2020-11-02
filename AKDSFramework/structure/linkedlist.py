@@ -140,6 +140,7 @@ class SinglyLinkedList:
         while pointer.next is not None:
             pointer = pointer.next
         pointer.next = noneNode
+        self.size += 1
 
         return self
 

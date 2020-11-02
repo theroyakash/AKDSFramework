@@ -27,6 +27,15 @@ class Stack:
         else:
             raise LookupError('Not enough element to pop')
 
+    def __reversed__(self):
+        return reversed(self.stack)
+
+    def __iter__(self):
+        node = self.stack.head
+        while node:
+            yield node.value
+        # raise NotImplementedError('Iteration over the stack is not implemented yet')
+
     def peak_top(self):
         """
         Quickly peak at the very top of the stack
