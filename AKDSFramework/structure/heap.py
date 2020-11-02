@@ -45,7 +45,7 @@ class MaxHeap(Heap):
         super(MaxHeap, self).__init__()
         self.heap = array
         self.size = 0
-        self.built = False
+        self.__built = False
 
     def get_right_child(self, i):
         """
