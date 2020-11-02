@@ -1,4 +1,10 @@
 # AKDSFramework
+![build](https://api.travis-ci.com/theroyakash/AKDSFramework.svg?branch=main&status=started)
+[![Python3](https://img.shields.io/badge/python-3.8-blue.svg)](https://github.com/theroyakash/reddit-api)
+[![GitHub license](https://img.shields.io/badge/LICENSE-MIT-orange)](https://github.com/theroyakash/AKDSFramework/blob/master/LICENSE)
+[![Discord Server](https://img.shields.io/badge/Support-theroyakash-red)](https://www.iamroyakash.com/contact)
+
+
 Python Package for all your data structure and algorithm needs.
 AKDSFramework is a Purely written in Python library containing implementations 
 of various data structures.
