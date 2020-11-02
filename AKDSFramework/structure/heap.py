@@ -10,7 +10,7 @@ The 2 main characteristics of Heaps are the followings
     - Nodes must be according to the min-max order property
 """
 
-
+from terminaltables import AsciiTable
 from AKDSFramework.error.error import InvalidOperationError
 
 
@@ -92,7 +92,7 @@ class MaxHeap(Heap):
 
     def add(self, value):
         self.heap.append(value)
-        self.built = False
+        self.__built = False
         self.size += 1
 
     def __getitem__(self, index):
@@ -113,12 +113,34 @@ class MaxHeap(Heap):
         for i in range(self.size // 2 - 1, -1, -1):
             self.heapify(i)
 
-        self.built = True
+        self.__built = True
 
     def __str__(self):
-        if not self.built:
-            print('The MaxHeap is not built yet, so use the .build() method to build the heap first.')
+        if not self.__built:
+            print('The MaxHeap is not built yet, consider using the .build() method to build the heap first.')
         return str(self.heap)
 
     def prettyprint(self):
-        raise NotImplementedError
+        table = [
+            ['Head Node Value', 'left child', 'right child']
+        ]
+
+        for i in range(len(self.heap) // 2):
+            entry = []
+            head = self.heap[i]
+            entry.append(head)
+            try:
+                lc = self.heap[i * 2 + 1]
+            except IndexError:
+                lc = 'None'
+            try:
+                rc = self.heap[i * 2 + 2]
+            except IndexError:
+                rc = 'None'
+
+            entry.append(str(lc))
+            entry.append(str(rc))
+            table.append(entry)
+
+        termtable = AsciiTable(table)
+        print(termtable.table)
