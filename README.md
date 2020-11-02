@@ -1,9 +1,9 @@
 # AKDSFramework
-![build](https://api.travis-ci.com/theroyakash/AKDSFramework.svg?branch=main&status=started)
+[![AttentionNet Build Status](https://github.com/theroyakash/AKDSFramework/workflows/AKDSFramework/badge.svg)](https://github.com/theroyakash/AKDSFramework/actions)
 [![Python3](https://img.shields.io/badge/python-3.8-blue.svg)](https://github.com/theroyakash/reddit-api)
 [![GitHub license](https://img.shields.io/badge/LICENSE-MIT-orange)](https://github.com/theroyakash/AKDSFramework/blob/master/LICENSE)
 [![Discord Server](https://img.shields.io/badge/Support-theroyakash-red)](https://www.iamroyakash.com/contact)
-
+[![GitHub license](https://img.shields.io/badge/Privacy-Policy-blue)](https://www.iamroyakash.com/privacy)
 
 Python Package for all your data structure and algorithm needs.
 AKDSFramework is a Purely written in Python library containing implementations 
@@ -46,4 +46,6 @@ print(reversed(lkl))
 ```
 
 ### Contributing
+[![GitHub license](https://img.shields.io/badge/CONTRIBUTING-Welcome-blue)](https://github.com/theroyakash/AKDSFramework/pulls)
+
 Contributions are welcome. Make PR or open a new issue with some idea.
