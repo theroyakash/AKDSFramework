@@ -11,7 +11,7 @@ The 2 main characteristics of Heaps are the followings
 """
 
 from terminaltables import AsciiTable
-from AKDSFramework.error.error import InvalidOperationError
+from AKDSFramework.error import InvalidOperationError, HeapNotBuildError
 
 
 class Heap:
@@ -95,6 +95,17 @@ class MaxHeap(Heap):
         self.__built = False
         self.size += 1
 
+    def get_root(self):
+        """
+        Returning the root node value of the max heap in O(1) time.
+        Returns:
+            - The root node which is the maximum value in the heap.
+        """
+        if self.__built:
+            return self.heap[0]
+        else:
+            raise HeapNotBuildError('Heap is not built yet. Call .build() method on the heap then get the root value.')
+
     def __getitem__(self, index):
         return self.heap[index]
 
@@ -105,6 +116,11 @@ class MaxHeap(Heap):
         raise InvalidOperationError('Invalid operation specified.')
 
     def build(self):
+        """
+        Build operation is called when the heap violates the heap property, Such as
+        during adding new element at the end of heap with .add() method or initializing the heap
+        for the first time. This takes O(log N) time.
+        """
         self.size = len(self.heap)
         self.heap = list(self.heap)
         if self.size <= 1:
@@ -117,8 +133,9 @@ class MaxHeap(Heap):
 
     def __str__(self):
         if not self.__built:
-            print('The MaxHeap is not built yet, consider using the .build() method to build the heap first.')
-        return str(self.heap)
+            raise HeapNotBuildError('The MaxHeap is not built yet, consider using the .build() method to build the heap first.')
+        else:
+            return str(self.heap)
 
     def prettyprint(self):
         table = [

@@ -4,3 +4,7 @@ class InvalidOperationError(Exception):
 
 class NotFoundError(Exception):
     pass
+
+
+class HeapNotBuildError(Exception):
+    pass
