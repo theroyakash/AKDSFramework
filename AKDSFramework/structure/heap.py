@@ -186,20 +186,3 @@ class MinHeap(Heap):
             self.heapify(i)
 
         self.built = True
-
-
-mxheap = MaxHeap([data**3 for data in range(1, 15)])
-mxheap.add(12)
-mxheap.add(4)
-mxheap.build()
-print(mxheap)
-
-mxheap.prettyprint()
-print('#' * 25)
-mnheap = MinHeap([data**3 for data in range(1, 15)])
-mnheap.add(12)
-mnheap.add(4)
-mnheap.build()
-print(mnheap)
-
-print(len(mnheap), len(mxheap))
