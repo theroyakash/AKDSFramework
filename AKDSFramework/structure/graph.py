@@ -10,7 +10,7 @@ class Graph:
                 - vertices (int): Number of total vertices in the graph
                 - is_directed (Bool): Expects directed or not directed graph. Defaults to not directed graph.
 
-            Examples:
+            .. Examples::
                 >>> from AKDSFramework.structure.graph import Graph
                 >>> import numpy as np
                 >>> graph1 = Graph(vertices=20, is_directed=True)
@@ -57,7 +57,7 @@ class Graph:
 
     def show_graph(self):
         """
-        Shows the graph as a 2D Numpy matrix.
+        Shows the graph as a 2D Numpy matrix. Alternatively you can use the ``print()`` method to show the graph.
             Returns:
                 - Numpy 2D array showing the graph.
         """
@@ -69,3 +69,9 @@ class Graph:
             - Total edge count
         """
         return self.number_of_edges
+
+    def __str__(self):
+        """
+        2D matrix representation of declared graph
+        """
+        return str(self.graph)
