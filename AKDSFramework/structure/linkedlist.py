@@ -182,13 +182,3 @@ class SinglyLinkedList:
         # return IMAGE
 
         raise NotImplementedError
-
-
-if __name__ == '__main__':
-    l1 = SinglyLinkedList()
-    for i in range(10):
-        l1.add(i**3)
-
-    print(l1)
-    print(l1.isEmpty())
-    print(reversed(l1))
