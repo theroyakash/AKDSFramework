@@ -174,11 +174,18 @@ class SinglyLinkedList:
         return ''.join(array[:-1])
 
     def prettyprint(self):
-        # graph = pydot.Dot(graph_type='digraph')
-        # parent_node = pydot.Node(f'{self.get_head().value}')
-        # graph.add_node(parent_node)
-        #
-        # IMAGE = graph.create_png()
-        # return IMAGE
+        array = []
+        current = self.head
 
-        raise NotImplementedError
+        while current:
+            array.append(f"""
+            +--------+
+            |        |
+            |   {current.value}
+            |        |
+            +--------+
+            """)
+            #array.append(' --> ')
+            current = current.next
+
+        print(''.join(array[:-1]))
