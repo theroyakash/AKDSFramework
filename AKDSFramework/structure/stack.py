@@ -1,5 +1,5 @@
 from AKDSFramework.structure.linkedlist import SinglyLinkedList
-
+from AKDSFramework.error import EmptyStackError
 
 class Stack:
     def __init__(self):
@@ -67,3 +67,56 @@ class Stack:
             current = current.next
 
         return str(array)
+
+
+class ListBasedStack:
+    def __init__(self, array=None):
+        """
+        Create a Stack based on array.
+            Args:
+                - array (list): Pass in an array to initialize the stack. If nothing is passed a blank stack is intialized.
+        """
+        if array is None:
+            self.stack = []
+        else:
+            self.stack = array
+    
+    def push(self, value):
+        """
+        Push data onto the stack.
+            Args:
+                - value (Any): Pass in the value you want to push
+        """
+        self.stack.append(value)
+        
+    def pop(self):
+        if len(self.stack)==0:
+            raise EmptyStackError('Stack may be empty')
+        else:
+            self.stack.pop(-1)
+
+    def clear(self):
+        self.stack = []
+    
+    def __len__(self):
+        return len(self.stack)
+    
+    def clone(self):
+        return self.stack.copy()
+    
+    def peek(self):
+        if len(self.stack)==0:
+            raise EmptyStackError('Stack may be empty')
+        else:
+            return self.stack[-1]
+    
+    def searchFor(self, element):
+        index = -1
+        for i in range(len(self.stack)):
+            if self.stack[i] == element:
+                index = i
+        
+        return index
+
+    def __str__(self):
+        return str(self.stack)
