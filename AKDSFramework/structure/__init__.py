@@ -1,3 +1,6 @@
 from . import graph
 from . import linkedlist
-from . import stack
+from .stack import Stack
+from .heap import MinHeap, MaxHeap
+from .linkedlist import SinglyLinkedList
+from .graph import Graph
