@@ -21,4 +21,3 @@ class Test(unittest.TestCase):
 if __name__ == '__main__':
     print('Queue Tests Running')
     unittest.main()
-    print('Queue Tests Completed')

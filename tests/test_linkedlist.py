@@ -74,4 +74,3 @@ class TestCases(unittest.TestCase):
 if __name__ == '__main__':
     print('LinkedList tests running')
     unittest.main()
-    print('LinkedList tests are done running')
