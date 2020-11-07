@@ -57,6 +57,17 @@ class ArrayQueue(QueueADT):
         self.size -= 1
         return val
 
+    def __iter__(self):
+        """
+        Iterable in a for and while loop
+        """
+        pointer = self.front
+        while True:
+            if pointer == self.rear:
+                return
+            yield self.array[pointer]
+            pointer += 1
+
     def expand(self):
         """
         Expands the size of the array with linear time complexity, Meant for usage in internal state. Don't use this operation outside.

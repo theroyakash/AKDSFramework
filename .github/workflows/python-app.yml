@@ -30,3 +30,4 @@ jobs:
         python tests/test_heap.py
         python tests/test_linkedlist.py
         python tests/test_sort.py
+        python tests/test_queue.py
