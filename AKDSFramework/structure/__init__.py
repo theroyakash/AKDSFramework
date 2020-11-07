@@ -3,4 +3,4 @@ from . import linkedlist
 from .stack import Stack
 from .heap import MinHeap, MaxHeap
 from .linkedlist import SinglyLinkedList
-from .graph import Graph
+from .graph import GraphMatrixRepresented, GraphDictionaryRepresented
