@@ -19,4 +19,6 @@ class Test(unittest.TestCase):
         self.assertEqual(12, dqueue)
 
 if __name__ == '__main__':
+    print('Queue Tests Running')
     unittest.main()
+    print('Queue Tests Completed')

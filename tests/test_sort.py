@@ -14,4 +14,6 @@ class Test(unittest.TestCase):
 
 
 if __name__ == '__main__':
+    print('Sort tests running')
     unittest.main()
+    print('Sort tests are done running')
