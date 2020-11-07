@@ -37,7 +37,10 @@ def bubblesort(array, vizualize=False, maintain_iter_dict=False):
                     iteration += 1
                     iter_dict[f'{iteration}'] = array
 
-    return array, iter_dict if maintain_iter_dict else array
+    if maintain_iter_dict:
+        return array, iter_dict
+    else:
+        return array
 
 
 def insertionsort(array, vizualize=False, maintain_iter_dict=False):
@@ -73,4 +76,7 @@ def insertionsort(array, vizualize=False, maintain_iter_dict=False):
             iteration += 1
             iter_dict[f'{iteration}'] = array
 
-    return array
+    if maintain_iter_dict:
+        return array, iter_dict
+    else:
+        return array
