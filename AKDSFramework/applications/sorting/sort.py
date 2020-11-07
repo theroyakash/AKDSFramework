@@ -1,4 +1,4 @@
-def bubblesort(array, vizualize=False):
+def bubblesort(array, vizualize=False, maintain_iter_dict=False):
     """
     Bubble sort algorithm, has worst case as performance O(n^2)
         Args:
@@ -16,6 +16,10 @@ def bubblesort(array, vizualize=False):
 
     if vizualize:
         print(f"Iteration {iteration}:", array)
+    
+    if maintain_iter_dict:
+        iter_dict = {}
+        iter_dict[f'{iteration}'] = array
 
     x = -1
     while swapped:
@@ -29,10 +33,14 @@ def bubblesort(array, vizualize=False):
                 if vizualize:
                     iteration += 1
                     print(f"Iteration {iteration}:", array)
-    return array
+                if maintain_iter_dict:
+                    iteration += 1
+                    iter_dict[f'{iteration}'] = array
+
+    return array, iter_dict if maintain_iter_dict else array
 
 
-def insertionsort(array, vizualize=False):
+def insertionsort(array, vizualize=False, maintain_iter_dict=False):
     """
     Insertion Sort method for sorting. Takes O(N^2) time in the worst case.
         Args:
@@ -42,6 +50,10 @@ def insertionsort(array, vizualize=False):
     iteration = 0
     if vizualize:
         print(f'Iteration {iteration}: {array}')
+
+    if maintain_iter_dict:
+        iter_dict = {}
+        iter_dict[f'{iteration}'] = array
 
     for i in range(len(array)):
         cursor = array[i]
@@ -56,5 +68,9 @@ def insertionsort(array, vizualize=False):
         if vizualize:
             iteration += 1
             print(f"Iteration {iteration}: {array}")
+        
+        if maintain_iter_dict:
+            iteration += 1
+            iter_dict[f'{iteration}'] = array
 
     return array
