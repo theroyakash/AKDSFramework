@@ -1,34 +1,37 @@
 import numpy as np
 
+class GraphMatrixRepresented:
+    """
+    Matrix representation of Graph
+        Args:
+            - ``vertices`` (int): Number of total vertices in the graph
+            - ``is_directed`` (Bool): Expects directed or not directed graph. Defaults to not directed graph.
 
-class Graph:
+        Space Complexity:
+            Space complexity for graphs represented with adjacenecy matrix is :math:`O(V^2)` where :math:`V` is number
+            of vertices. Use this method of representation only when your graph is dense. Number of edges `:math:|E| ≥ V^2`
+            Else a lot of zeros will be placed inside the matrix which won't be that efficient space wise. For sparse matrix
+            use ``GraphDictionaryRepresented`` instead of ``GraphMatrixRepresented``.
 
+        .. Examples::
+            >>> from AKDSFramework.structure.graph import GraphMatrixRepresented
+            >>> import numpy as np
+            >>> graph1 = GraphMatrixRepresented(vertices=20, is_directed=True)
+            >>> # Now add few edges with random weights
+            >>> while graph1.number_of_edges < 100:
+            >>>     random_start = np.random.randint(low=0, high=graph1.vertices)
+            >>>     random_end = np.random.randint(low=0, high=graph1.vertices)
+            >>>     random_weight = np.random.randint(-7, 20)
+            >>>     if random_weight != 0 and graph1.show_graph()[random_start][random_end] == 0:
+            >>>         graph1.add_edge_between(start=random_start, end=random_end, weight=random_weight)
+            >>>         graph1.add_edge_between(start=random_start, end=random_end, weight=random_weight)
+            >>>     else:
+            >>>         pass
+            >>> print(graph1.number_of_edges)  # or print(graph1.count_edges())
+            >>> print(graph1.vertices)
+            >>> print(graph1.show_graph())
+    """
     def __init__(self, vertices, is_directed=False):
-        """
-        Initialize the graph
-            Args:
-                - vertices (int): Number of total vertices in the graph
-                - is_directed (Bool): Expects directed or not directed graph. Defaults to not directed graph.
-
-            .. Examples::
-                >>> from AKDSFramework.structure.graph import Graph
-                >>> import numpy as np
-                >>> graph1 = Graph(vertices=20, is_directed=True)
-                >>> # Now add few edges with random weights
-                >>> while graph1.number_of_edges < 100:
-                >>>     random_start = np.random.randint(low=0, high=graph1.vertices)
-                >>>     random_end = np.random.randint(low=0, high=graph1.vertices)
-                >>>     random_weight = np.random.randint(-7, 20)
-                >>>     if random_weight != 0 and graph1.show_graph()[random_start][random_end] == 0:
-                >>>         graph1.add_edge_between(start=random_start, end=random_end, weight=random_weight)
-                >>>         graph1.add_edge_between(start=random_start, end=random_end, weight=random_weight)
-                >>>     else:
-                >>>         pass
-                >>> print(graph1.number_of_edges)  # or print(graph1.count_edges())
-                >>> print(graph1.vertices)
-                >>> print(graph1.show_graph())
-        """
-
         self.vertices = vertices
         self.graph = np.zeros((vertices, vertices), dtype=int)
         self.is_directed = is_directed
@@ -38,9 +41,9 @@ class Graph:
         """
         Adds edge between two points in a graph. If the graph is not directed then one edge b/w start and end and one b/w end and start will be added which has the same weight.
             Args:
-                - start (int): Starting Index where the edge starts
-                - end (int): Ending index where the edge ends
-                - weight (float or int): Weight of the edge
+                - ``start`` (int): Starting Index where the edge starts
+                - ``end`` (int): Ending index where the edge ends
+                - ``weight`` (float or int): Weight of the edge
         """
 
         if not self.is_directed and self.graph[start][end] == 0 and self.graph[end][start] == 0:
@@ -75,3 +78,53 @@ class Graph:
         2D matrix representation of declared graph
         """
         return str(self.graph)
+
+
+class Vertex:
+    def __init__(self, name):
+        self.name = name
+        self.neighbors = list()
+
+    def add_neighbor(self, v, weight):
+        if v not in self.neighbors:
+            self.neighbors.append((v, weight))
+            self.neighbors.sort()
+
+    def __repr__(self):
+        return f"<AKDSFramework.structure.graph.Vertex object {self.name} with neighbors: {self.neighbors}>"
+
+    
+class GraphDictionaryRepresented:
+    """
+    Dictionary representation of Graph
+        Args:
+            - vertices (int): Number of total vertices in the graph
+            - is_directed (Bool): Expects directed or not directed graph. Defaults to not directed graph.
+    """
+    def __init__(self):
+        self.vertices = {}
+    
+    def register_vertex(self, vertex):
+        """
+        Register a vertex in the graph
+        """
+        if isinstance(vertex, Vertex) and vertex.name not in self.vertices:
+            self.vertices[vertex.name] = vertex
+            return True
+        else:
+            return False
+
+    def register_edge(self, init, stop, weight=1):
+        if init in self.vertices and stop in self.vertices:
+            self.vertices[init].add_neighbor(stop, weight)
+            self.vertices[stop].add_neighbor(init, weight)
+            return True
+        else:
+            return False
+        
+    def prettyprint(self):
+        for key in sorted(list(self.vertices.keys())):
+            print(key + ':' + str(self.vertices[key].neighbors))
+
+    def raw_dict(self):
+        return self.vertices
