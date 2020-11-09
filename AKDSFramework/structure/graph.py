@@ -1,4 +1,6 @@
 import numpy as np
+from AKDSFramework.structure.queue import ArrayQueue
+from AKDSFramework.error import BadVertexTypeError
 
 class GraphMatrixRepresented:
     """
@@ -85,6 +87,10 @@ class Vertex:
         self.name = name
         self.neighbors = list()
 
+    def __iter__(self):
+        for vertex in self.neighbors:
+            yield vertex[0]
+
     def add_neighbor(self, v, weight):
         if v not in self.neighbors:
             self.neighbors.append((v, weight))
@@ -103,6 +109,7 @@ class GraphDictionaryRepresented:
     """
     def __init__(self):
         self.vertices = {}
+        self.number_of_vertices = 0
     
     def register_vertex(self, vertex):
         """
@@ -110,17 +117,25 @@ class GraphDictionaryRepresented:
         """
         if isinstance(vertex, Vertex) and vertex.name not in self.vertices:
             self.vertices[vertex.name] = vertex
+            self.number_of_vertices += 1
             return True
         else:
-            return False
+            raise BadVertexTypeError
 
-    def register_edge(self, init, stop, weight=1):
-        if init in self.vertices and stop in self.vertices:
-            self.vertices[init].add_neighbor(stop, weight)
-            self.vertices[stop].add_neighbor(init, weight)
-            return True
+    def register_edge(self, init, stop, weight=1, directed=True):
+        if directed:
+            if init in self.vertices and stop in self.vertices:
+                self.vertices[init].add_neighbor(stop, weight)
+                self.vertices[stop].add_neighbor(init, weight)
+                return True
+            else:
+                return False
         else:
-            return False
+            if init in self.vertices and stop in self.vertices:
+                self.vertices[init].add_neighbor(stop, weight)
+                return True
+            else:
+                return False
         
     def prettyprint(self):
         for key in sorted(list(self.vertices.keys())):
@@ -128,3 +143,21 @@ class GraphDictionaryRepresented:
 
     def raw_dict(self):
         return self.vertices
+
+    def BFS(self, startFromVertex):
+        visited_set = set()
+        # create a first in first out queue to store all the vertices for BFS
+        queue = ArrayQueue(capacity=20)
+        # mark the source node as visited and enqueue it
+        visited_set.add(startFromVertex)
+        queue.enqueue(startFromVertex)
+
+        while queue:
+            vertex = queue.dequeue()
+            # loop through all adjacent vertex and enqueue it if not yet visited
+            for adjacent_vertex in self.vertices[vertex]:
+                if adjacent_vertex not in visited_set:
+                    queue.enqueue(adjacent_vertex)
+                    visited_set.add(adjacent_vertex)
+
+        return visited_set

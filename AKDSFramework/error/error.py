@@ -9,3 +9,6 @@ class HeapNotBuildError(Exception):
 
 class EmptyStackError(Exception):
     pass
+
+class BadVertexTypeError(Exception):
+    pass
