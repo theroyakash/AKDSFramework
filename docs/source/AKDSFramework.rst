@@ -6,6 +6,8 @@ Subpackages
 
 .. toctree::
 
+    AKDSFramework.applications
+    AKDSFramework.error
     AKDSFramework.structure
 
 Module contents

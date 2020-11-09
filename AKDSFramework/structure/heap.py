@@ -32,8 +32,8 @@ class Heap:
     def get_root(self):
         """
         Returning the root node value of the max heap in O(1) time.
-        Returns:
-            - The root node which is the maximum value in the heap.
+            Returns:
+                - The root node which is the maximum value in the heap.
         """
         if self.built:
             return self.heap[0]

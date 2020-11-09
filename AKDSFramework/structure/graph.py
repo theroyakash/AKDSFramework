@@ -15,7 +15,7 @@ class GraphMatrixRepresented:
             Else a lot of zeros will be placed inside the matrix which won't be that efficient space wise. For sparse matrix
             use ``GraphDictionaryRepresented`` instead of ``GraphMatrixRepresented``.
 
-        .. Examples::
+        Examples::
             >>> from AKDSFramework.structure.graph import GraphMatrixRepresented
             >>> import numpy as np
             >>> graph1 = GraphMatrixRepresented(vertices=20, is_directed=True)
