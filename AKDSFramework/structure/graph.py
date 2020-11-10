@@ -88,6 +88,9 @@ class Vertex:
         self.neighbors = list()
 
     def __iter__(self):
+        """
+        Yields all the neighbouring vertex when iterated in a loop.
+        """
         for vertex in self.neighbors:
             yield vertex[0]
 
@@ -139,17 +142,17 @@ class GraphDictionaryRepresented:
         
     def prettyprint(self):
         for key in sorted(list(self.vertices.keys())):
-            print(key + ':' + str(self.vertices[key].neighbors))
+            print(key + ' -> ' + str(self.vertices[key].neighbors))
 
     def raw_dict(self):
         return self.vertices
 
     def BFS(self, startFromVertex):
-        visited_set = set()
+        visited_set = []
         # create a first in first out queue to store all the vertices for BFS
-        queue = ArrayQueue(capacity=20)
+        queue = ArrayQueue(capacity=self.number_of_vertices)
         # mark the source node as visited and enqueue it
-        visited_set.add(startFromVertex)
+        visited_set.append(startFromVertex)
         queue.enqueue(startFromVertex)
 
         while queue:
@@ -158,6 +161,21 @@ class GraphDictionaryRepresented:
             for adjacent_vertex in self.vertices[vertex]:
                 if adjacent_vertex not in visited_set:
                     queue.enqueue(adjacent_vertex)
-                    visited_set.add(adjacent_vertex)
+                    if adjacent_vertex not in visited_set:
+                        visited_set.append(adjacent_vertex)
 
         return visited_set
+
+# Small example of using GraphDictionaryRepresented
+if __name__ == "__main__":
+    g = GraphDictionaryRepresented()
+
+    for i in range(1, 8):
+        g.register_vertex(Vertex(f'{i}'))
+
+    edges = ['15', '14', '12', '27', '26', '23']
+    for edge in edges:
+        g.register_edge(edge[:1], edge[1:], directed=True)
+
+    print(g.prettyprint())
+    print(g.BFS('1'))
