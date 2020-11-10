@@ -31,3 +31,4 @@ jobs:
         python tests/test_linkedlist.py
         python tests/test_sort.py
         python tests/test_queue.py
+        python tests/tests_graph.py
