@@ -166,6 +166,35 @@ class GraphDictionaryRepresented:
 
         return visited_set
 
+    def DFS(self, startFromVertex):
+        # 3 color of a vertex and those are
+        #   White: the vertex is not visited yet
+        #   Gray: just visited but all of it's neighbor are not explored
+        #   Black: All of it's neighbor are explored
+
+        color = {}
+        parent = {}
+        traversal_table = []   # Output
+
+        # First set all the node to white
+        for node in self.vertices.keys():
+            color[node] = 'W'
+            parent[node] = None
+
+        def dfs(source: Vertex):
+            color[source] = 'G'
+            traversal_table.append(source)
+
+            for adjacent_vertex in self.vertices[source]:
+                if color[adjacent_vertex] == 'W':
+                    parent[adjacent_vertex] = source
+                    dfs(adjacent_vertex)
+            
+            color[source] = 'B'
+        
+        dfs(startFromVertex)
+        return traversal_table
+
 # Small example of using GraphDictionaryRepresented
 if __name__ == "__main__":
     g = GraphDictionaryRepresented()
@@ -175,7 +204,8 @@ if __name__ == "__main__":
 
     edges = ['15', '14', '12', '27', '26', '23']
     for edge in edges:
-        g.register_edge(edge[:1], edge[1:], directed=True)
+        g.register_edge(edge[:1], edge[1:], directed=False)
 
     print(g.prettyprint())
     print(g.BFS('1'))
+    print(g.DFS('1'))
