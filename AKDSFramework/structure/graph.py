@@ -11,7 +11,7 @@ class GraphMatrixRepresented:
 
         Space Complexity:
             Space complexity for graphs represented with adjacenecy matrix is :math:`O(V^2)` where :math:`V` is number
-            of vertices. Use this method of representation only when your graph is dense. Number of edges `:math:|E| ≥ V^2`
+            of vertices. Use this method of representation only when your graph is dense. Number of edges :math:`|E| ≥ V^2`
             Else a lot of zeros will be placed inside the matrix which won't be that efficient space wise. For sparse matrix
             use ``GraphDictionaryRepresented`` instead of ``GraphMatrixRepresented``.
 
@@ -109,6 +109,17 @@ class GraphDictionaryRepresented:
         Args:
             - vertices (int): Number of total vertices in the graph
             - is_directed (Bool): Expects directed or not directed graph. Defaults to not directed graph.
+
+        Examples::
+            >>> g = GraphDictionaryRepresented()
+            >>> for i in range(1, 8):
+            >>>     g.register_vertex(Vertex(f'{i}'))
+            >>> edges = ['15', '14', '12', '27', '26', '23']
+            >>> for edge in edges:
+            >>>     g.register_edge(edge[:1], edge[1:], directed=False)
+            >>> g.prettyprint()
+            >>> print(g.BFS('1'))
+            >>> print(g.DFS('1'))
     """
     def __init__(self):
         self.vertices = {}
@@ -194,18 +205,3 @@ class GraphDictionaryRepresented:
         
         dfs(startFromVertex)
         return traversal_table
-
-# Small example of using GraphDictionaryRepresented
-if __name__ == "__main__":
-    g = GraphDictionaryRepresented()
-
-    for i in range(1, 8):
-        g.register_vertex(Vertex(f'{i}'))
-
-    edges = ['15', '14', '12', '27', '26', '23']
-    for edge in edges:
-        g.register_edge(edge[:1], edge[1:], directed=False)
-
-    print(g.prettyprint())
-    print(g.BFS('1'))
-    print(g.DFS('1'))
