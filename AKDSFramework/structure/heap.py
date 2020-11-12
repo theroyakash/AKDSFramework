@@ -28,6 +28,16 @@ class Heap:
         self.heap.append(value)
         self.built = False
         self.size += 1
+    
+    def delete_root(self):
+        if self.built:
+            root = self.heap[0]
+            del self.heap[0]
+            self.size -= 1
+            self.built = False
+            return root
+        else:
+            raise HeapNotBuildError
 
     def get_root(self):
         """
@@ -128,6 +138,7 @@ class MaxHeap(Heap):
         self.size = len(self.heap)
         self.heap = list(self.heap)
         if self.size <= 1:
+            self.built = True
             return
 
         for i in range(self.size // 2 - 1, -1, -1):
@@ -180,6 +191,7 @@ class MinHeap(Heap):
         self.size = len(self.heap)
         self.heap = list(self.heap)
         if self.size <= 1:
+            self.built = True
             return
 
         for i in range(self.size // 2 - 1, -1, -1):

@@ -1,1 +1,1 @@
-from .sort import bubblesort, insertionsort
+from .sort import bubblesort, insertionsort, heapsort

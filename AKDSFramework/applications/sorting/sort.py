@@ -1,3 +1,5 @@
+from AKDSFramework.structure.heap import MinHeap
+
 def bubblesort(array, vizualize=False, maintain_iter_dict=False):
     """
     Bubble sort algorithm, has worst case as performance O(n^2)
@@ -80,3 +82,35 @@ def insertionsort(array, vizualize=False, maintain_iter_dict=False):
         return array, iter_dict
     else:
         return array
+
+
+def heapsort(array, visualize=False):
+    if visualize:
+        iteration = 0
+
+    ret = []
+
+    mnheap = MinHeap(array)
+    mnheap.build()
+    
+    while len(mnheap) >= 1:
+        if len(mnheap) == 1:
+            ret.append(mnheap[0])
+            break
+
+        # O(1) time access of minimum element
+        root = mnheap.get_root()
+        ret.append(root)
+        # O(log n) operation
+        mnheap.delete_root()  # Constant operation, deleting at the begining
+        mnheap.build()        # O(log N)
+        
+        if visualize:
+            print("-"*40)
+            print(f'End of Iteration: {iteration}')
+            print(f'Currently heap: {mnheap}')
+            print(f'Our returning array: {ret}')
+            
+            iteration += 1
+        
+    return ret
