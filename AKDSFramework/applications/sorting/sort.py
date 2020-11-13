@@ -1,4 +1,5 @@
 from AKDSFramework.structure.heap import MinHeap
+import random
 
 def bubblesort(array, vizualize=False, maintain_iter_dict=False):
     """
@@ -119,3 +120,44 @@ def heapsort(array, visualize=False):
             iteration += 1
         
     return ret
+
+
+def quicksort(array: list, inplace: bool) -> list:
+    """
+    Quick sort algorithm. Runs recursively
+        Args:
+            - array (list): List of data that you want sorted.
+            - inplace (bool): Set this to true if you have space constraints
+    """
+    if not inplace:
+        length = len(array)
+        if length <= 1:
+            return array
+        else:
+            # Choosing random element as pivot point ensures avarage case O(N log N) time
+            randompivotindex = random.randint(0, len(array) - 1)
+            pivot = array[randompivotindex]
+            del array[randompivotindex]
+        
+        items_greater = []
+        items_lesser = []
+
+        for item in array:
+            if item > pivot:
+                items_greater.append(item)
+            else:
+                items_lesser.append(item)
+
+        return quicksort(items_lesser, False) + [pivot] + quicksort(items_greater, False)
+
+    else:
+        raise NotImplementedError
+
+import random
+a = [data for data in range(10)]
+random.shuffle(a)
+print(a)
+a.append(2140)
+a = quicksort(a, False)
+
+print(a)
