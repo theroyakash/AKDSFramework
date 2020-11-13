@@ -24,8 +24,8 @@ class QueueADT:
 class ArrayQueue(QueueADT):
     """
     Intialize an Queue using Array
-            Args:
-                - capacity (int): Creates a None value static array with specified capacity.
+        Args:
+            - capacity (int): Creates a None value static array with specified capacity.
     """
     def __init__(self, capacity):
         super(ArrayQueue, self).__init__()
@@ -65,8 +65,8 @@ class ArrayQueue(QueueADT):
         while True:
             if pointer == self.rear:
                 return
-            yield self.array[pointer]
             pointer += 1
+            yield self.array[pointer]
 
     def expand(self):
         """
