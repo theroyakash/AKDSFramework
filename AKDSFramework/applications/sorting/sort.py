@@ -21,7 +21,7 @@ def bubblesort(array, vizualize=False, maintain_iter_dict=False):
     
     if maintain_iter_dict:
         iter_dict = {}
-        iter_dict[f'{iteration}'] = array
+        iter_dict[f'{iteration}'] = array.copy()
 
     x = -1
     while swapped:
@@ -32,12 +32,17 @@ def bubblesort(array, vizualize=False, maintain_iter_dict=False):
             if array[i - 1] > array[i]:
                 swap(i-1, i)
                 swapped = True
-                if vizualize:
+
+                if vizualize and maintain_iter_dict:
                     iteration += 1
                     print(f"Iteration {iteration}:", array)
-                if maintain_iter_dict:
+                    iter_dict[f'{iteration}'] = array.copy()
+                elif vizualize:
                     iteration += 1
-                    iter_dict[f'{iteration}'] = array
+                    print(f"Iteration {iteration}:", array)
+                elif maintain_iter_dict:
+                    iteration += 1
+                    iter_dict[f'{iteration}'] = array.copy()
 
     if maintain_iter_dict:
         return array, iter_dict
@@ -58,7 +63,7 @@ def insertionsort(array, vizualize=False, maintain_iter_dict=False):
 
     if maintain_iter_dict:
         iter_dict = {}
-        iter_dict[f'{iteration}'] = array
+        iter_dict[f'{iteration}'] = array.copy()
 
     for i in range(len(array)):
         cursor = array[i]
@@ -76,7 +81,7 @@ def insertionsort(array, vizualize=False, maintain_iter_dict=False):
         
         if maintain_iter_dict:
             iteration += 1
-            iter_dict[f'{iteration}'] = array
+            iter_dict[f'{iteration}'] = array.copy()
 
     if maintain_iter_dict:
         return array, iter_dict
