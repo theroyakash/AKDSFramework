@@ -111,6 +111,7 @@ class GraphDictionaryRepresented:
             - is_directed (Bool): Expects directed or not directed graph. Defaults to not directed graph.
 
         Examples::
+            >>> from AKDSFramework.structure.graph import Vertex
             >>> g = GraphDictionaryRepresented()
             >>> for i in range(1, 8):
             >>>     g.register_vertex(Vertex(f'{i}'))
