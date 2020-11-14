@@ -21,14 +21,14 @@ class GraphMatrixRepresented:
             >>> graph1 = GraphMatrixRepresented(vertices=20, is_directed=True)
             >>> # Now add few edges with random weights
             >>> while graph1.number_of_edges < 100:
-            >>>     random_start = np.random.randint(low=0, high=graph1.vertices)
-            >>>     random_end = np.random.randint(low=0, high=graph1.vertices)
-            >>>     random_weight = np.random.randint(-7, 20)
-            >>>     if random_weight != 0 and graph1.show_graph()[random_start][random_end] == 0:
-            >>>         graph1.add_edge_between(start=random_start, end=random_end, weight=random_weight)
-            >>>         graph1.add_edge_between(start=random_start, end=random_end, weight=random_weight)
-            >>>     else:
-            >>>         pass
+            ...     random_start = np.random.randint(low=0, high=graph1.vertices)
+            ...     random_end = np.random.randint(low=0, high=graph1.vertices)
+            ...     random_weight = np.random.randint(-7, 20)
+            ...     if random_weight != 0 and graph1.show_graph()[random_start][random_end] == 0:
+            ...         graph1.add_edge_between(start=random_start, end=random_end, weight=random_weight)
+            ...         graph1.add_edge_between(start=random_start, end=random_end, weight=random_weight)
+            ...     else:
+            ...         pass
             >>> print(graph1.number_of_edges)  # or print(graph1.count_edges())
             >>> print(graph1.vertices)
             >>> print(graph1.show_graph())
@@ -106,18 +106,14 @@ class Vertex:
 class GraphDictionaryRepresented:
     """
     Dictionary representation of Graph
-        Args:
-            - vertices (int): Number of total vertices in the graph
-            - is_directed (Bool): Expects directed or not directed graph. Defaults to not directed graph.
-
-        Examples::
+        Examples:
             >>> from AKDSFramework.structure.graph import Vertex
             >>> g = GraphDictionaryRepresented()
             >>> for i in range(1, 8):
-            >>>     g.register_vertex(Vertex(f'{i}'))
+            ...     g.register_vertex(Vertex(f'{i}'))
             >>> edges = ['15', '14', '12', '27', '26', '23']
             >>> for edge in edges:
-            >>>     g.register_edge(edge[:1], edge[1:], directed=False)
+            ...     g.register_edge(edge[:1], edge[1:], directed=False)
             >>> g.prettyprint()
             >>> print(g.BFS('1'))
             >>> print(g.DFS('1'))
