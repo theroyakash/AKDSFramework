@@ -4,11 +4,11 @@ import sys
 
 
 def bubblesort(array, vizualize=False, maintain_iter_dict=False):
-    """
-    Bubble sort algorithm, has worst case as performance O(n^2)
+    r"""
+    Bubble sort algorithm, has worst case as performance :math:`O(n^2)`
         Args:
-            - array (list): List of elements
-            - vizualize (bool): Marked as False by default. If you want to vizualize set this as True
+            - ``array`` (list): List of elements
+            - ``vizualize`` (bool): Marked as False by default. If you want to vizualize set this as True
     """
 
     def swap(pos1, pos2):
@@ -54,11 +54,11 @@ def bubblesort(array, vizualize=False, maintain_iter_dict=False):
 
 
 def insertionsort(array, vizualize=False, maintain_iter_dict=False):
-    """
-    Insertion Sort method for sorting. Takes O(N^2) time in the worst case.
+    r"""
+    Insertion Sort method for sorting. Takes :math:`O(N^2)` time in the worst case.
         Args:
-            - array (list): List of elements
-            - vizualize (bool): Marked as False by default. If you want to vizualize set this as True
+            - ``array`` (list): List of elements
+            - ``vizualize`` (bool): Marked as False by default. If you want to vizualize set this as True
     """
     iteration = 0
     if vizualize:
@@ -93,6 +93,12 @@ def insertionsort(array, vizualize=False, maintain_iter_dict=False):
 
 
 def heapsort(array, visualize=False):
+    r"""
+    Heapsort implementation with min heap from AKDSFramework. Running time: :math:`O(N \log (n))`
+        Args:
+            - ``array`` (list): List of elements
+            - ``vizualize`` (bool): Marked as False by default. If you want to vizualize set this as True
+    """
     if visualize:
         iteration = 0
 
@@ -125,11 +131,11 @@ def heapsort(array, visualize=False):
 
 
 def quicksort(array: list, inplace: bool) -> list:
-    """
-    Quick sort algorithm. Runs recursively
+    r"""
+    Quick sort algorithm. Runs recursively. Performance: :math:`O(N \log (n))`
         Args:
-            - array (list): List of data that you want sorted.
-            - inplace (bool): Set this to true if you have space constraints
+            - ``array`` (list): List of data that you want sorted.
+            - ``inplace`` (bool): Set this to true if you have space constraints
     """
     if not inplace:
         length = len(array)
@@ -158,8 +164,8 @@ def quicksort(array: list, inplace: bool) -> list:
 
 
 def merge_sort(array: list) -> list:
-    """
-    Given an array sorts the array with merge sort.
+    r"""
+    Given an array sorts the array with merge sort. Performance: :math:`O(N \log (n))`
         Args:
             - ``array`` (list): List of comparable datatypes
     """
