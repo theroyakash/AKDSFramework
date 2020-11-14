@@ -1,13 +1,13 @@
 class QueueADT:
     def __init__(self):
         self.size = 0
-    
+
     def __len__(self):
         return self.size
-    
+
     def isEmpty(self):
         return False if self.size > 0 else True
-    
+
     def enqueue(self):
         raise NotImplementedError
 
@@ -27,6 +27,7 @@ class ArrayQueue(QueueADT):
         Args:
             - capacity (int): Creates a None value static array with specified capacity.
     """
+
     def __init__(self, capacity):
         super(ArrayQueue, self).__init__()
         self.array = [None] * capacity
@@ -44,7 +45,7 @@ class ArrayQueue(QueueADT):
         self.array[self.rear] = value
         self.size += 1
         self.rear += 1
-    
+
     def dequeue(self):
         """
         Dequeue from the beginning of the Queue following the FIFO policy

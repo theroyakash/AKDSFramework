@@ -2,6 +2,7 @@ import numpy as np
 from AKDSFramework.structure.queue import ArrayQueue
 from AKDSFramework.error import BadVertexTypeError
 
+
 class GraphMatrixRepresented:
     """
     Matrix representation of Graph
@@ -33,6 +34,7 @@ class GraphMatrixRepresented:
             >>> print(graph1.vertices)
             >>> print(graph1.show_graph())
     """
+
     def __init__(self, vertices, is_directed=False):
         self.vertices = vertices
         self.graph = np.zeros((vertices, vertices), dtype=int)
@@ -102,7 +104,7 @@ class Vertex:
     def __repr__(self):
         return f"<AKDSFramework.structure.graph.Vertex object {self.name} with neighbors: {self.neighbors}>"
 
-    
+
 class GraphDictionaryRepresented:
     """
     Dictionary representation of Graph
@@ -118,10 +120,11 @@ class GraphDictionaryRepresented:
             >>> print(g.BFS('1'))
             >>> print(g.DFS('1'))
     """
+
     def __init__(self):
         self.vertices = {}
         self.number_of_vertices = 0
-    
+
     def register_vertex(self, vertex):
         """
         Register a vertex in the graph
@@ -147,7 +150,7 @@ class GraphDictionaryRepresented:
                 return True
             else:
                 return False
-        
+
     def prettyprint(self):
         for key in sorted(list(self.vertices.keys())):
             print(key + ' -> ' + str(self.vertices[key].neighbors))
@@ -197,8 +200,8 @@ class GraphDictionaryRepresented:
                 if color[adjacent_vertex] == 'W':
                     parent[adjacent_vertex] = source
                     dfs(adjacent_vertex)
-            
+
             color[source] = 'B'
-        
+
         dfs(startFromVertex)
         return traversal_table

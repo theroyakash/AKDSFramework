@@ -152,7 +152,8 @@ class SinglyLinkedList:
 
     def __getitem__(self, index):
         if not 0 <= index <= self.size:
-            raise IndexError(f"You messed up boy. Index {index} is not available because it's out of bounds")
+            raise IndexError(
+                f"You messed up boy. Index {index} is not available because it's out of bounds")
         for y, node in enumerate(self):
             if y == index:
                 return node

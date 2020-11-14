@@ -28,7 +28,7 @@ class Heap:
         self.heap.append(value)
         self.built = False
         self.size += 1
-    
+
     def delete_root(self):
         if self.built:
             root = self.heap[0]
@@ -48,7 +48,8 @@ class Heap:
         if self.built:
             return self.heap[0]
         else:
-            raise HeapNotBuildError('Heap is not built yet. Call .build() method on the heap then get the root value.')
+            raise HeapNotBuildError(
+                'Heap is not built yet. Call .build() method on the heap then get the root value.')
 
     def get_right_child(self, i):
         """
@@ -145,7 +146,6 @@ class MaxHeap(Heap):
             self.heapify(i)
 
         self.built = True
-
 
     def heapify(self, index):
         if index < self.size:
