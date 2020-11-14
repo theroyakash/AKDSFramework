@@ -1,37 +1,151 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>AKDSFramework.structure.graph &#8212; AKDSFramework 1.0.0 documentation</title>
-    <link rel="stylesheet" href="../../../_static/alabaster.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../../_static/language_data.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>AKDSFramework.structure.graph &mdash; AKDSFramework 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
    
-  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-
-  </head><body>
-  
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
           
 
-          <div class="body" role="main">
+          
+            <a href="../../../index.html" class="icon icon-home" alt="Documentation Home"> AKDSFramework
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">AKDSFramework</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">AKDSFramework</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>AKDSFramework.structure.graph</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <h1>Source code for AKDSFramework.structure.graph</h1><div class="highlight"><pre>
 <span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -57,14 +171,14 @@
 <span class="sd">            &gt;&gt;&gt; graph1 = GraphMatrixRepresented(vertices=20, is_directed=True)</span>
 <span class="sd">            &gt;&gt;&gt; # Now add few edges with random weights</span>
 <span class="sd">            &gt;&gt;&gt; while graph1.number_of_edges &lt; 100:</span>
-<span class="sd">            &gt;&gt;&gt;     random_start = np.random.randint(low=0, high=graph1.vertices)</span>
-<span class="sd">            &gt;&gt;&gt;     random_end = np.random.randint(low=0, high=graph1.vertices)</span>
-<span class="sd">            &gt;&gt;&gt;     random_weight = np.random.randint(-7, 20)</span>
-<span class="sd">            &gt;&gt;&gt;     if random_weight != 0 and graph1.show_graph()[random_start][random_end] == 0:</span>
-<span class="sd">            &gt;&gt;&gt;         graph1.add_edge_between(start=random_start, end=random_end, weight=random_weight)</span>
-<span class="sd">            &gt;&gt;&gt;         graph1.add_edge_between(start=random_start, end=random_end, weight=random_weight)</span>
-<span class="sd">            &gt;&gt;&gt;     else:</span>
-<span class="sd">            &gt;&gt;&gt;         pass</span>
+<span class="sd">            ...     random_start = np.random.randint(low=0, high=graph1.vertices)</span>
+<span class="sd">            ...     random_end = np.random.randint(low=0, high=graph1.vertices)</span>
+<span class="sd">            ...     random_weight = np.random.randint(-7, 20)</span>
+<span class="sd">            ...     if random_weight != 0 and graph1.show_graph()[random_start][random_end] == 0:</span>
+<span class="sd">            ...         graph1.add_edge_between(start=random_start, end=random_end, weight=random_weight)</span>
+<span class="sd">            ...         graph1.add_edge_between(start=random_start, end=random_end, weight=random_weight)</span>
+<span class="sd">            ...     else:</span>
+<span class="sd">            ...         pass</span>
 <span class="sd">            &gt;&gt;&gt; print(graph1.number_of_edges)  # or print(graph1.count_edges())</span>
 <span class="sd">            &gt;&gt;&gt; print(graph1.vertices)</span>
 <span class="sd">            &gt;&gt;&gt; print(graph1.show_graph())</span>
@@ -142,18 +256,14 @@
 <div class="viewcode-block" id="GraphDictionaryRepresented"><a class="viewcode-back" href="../../../AKDSFramework.structure.html#AKDSFramework.structure.graph.GraphDictionaryRepresented">[docs]</a><span class="k">class</span> <span class="nc">GraphDictionaryRepresented</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Dictionary representation of Graph</span>
-<span class="sd">        Args:</span>
-<span class="sd">            - vertices (int): Number of total vertices in the graph</span>
-<span class="sd">            - is_directed (Bool): Expects directed or not directed graph. Defaults to not directed graph.</span>
-
-<span class="sd">        Examples::</span>
+<span class="sd">        Examples:</span>
 <span class="sd">            &gt;&gt;&gt; from AKDSFramework.structure.graph import Vertex</span>
 <span class="sd">            &gt;&gt;&gt; g = GraphDictionaryRepresented()</span>
 <span class="sd">            &gt;&gt;&gt; for i in range(1, 8):</span>
-<span class="sd">            &gt;&gt;&gt;     g.register_vertex(Vertex(f&#39;{i}&#39;))</span>
+<span class="sd">            ...     g.register_vertex(Vertex(f&#39;{i}&#39;))</span>
 <span class="sd">            &gt;&gt;&gt; edges = [&#39;15&#39;, &#39;14&#39;, &#39;12&#39;, &#39;27&#39;, &#39;26&#39;, &#39;23&#39;]</span>
 <span class="sd">            &gt;&gt;&gt; for edge in edges:</span>
-<span class="sd">            &gt;&gt;&gt;     g.register_edge(edge[:1], edge[1:], directed=False)</span>
+<span class="sd">            ...     g.register_edge(edge[:1], edge[1:], directed=False)</span>
 <span class="sd">            &gt;&gt;&gt; g.prettyprint()</span>
 <span class="sd">            &gt;&gt;&gt; print(g.BFS(&#39;1&#39;))</span>
 <span class="sd">            &gt;&gt;&gt; print(g.DFS(&#39;1&#39;))</span>
@@ -244,71 +354,50 @@
         <span class="k">return</span> <span class="n">traversal_table</span></div></div>
 </pre></div>
 
+           </div>
+           
           </div>
-          
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="../../../index.html">AKDSFramework</a></h1>
+          <footer>
+  
 
+  <hr/>
 
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, theroyakash
 
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
-
-
-
-
-<h3>Navigation</h3>
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">AKDSFramework</a></li>
-</ul>
-
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="../../../index.html">Documentation overview</a><ul>
-  <li><a href="../../index.html">Module code</a><ul>
-  </ul></li>
-  </ul></li>
-</ul>
-</div>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    </div>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-
-
-
-
-
-
-
+</footer>
 
         </div>
       </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &copy;2020, theroyakash.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
-      
-    </div>
 
-    
+    </section>
 
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
     
-  </body>
+   
+
+</body>
 </html>
