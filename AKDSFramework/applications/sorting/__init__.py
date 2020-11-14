@@ -1,1 +1,1 @@
-from .sort import bubblesort, insertionsort, heapsort, quicksort
+from .sort import bubblesort, insertionsort, heapsort, quicksort, merge_sort
