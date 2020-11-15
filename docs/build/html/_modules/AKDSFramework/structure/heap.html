@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html4" lang="en" >
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -26,11 +26,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
@@ -178,7 +178,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">heap</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">built</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">+=</span> <span class="mi">1</span></div>
-    
+
 <div class="viewcode-block" id="Heap.delete_root"><a class="viewcode-back" href="../../../AKDSFramework.structure.html#AKDSFramework.structure.heap.Heap.delete_root">[docs]</a>    <span class="k">def</span> <span class="nf">delete_root</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">built</span><span class="p">:</span>
             <span class="n">root</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">heap</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -198,7 +198,8 @@
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">built</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">heap</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="n">HeapNotBuildError</span><span class="p">(</span><span class="s1">&#39;Heap is not built yet. Call .build() method on the heap then get the root value.&#39;</span><span class="p">)</span></div>
+            <span class="k">raise</span> <span class="n">HeapNotBuildError</span><span class="p">(</span>
+                <span class="s1">&#39;Heap is not built yet. Call .build() method on the heap then get the root value.&#39;</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="Heap.get_right_child"><a class="viewcode-back" href="../../../AKDSFramework.structure.html#AKDSFramework.structure.heap.Heap.get_right_child">[docs]</a>    <span class="k">def</span> <span class="nf">get_right_child</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
@@ -295,7 +296,6 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">heapify</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">built</span> <span class="o">=</span> <span class="kc">True</span></div>
-
 
 <div class="viewcode-block" id="MaxHeap.heapify"><a class="viewcode-back" href="../../../AKDSFramework.structure.html#AKDSFramework.structure.heap.MaxHeap.heapify">[docs]</a>    <span class="k">def</span> <span class="nf">heapify</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">index</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">:</span>

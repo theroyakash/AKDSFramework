@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html4" lang="en" >
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -26,11 +26,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
@@ -152,6 +152,7 @@
 <span class="kn">from</span> <span class="nn">AKDSFramework.structure.queue</span> <span class="kn">import</span> <span class="n">ArrayQueue</span>
 <span class="kn">from</span> <span class="nn">AKDSFramework.error</span> <span class="kn">import</span> <span class="n">BadVertexTypeError</span>
 
+
 <div class="viewcode-block" id="GraphMatrixRepresented"><a class="viewcode-back" href="../../../AKDSFramework.structure.html#AKDSFramework.structure.graph.GraphMatrixRepresented">[docs]</a><span class="k">class</span> <span class="nc">GraphMatrixRepresented</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Matrix representation of Graph</span>
@@ -183,6 +184,7 @@
 <span class="sd">            &gt;&gt;&gt; print(graph1.vertices)</span>
 <span class="sd">            &gt;&gt;&gt; print(graph1.show_graph())</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vertices</span><span class="p">,</span> <span class="n">is_directed</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vertices</span> <span class="o">=</span> <span class="n">vertices</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">graph</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">vertices</span><span class="p">,</span> <span class="n">vertices</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
@@ -252,7 +254,7 @@
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;&lt;AKDSFramework.structure.graph.Vertex object </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> with neighbors: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">neighbors</span><span class="si">}</span><span class="s2">&gt;&quot;</span></div>
 
-    
+
 <div class="viewcode-block" id="GraphDictionaryRepresented"><a class="viewcode-back" href="../../../AKDSFramework.structure.html#AKDSFramework.structure.graph.GraphDictionaryRepresented">[docs]</a><span class="k">class</span> <span class="nc">GraphDictionaryRepresented</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Dictionary representation of Graph</span>
@@ -268,10 +270,11 @@
 <span class="sd">            &gt;&gt;&gt; print(g.BFS(&#39;1&#39;))</span>
 <span class="sd">            &gt;&gt;&gt; print(g.DFS(&#39;1&#39;))</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vertices</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">number_of_vertices</span> <span class="o">=</span> <span class="mi">0</span>
-    
+
 <div class="viewcode-block" id="GraphDictionaryRepresented.register_vertex"><a class="viewcode-back" href="../../../AKDSFramework.structure.html#AKDSFramework.structure.graph.GraphDictionaryRepresented.register_vertex">[docs]</a>    <span class="k">def</span> <span class="nf">register_vertex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vertex</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Register a vertex in the graph</span>
@@ -297,7 +300,7 @@
                 <span class="k">return</span> <span class="kc">True</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="k">return</span> <span class="kc">False</span></div>
-        
+
 <div class="viewcode-block" id="GraphDictionaryRepresented.prettyprint"><a class="viewcode-back" href="../../../AKDSFramework.structure.html#AKDSFramework.structure.graph.GraphDictionaryRepresented.prettyprint">[docs]</a>    <span class="k">def</span> <span class="nf">prettyprint</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">vertices</span><span class="o">.</span><span class="n">keys</span><span class="p">())):</span>
             <span class="nb">print</span><span class="p">(</span><span class="n">key</span> <span class="o">+</span> <span class="s1">&#39; -&gt; &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">vertices</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">neighbors</span><span class="p">))</span></div>
@@ -347,9 +350,9 @@
                 <span class="k">if</span> <span class="n">color</span><span class="p">[</span><span class="n">adjacent_vertex</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;W&#39;</span><span class="p">:</span>
                     <span class="n">parent</span><span class="p">[</span><span class="n">adjacent_vertex</span><span class="p">]</span> <span class="o">=</span> <span class="n">source</span>
                     <span class="n">dfs</span><span class="p">(</span><span class="n">adjacent_vertex</span><span class="p">)</span>
-            
+
             <span class="n">color</span><span class="p">[</span><span class="n">source</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;B&#39;</span>
-        
+
         <span class="n">dfs</span><span class="p">(</span><span class="n">startFromVertex</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">traversal_table</span></div></div>
 </pre></div>
