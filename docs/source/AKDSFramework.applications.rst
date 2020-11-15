@@ -8,6 +8,18 @@ Subpackages
 
     AKDSFramework.applications.sorting
 
+Submodules
+----------
+
+AKDSFramework.applications.search module
+----------------------------------------
+
+.. automodule:: AKDSFramework.applications.search
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
 Module contents
 ---------------
 

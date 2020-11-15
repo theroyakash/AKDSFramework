@@ -182,6 +182,51 @@
 </ul>
 </div>
 </div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-AKDSFramework.applications.search">
+<span id="akdsframework-applications-search-module"></span><h2>AKDSFramework.applications.search module<a class="headerlink" href="#module-AKDSFramework.applications.search" title="Permalink to this headline">¶</a></h2>
+<p>AKDSFramework searching package. Implements Linear, Binary Search</p>
+<dl class="function">
+<dt id="AKDSFramework.applications.search.binarysearch">
+<code class="descclassname">AKDSFramework.applications.search.</code><code class="descname">binarysearch</code><span class="sig-paren">(</span><em>array: list</em>, <em>target: any</em>, <em>require_sorting=False</em><span class="sig-paren">)</span> &#x2192; any<a class="reference internal" href="_modules/AKDSFramework/applications/search.html#binarysearch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.applications.search.binarysearch" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Binary search implementation. Use only when your array is sorted. Pass in <code class="docutils literal notranslate"><span class="pre">require_sorting</span></code> as <code class="docutils literal notranslate"><span class="pre">True</span></code> to sort on the fly.</dt>
+<dd><dl class="first last docutils">
+<dt>Args:</dt>
+<dd><ul class="first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">array</span></code> (list): Search space</li>
+<li><code class="docutils literal notranslate"><span class="pre">target</span></code> (any): Value of the target that you want to search</li>
+</ul>
+</dd>
+<dt>Returns:</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">True</span></code> if element found else <code class="docutils literal notranslate"><span class="pre">False</span></code></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="AKDSFramework.applications.search.linearsearch">
+<code class="descclassname">AKDSFramework.applications.search.</code><code class="descname">linearsearch</code><span class="sig-paren">(</span><em>array: list</em>, <em>target: any</em><span class="sig-paren">)</span> &#x2192; any<a class="reference internal" href="_modules/AKDSFramework/applications/search.html#linearsearch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.applications.search.linearsearch" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Implementation of linear search. Use only when your array is not sorted. If you have a sorted array use binary search instead.Running time <span class="math notranslate nohighlight">\(O(N)\)</span></dt>
+<dd><dl class="first last docutils">
+<dt>Args:</dt>
+<dd><ul class="first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">array</span></code> (list): List of any data type</li>
+<li><code class="docutils literal notranslate"><span class="pre">target</span></code> (any): Value of the target that you want to search</li>
+</ul>
+</dd>
+<dt>Returns:</dt>
+<dd>None if no element found or dictionary of {index, target} of the element where it’s found</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
 <div class="section" id="module-AKDSFramework.applications">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-AKDSFramework.applications" title="Permalink to this headline">¶</a></h2>
 </div>

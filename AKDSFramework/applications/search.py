@@ -4,8 +4,7 @@ AKDSFramework searching package. Implements Linear, Binary Search
 
 def linearsearch(array: list, target: any) -> any:
     r"""
-    Implementation of linear search. Use only when your array is not sorted. If you have a sorted array use binary search instead
-    Running time :math:`O(N)`
+    Implementation of linear search. Use only when your array is not sorted. If you have a sorted array use binary search instead.Running time :math:`O(N)`
         Args:
             - ``array`` (list): List of any data type
             - ``target`` (any): Value of the target that you want to search
