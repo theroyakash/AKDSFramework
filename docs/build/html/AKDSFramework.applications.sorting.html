@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html4" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -26,11 +26,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -176,14 +176,16 @@
 </div>
 <div class="section" id="module-AKDSFramework.applications.sorting.sort">
 <span id="akdsframework-applications-sorting-sort-module"></span><h2>AKDSFramework.applications.sorting.sort module<a class="headerlink" href="#module-AKDSFramework.applications.sorting.sort" title="Permalink to this headline">¶</a></h2>
-<dl class="py function">
+<dl class="function">
 <dt id="AKDSFramework.applications.sorting.sort.bubblesort">
-<code class="sig-prename descclassname">AKDSFramework.applications.sorting.sort.</code><code class="sig-name descname">bubblesort</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">array</span></em>, <em class="sig-param"><span class="n">vizualize</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">maintain_iter_dict</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/applications/sorting/sort.html#bubblesort"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.applications.sorting.sort.bubblesort" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>Bubble sort algorithm, has worst case as performance <span class="math notranslate nohighlight">\(O(n^2)\)</span></dt><dd><dl class="simple">
-<dt>Args:</dt><dd><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">array</span></code> (list): List of elements</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vizualize</span></code> (bool): Marked as False by default. If you want to vizualize set this as True</p></li>
+<code class="descclassname">AKDSFramework.applications.sorting.sort.</code><code class="descname">bubblesort</code><span class="sig-paren">(</span><em>array</em>, <em>vizualize=False</em>, <em>maintain_iter_dict=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/applications/sorting/sort.html#bubblesort"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.applications.sorting.sort.bubblesort" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Bubble sort algorithm, has worst case as performance <span class="math notranslate nohighlight">\(O(n^2)\)</span></dt>
+<dd><dl class="first last docutils">
+<dt>Args:</dt>
+<dd><ul class="first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">array</span></code> (list): List of elements</li>
+<li><code class="docutils literal notranslate"><span class="pre">vizualize</span></code> (bool): Marked as False by default. If you want to vizualize set this as True</li>
 </ul>
 </dd>
 </dl>
@@ -191,14 +193,16 @@
 </dl>
 </dd></dl>
 
-<dl class="py function">
+<dl class="function">
 <dt id="AKDSFramework.applications.sorting.sort.heapsort">
-<code class="sig-prename descclassname">AKDSFramework.applications.sorting.sort.</code><code class="sig-name descname">heapsort</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">array</span></em>, <em class="sig-param"><span class="n">visualize</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/applications/sorting/sort.html#heapsort"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.applications.sorting.sort.heapsort" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>Heapsort implementation with min heap from AKDSFramework. Running time: <span class="math notranslate nohighlight">\(O(N \log (n))\)</span></dt><dd><dl class="simple">
-<dt>Args:</dt><dd><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">array</span></code> (list): List of elements</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vizualize</span></code> (bool): Marked as False by default. If you want to vizualize set this as True</p></li>
+<code class="descclassname">AKDSFramework.applications.sorting.sort.</code><code class="descname">heapsort</code><span class="sig-paren">(</span><em>array</em>, <em>visualize=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/applications/sorting/sort.html#heapsort"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.applications.sorting.sort.heapsort" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Heapsort implementation with min heap from AKDSFramework. Running time: <span class="math notranslate nohighlight">\(O(N \log (n))\)</span></dt>
+<dd><dl class="first last docutils">
+<dt>Args:</dt>
+<dd><ul class="first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">array</span></code> (list): List of elements</li>
+<li><code class="docutils literal notranslate"><span class="pre">vizualize</span></code> (bool): Marked as False by default. If you want to vizualize set this as True</li>
 </ul>
 </dd>
 </dl>
@@ -206,14 +210,16 @@
 </dl>
 </dd></dl>
 
-<dl class="py function">
+<dl class="function">
 <dt id="AKDSFramework.applications.sorting.sort.insertionsort">
-<code class="sig-prename descclassname">AKDSFramework.applications.sorting.sort.</code><code class="sig-name descname">insertionsort</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">array</span></em>, <em class="sig-param"><span class="n">vizualize</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">maintain_iter_dict</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/applications/sorting/sort.html#insertionsort"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.applications.sorting.sort.insertionsort" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>Insertion Sort method for sorting. Takes <span class="math notranslate nohighlight">\(O(N^2)\)</span> time in the worst case.</dt><dd><dl class="simple">
-<dt>Args:</dt><dd><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">array</span></code> (list): List of elements</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vizualize</span></code> (bool): Marked as False by default. If you want to vizualize set this as True</p></li>
+<code class="descclassname">AKDSFramework.applications.sorting.sort.</code><code class="descname">insertionsort</code><span class="sig-paren">(</span><em>array</em>, <em>vizualize=False</em>, <em>maintain_iter_dict=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/applications/sorting/sort.html#insertionsort"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.applications.sorting.sort.insertionsort" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Insertion Sort method for sorting. Takes <span class="math notranslate nohighlight">\(O(N^2)\)</span> time in the worst case.</dt>
+<dd><dl class="first last docutils">
+<dt>Args:</dt>
+<dd><ul class="first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">array</span></code> (list): List of elements</li>
+<li><code class="docutils literal notranslate"><span class="pre">vizualize</span></code> (bool): Marked as False by default. If you want to vizualize set this as True</li>
 </ul>
 </dd>
 </dl>
@@ -221,13 +227,15 @@
 </dl>
 </dd></dl>
 
-<dl class="py function">
+<dl class="function">
 <dt id="AKDSFramework.applications.sorting.sort.merge_sort">
-<code class="sig-prename descclassname">AKDSFramework.applications.sorting.sort.</code><code class="sig-name descname">merge_sort</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">array</span><span class="p">:</span> <span class="n">list</span></em><span class="sig-paren">)</span> &#x2192; list<a class="reference internal" href="_modules/AKDSFramework/applications/sorting/sort.html#merge_sort"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.applications.sorting.sort.merge_sort" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>Given an array sorts the array with merge sort. Performance: <span class="math notranslate nohighlight">\(O(N \log (n))\)</span></dt><dd><dl class="simple">
-<dt>Args:</dt><dd><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">array</span></code> (list): List of comparable datatypes</p></li>
+<code class="descclassname">AKDSFramework.applications.sorting.sort.</code><code class="descname">merge_sort</code><span class="sig-paren">(</span><em>array: list</em><span class="sig-paren">)</span> &#x2192; list<a class="reference internal" href="_modules/AKDSFramework/applications/sorting/sort.html#merge_sort"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.applications.sorting.sort.merge_sort" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Given an array sorts the array with merge sort. Performance: <span class="math notranslate nohighlight">\(O(N \log (n))\)</span></dt>
+<dd><dl class="first last docutils">
+<dt>Args:</dt>
+<dd><ul class="first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">array</span></code> (list): List of comparable datatypes</li>
 </ul>
 </dd>
 </dl>
@@ -235,14 +243,16 @@
 </dl>
 </dd></dl>
 
-<dl class="py function">
+<dl class="function">
 <dt id="AKDSFramework.applications.sorting.sort.quicksort">
-<code class="sig-prename descclassname">AKDSFramework.applications.sorting.sort.</code><code class="sig-name descname">quicksort</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">array</span><span class="p">:</span> <span class="n">list</span></em>, <em class="sig-param"><span class="n">inplace</span><span class="p">:</span> <span class="n">bool</span></em><span class="sig-paren">)</span> &#x2192; list<a class="reference internal" href="_modules/AKDSFramework/applications/sorting/sort.html#quicksort"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.applications.sorting.sort.quicksort" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>Quick sort algorithm. Runs recursively. Performance: <span class="math notranslate nohighlight">\(O(N \log (n))\)</span></dt><dd><dl class="simple">
-<dt>Args:</dt><dd><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">array</span></code> (list): List of data that you want sorted.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">inplace</span></code> (bool): Set this to true if you have space constraints</p></li>
+<code class="descclassname">AKDSFramework.applications.sorting.sort.</code><code class="descname">quicksort</code><span class="sig-paren">(</span><em>array: list</em>, <em>inplace: bool</em><span class="sig-paren">)</span> &#x2192; list<a class="reference internal" href="_modules/AKDSFramework/applications/sorting/sort.html#quicksort"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.applications.sorting.sort.quicksort" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Quick sort algorithm. Runs recursively. Performance: <span class="math notranslate nohighlight">\(O(N \log (n))\)</span></dt>
+<dd><dl class="first last docutils">
+<dt>Args:</dt>
+<dd><ul class="first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">array</span></code> (list): List of data that you want sorted.</li>
+<li><code class="docutils literal notranslate"><span class="pre">inplace</span></code> (bool): Set this to true if you have space constraints</li>
 </ul>
 </dd>
 </dl>

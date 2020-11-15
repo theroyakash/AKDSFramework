@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html4" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -26,11 +26,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -173,24 +173,26 @@
 </div>
 <div class="section" id="module-AKDSFramework.structure.dictionary">
 <span id="akdsframework-structure-dictionary-module"></span><h2>AKDSFramework.structure.dictionary module<a class="headerlink" href="#module-AKDSFramework.structure.dictionary" title="Permalink to this headline">¶</a></h2>
-<dl class="py class">
+<dl class="class">
 <dt id="AKDSFramework.structure.dictionary.Hash">
-<em class="property">class </em><code class="sig-prename descclassname">AKDSFramework.structure.dictionary.</code><code class="sig-name descname">Hash</code><a class="reference internal" href="_modules/AKDSFramework/structure/dictionary.html#Hash"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.dictionary.Hash" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">AKDSFramework.structure.dictionary.</code><code class="descname">Hash</code><a class="reference internal" href="_modules/AKDSFramework/structure/dictionary.html#Hash"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.dictionary.Hash" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Hash object class.</p>
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.dictionary.Hash.hash">
-<code class="sig-name descname">hash</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/dictionary.html#Hash.hash"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.dictionary.Hash.hash" title="Permalink to this definition">¶</a></dt>
+<code class="descname">hash</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/dictionary.html#Hash.hash"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.dictionary.Hash.hash" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.dictionary.Hash.include">
-<code class="sig-name descname">include</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/dictionary.html#Hash.include"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.dictionary.Hash.include" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>Include a new key-value pair in your already existing hash table.</dt><dd><dl class="simple">
-<dt>Args:</dt><dd><ul class="simple">
-<li><p>key (str): Any thing can be your key</p></li>
-<li><p>value (Any): Mention the value associated with your particular key</p></li>
+<code class="descname">include</code><span class="sig-paren">(</span><em>key</em>, <em>value</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/dictionary.html#Hash.include"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.dictionary.Hash.include" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Include a new key-value pair in your already existing hash table.</dt>
+<dd><dl class="first last docutils">
+<dt>Args:</dt>
+<dd><ul class="first last simple">
+<li>key (str): Any thing can be your key</li>
+<li>value (Any): Mention the value associated with your particular key</li>
 </ul>
 </dd>
 </dl>
@@ -198,13 +200,15 @@
 </dl>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.dictionary.Hash.removeFor">
-<code class="sig-name descname">removeFor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/dictionary.html#Hash.removeFor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.dictionary.Hash.removeFor" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>Remove value associated with some key.</dt><dd><dl class="simple">
-<dt>Args:</dt><dd><ul class="simple">
-<li><p>key (str): Mention the key for which you want to delete the value.</p></li>
+<code class="descname">removeFor</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/dictionary.html#Hash.removeFor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.dictionary.Hash.removeFor" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Remove value associated with some key.</dt>
+<dd><dl class="first last docutils">
+<dt>Args:</dt>
+<dd><ul class="first last simple">
+<li>key (str): Mention the key for which you want to delete the value.</li>
 </ul>
 </dd>
 </dl>
@@ -212,13 +216,15 @@
 </dl>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.dictionary.Hash.searchFor">
-<code class="sig-name descname">searchFor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/dictionary.html#Hash.searchFor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.dictionary.Hash.searchFor" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>Search for a given key.</dt><dd><dl class="simple">
-<dt>Args:</dt><dd><ul class="simple">
-<li><p>key (str): Any thing can be your key. Mention the key you want to search for the value associated with it.</p></li>
+<code class="descname">searchFor</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/dictionary.html#Hash.searchFor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.dictionary.Hash.searchFor" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Search for a given key.</dt>
+<dd><dl class="first last docutils">
+<dt>Args:</dt>
+<dd><ul class="first last simple">
+<li>key (str): Any thing can be your key. Mention the key you want to search for the value associated with it.</li>
 </ul>
 </dd>
 </dl>
@@ -228,22 +234,24 @@
 
 </dd></dl>
 
-<dl class="py class">
+<dl class="class">
 <dt id="AKDSFramework.structure.dictionary.Node">
-<em class="property">class </em><code class="sig-prename descclassname">AKDSFramework.structure.dictionary.</code><code class="sig-name descname">Node</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/dictionary.html#Node"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.dictionary.Node" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">AKDSFramework.structure.dictionary.</code><code class="descname">Node</code><span class="sig-paren">(</span><em>key</em>, <em>value</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/dictionary.html#Node"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.dictionary.Node" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 </dd></dl>
 
 </div>
 <div class="section" id="module-AKDSFramework.structure.graph">
 <span id="akdsframework-structure-graph-module"></span><h2>AKDSFramework.structure.graph module<a class="headerlink" href="#module-AKDSFramework.structure.graph" title="Permalink to this headline">¶</a></h2>
-<dl class="py class">
+<dl class="class">
 <dt id="AKDSFramework.structure.graph.GraphDictionaryRepresented">
-<em class="property">class </em><code class="sig-prename descclassname">AKDSFramework.structure.graph.</code><code class="sig-name descname">GraphDictionaryRepresented</code><a class="reference internal" href="_modules/AKDSFramework/structure/graph.html#GraphDictionaryRepresented"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.graph.GraphDictionaryRepresented" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">AKDSFramework.structure.graph.</code><code class="descname">GraphDictionaryRepresented</code><a class="reference internal" href="_modules/AKDSFramework/structure/graph.html#GraphDictionaryRepresented"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.graph.GraphDictionaryRepresented" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl>
-<dt>Dictionary representation of Graph</dt><dd><dl>
-<dt>Examples:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">AKDSFramework.structure.graph</span> <span class="kn">import</span> <span class="n">Vertex</span>
+<dl class="docutils">
+<dt>Dictionary representation of Graph</dt>
+<dd><dl class="first last docutils">
+<dt>Examples:</dt>
+<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">AKDSFramework.structure.graph</span> <span class="kn">import</span> <span class="n">Vertex</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">g</span> <span class="o">=</span> <span class="n">GraphDictionaryRepresented</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="n">g</span><span class="o">.</span><span class="n">register_vertex</span><span class="p">(</span><span class="n">Vertex</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
@@ -259,56 +267,59 @@
 </dl>
 </dd>
 </dl>
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.graph.GraphDictionaryRepresented.BFS">
-<code class="sig-name descname">BFS</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">startFromVertex</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/graph.html#GraphDictionaryRepresented.BFS"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.graph.GraphDictionaryRepresented.BFS" title="Permalink to this definition">¶</a></dt>
+<code class="descname">BFS</code><span class="sig-paren">(</span><em>startFromVertex</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/graph.html#GraphDictionaryRepresented.BFS"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.graph.GraphDictionaryRepresented.BFS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.graph.GraphDictionaryRepresented.DFS">
-<code class="sig-name descname">DFS</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">startFromVertex</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/graph.html#GraphDictionaryRepresented.DFS"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.graph.GraphDictionaryRepresented.DFS" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DFS</code><span class="sig-paren">(</span><em>startFromVertex</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/graph.html#GraphDictionaryRepresented.DFS"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.graph.GraphDictionaryRepresented.DFS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.graph.GraphDictionaryRepresented.prettyprint">
-<code class="sig-name descname">prettyprint</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/graph.html#GraphDictionaryRepresented.prettyprint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.graph.GraphDictionaryRepresented.prettyprint" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prettyprint</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/graph.html#GraphDictionaryRepresented.prettyprint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.graph.GraphDictionaryRepresented.prettyprint" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.graph.GraphDictionaryRepresented.raw_dict">
-<code class="sig-name descname">raw_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/graph.html#GraphDictionaryRepresented.raw_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.graph.GraphDictionaryRepresented.raw_dict" title="Permalink to this definition">¶</a></dt>
+<code class="descname">raw_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/graph.html#GraphDictionaryRepresented.raw_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.graph.GraphDictionaryRepresented.raw_dict" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.graph.GraphDictionaryRepresented.register_edge">
-<code class="sig-name descname">register_edge</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">init</span></em>, <em class="sig-param"><span class="n">stop</span></em>, <em class="sig-param"><span class="n">weight</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">directed</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/graph.html#GraphDictionaryRepresented.register_edge"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.graph.GraphDictionaryRepresented.register_edge" title="Permalink to this definition">¶</a></dt>
+<code class="descname">register_edge</code><span class="sig-paren">(</span><em>init</em>, <em>stop</em>, <em>weight=1</em>, <em>directed=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/graph.html#GraphDictionaryRepresented.register_edge"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.graph.GraphDictionaryRepresented.register_edge" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.graph.GraphDictionaryRepresented.register_vertex">
-<code class="sig-name descname">register_vertex</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vertex</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/graph.html#GraphDictionaryRepresented.register_vertex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.graph.GraphDictionaryRepresented.register_vertex" title="Permalink to this definition">¶</a></dt>
+<code class="descname">register_vertex</code><span class="sig-paren">(</span><em>vertex</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/graph.html#GraphDictionaryRepresented.register_vertex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.graph.GraphDictionaryRepresented.register_vertex" title="Permalink to this definition">¶</a></dt>
 <dd><p>Register a vertex in the graph</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="py class">
+<dl class="class">
 <dt id="AKDSFramework.structure.graph.GraphMatrixRepresented">
-<em class="property">class </em><code class="sig-prename descclassname">AKDSFramework.structure.graph.</code><code class="sig-name descname">GraphMatrixRepresented</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vertices</span></em>, <em class="sig-param"><span class="n">is_directed</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/graph.html#GraphMatrixRepresented"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.graph.GraphMatrixRepresented" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">AKDSFramework.structure.graph.</code><code class="descname">GraphMatrixRepresented</code><span class="sig-paren">(</span><em>vertices</em>, <em>is_directed=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/graph.html#GraphMatrixRepresented"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.graph.GraphMatrixRepresented" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl>
-<dt>Matrix representation of Graph</dt><dd><dl>
-<dt>Args:</dt><dd><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">vertices</span></code> (int): Number of total vertices in the graph</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">is_directed</span></code> (Bool): Expects directed or not directed graph. Defaults to not directed graph.</p></li>
+<dl class="docutils">
+<dt>Matrix representation of Graph</dt>
+<dd><dl class="first last docutils">
+<dt>Args:</dt>
+<dd><ul class="first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">vertices</span></code> (int): Number of total vertices in the graph</li>
+<li><code class="docutils literal notranslate"><span class="pre">is_directed</span></code> (Bool): Expects directed or not directed graph. Defaults to not directed graph.</li>
 </ul>
 </dd>
-<dt>Space Complexity:</dt><dd><p>Space complexity for graphs represented with adjacenecy matrix is <span class="math notranslate nohighlight">\(O(V^2)\)</span> where <span class="math notranslate nohighlight">\(V\)</span> is number
+<dt>Space Complexity:</dt>
+<dd>Space complexity for graphs represented with adjacenecy matrix is <span class="math notranslate nohighlight">\(O(V^2)\)</span> where <span class="math notranslate nohighlight">\(V\)</span> is number
 of vertices. Use this method of representation only when your graph is dense. Number of edges <span class="math notranslate nohighlight">\(|E| ≥ V^2\)</span>
 Else a lot of zeros will be placed inside the matrix which won’t be that efficient space wise. For sparse matrix
-use <code class="docutils literal notranslate"><span class="pre">GraphDictionaryRepresented</span></code> instead of <code class="docutils literal notranslate"><span class="pre">GraphMatrixRepresented</span></code>.</p>
-</dd>
-<dt>Examples::</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">AKDSFramework.structure.graph</span> <span class="kn">import</span> <span class="n">GraphMatrixRepresented</span>
+use <code class="docutils literal notranslate"><span class="pre">GraphDictionaryRepresented</span></code> instead of <code class="docutils literal notranslate"><span class="pre">GraphMatrixRepresented</span></code>.</dd>
+<dt>Examples::</dt>
+<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">AKDSFramework.structure.graph</span> <span class="kn">import</span> <span class="n">GraphMatrixRepresented</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">graph1</span> <span class="o">=</span> <span class="n">GraphMatrixRepresented</span><span class="p">(</span><span class="n">vertices</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">is_directed</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># Now add few edges with random weights</span>
@@ -330,15 +341,17 @@ use <code class="docutils literal notranslate"><span class="pre">GraphDictionary
 </dl>
 </dd>
 </dl>
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.graph.GraphMatrixRepresented.add_edge_between">
-<code class="sig-name descname">add_edge_between</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">start</span></em>, <em class="sig-param"><span class="n">end</span></em>, <em class="sig-param"><span class="n">weight</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/graph.html#GraphMatrixRepresented.add_edge_between"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.graph.GraphMatrixRepresented.add_edge_between" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>Adds edge between two points in a graph. If the graph is not directed then one edge b/w start and end and one b/w end and start will be added which has the same weight.</dt><dd><dl class="simple">
-<dt>Args:</dt><dd><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (int): Starting Index where the edge starts</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">end</span></code> (int): Ending index where the edge ends</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (float or int): Weight of the edge</p></li>
+<code class="descname">add_edge_between</code><span class="sig-paren">(</span><em>start</em>, <em>end</em>, <em>weight</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/graph.html#GraphMatrixRepresented.add_edge_between"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.graph.GraphMatrixRepresented.add_edge_between" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Adds edge between two points in a graph. If the graph is not directed then one edge b/w start and end and one b/w end and start will be added which has the same weight.</dt>
+<dd><dl class="first last docutils">
+<dt>Args:</dt>
+<dd><ul class="first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">start</span></code> (int): Starting Index where the edge starts</li>
+<li><code class="docutils literal notranslate"><span class="pre">end</span></code> (int): Ending index where the edge ends</li>
+<li><code class="docutils literal notranslate"><span class="pre">weight</span></code> (float or int): Weight of the edge</li>
 </ul>
 </dd>
 </dl>
@@ -346,24 +359,27 @@ use <code class="docutils literal notranslate"><span class="pre">GraphDictionary
 </dl>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.graph.GraphMatrixRepresented.count_edges">
-<code class="sig-name descname">count_edges</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/graph.html#GraphMatrixRepresented.count_edges"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.graph.GraphMatrixRepresented.count_edges" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>Returns:</dt><dd><ul class="simple">
-<li><p>Total edge count</p></li>
+<code class="descname">count_edges</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/graph.html#GraphMatrixRepresented.count_edges"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.graph.GraphMatrixRepresented.count_edges" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Returns:</dt>
+<dd><ul class="first last simple">
+<li>Total edge count</li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.graph.GraphMatrixRepresented.show_graph">
-<code class="sig-name descname">show_graph</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/graph.html#GraphMatrixRepresented.show_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.graph.GraphMatrixRepresented.show_graph" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>Shows the graph as a 2D Numpy matrix. Alternatively you can use the <code class="docutils literal notranslate"><span class="pre">print()</span></code> method to show the graph.</dt><dd><dl class="simple">
-<dt>Returns:</dt><dd><ul class="simple">
-<li><p>Numpy 2D array showing the graph.</p></li>
+<code class="descname">show_graph</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/graph.html#GraphMatrixRepresented.show_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.graph.GraphMatrixRepresented.show_graph" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Shows the graph as a 2D Numpy matrix. Alternatively you can use the <code class="docutils literal notranslate"><span class="pre">print()</span></code> method to show the graph.</dt>
+<dd><dl class="first last docutils">
+<dt>Returns:</dt>
+<dd><ul class="first last simple">
+<li>Numpy 2D array showing the graph.</li>
 </ul>
 </dd>
 </dl>
@@ -373,13 +389,13 @@ use <code class="docutils literal notranslate"><span class="pre">GraphDictionary
 
 </dd></dl>
 
-<dl class="py class">
+<dl class="class">
 <dt id="AKDSFramework.structure.graph.Vertex">
-<em class="property">class </em><code class="sig-prename descclassname">AKDSFramework.structure.graph.</code><code class="sig-name descname">Vertex</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/graph.html#Vertex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.graph.Vertex" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">AKDSFramework.structure.graph.</code><code class="descname">Vertex</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/graph.html#Vertex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.graph.Vertex" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.graph.Vertex.add_neighbor">
-<code class="sig-name descname">add_neighbor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">v</span></em>, <em class="sig-param"><span class="n">weight</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/graph.html#Vertex.add_neighbor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.graph.Vertex.add_neighbor" title="Permalink to this definition">¶</a></dt>
+<code class="descname">add_neighbor</code><span class="sig-paren">(</span><em>v</em>, <em>weight</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/graph.html#Vertex.add_neighbor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.graph.Vertex.add_neighbor" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -391,39 +407,43 @@ use <code class="docutils literal notranslate"><span class="pre">GraphDictionary
 &#64;author: theroyakash</p>
 <p>Heaps are advanced data structures and are mostly implemented using priority queues.
 They can be thought of as a tree-based structure, in which the tree is a complete binary tree.</p>
-<dl class="simple">
-<dt>The 2 main characteristics of Heaps are the followings</dt><dd><ul class="simple">
-<li><p>It should be a completely binary tree</p></li>
-<li><p>Nodes must be according to the min-max order property</p></li>
+<dl class="docutils">
+<dt>The 2 main characteristics of Heaps are the followings</dt>
+<dd><ul class="first last simple">
+<li>It should be a completely binary tree</li>
+<li>Nodes must be according to the min-max order property</li>
 </ul>
 </dd>
 </dl>
-<dl class="py class">
+<dl class="class">
 <dt id="AKDSFramework.structure.heap.Heap">
-<em class="property">class </em><code class="sig-prename descclassname">AKDSFramework.structure.heap.</code><code class="sig-name descname">Heap</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">array</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/heap.html#Heap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.heap.Heap" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">AKDSFramework.structure.heap.</code><code class="descname">Heap</code><span class="sig-paren">(</span><em>array</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/heap.html#Heap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.heap.Heap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Base Heap class</p>
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.heap.Heap.add">
-<code class="sig-name descname">add</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/heap.html#Heap.add"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.heap.Heap.add" title="Permalink to this definition">¶</a></dt>
+<code class="descname">add</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/heap.html#Heap.add"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.heap.Heap.add" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.heap.Heap.delete_root">
-<code class="sig-name descname">delete_root</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/heap.html#Heap.delete_root"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.heap.Heap.delete_root" title="Permalink to this definition">¶</a></dt>
+<code class="descname">delete_root</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/heap.html#Heap.delete_root"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.heap.Heap.delete_root" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.heap.Heap.get_left_child">
-<code class="sig-name descname">get_left_child</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">i</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/heap.html#Heap.get_left_child"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.heap.Heap.get_left_child" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>Get right child’s index for parent i</dt><dd><dl class="simple">
-<dt>Args:</dt><dd><ul class="simple">
-<li><p>i (int): Index whose left child’s index you want</p></li>
+<code class="descname">get_left_child</code><span class="sig-paren">(</span><em>i</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/heap.html#Heap.get_left_child"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.heap.Heap.get_left_child" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Get right child’s index for parent i</dt>
+<dd><dl class="first last docutils">
+<dt>Args:</dt>
+<dd><ul class="first last simple">
+<li>i (int): Index whose left child’s index you want</li>
 </ul>
 </dd>
-<dt>Returns:</dt><dd><ul class="simple">
-<li><p>Returns the right child of any node, if not possible returns None</p></li>
+<dt>Returns:</dt>
+<dd><ul class="first last simple">
+<li>Returns the right child of any node, if not possible returns None</li>
 </ul>
 </dd>
 </dl>
@@ -431,17 +451,20 @@ They can be thought of as a tree-based structure, in which the tree is a complet
 </dl>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.heap.Heap.get_right_child">
-<code class="sig-name descname">get_right_child</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">i</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/heap.html#Heap.get_right_child"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.heap.Heap.get_right_child" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>Get right child for index i</dt><dd><dl class="simple">
-<dt>Args:</dt><dd><ul class="simple">
-<li><p>i (int): Index whose right child you want</p></li>
+<code class="descname">get_right_child</code><span class="sig-paren">(</span><em>i</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/heap.html#Heap.get_right_child"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.heap.Heap.get_right_child" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Get right child for index i</dt>
+<dd><dl class="first last docutils">
+<dt>Args:</dt>
+<dd><ul class="first last simple">
+<li>i (int): Index whose right child you want</li>
 </ul>
 </dd>
-<dt>Returns:</dt><dd><ul class="simple">
-<li><p>Returns the right child of any node, if not possible returns None</p></li>
+<dt>Returns:</dt>
+<dd><ul class="first last simple">
+<li>Returns the right child of any node, if not possible returns None</li>
 </ul>
 </dd>
 </dl>
@@ -449,13 +472,15 @@ They can be thought of as a tree-based structure, in which the tree is a complet
 </dl>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.heap.Heap.get_root">
-<code class="sig-name descname">get_root</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/heap.html#Heap.get_root"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.heap.Heap.get_root" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>Returning the root node value of the max heap in O(1) time.</dt><dd><dl class="simple">
-<dt>Returns:</dt><dd><ul class="simple">
-<li><p>The root node which is the maximum value in the heap.</p></li>
+<code class="descname">get_root</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/heap.html#Heap.get_root"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.heap.Heap.get_root" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Returning the root node value of the max heap in O(1) time.</dt>
+<dd><dl class="first last docutils">
+<dt>Returns:</dt>
+<dd><ul class="first last simple">
+<li>The root node which is the maximum value in the heap.</li>
 </ul>
 </dd>
 </dl>
@@ -463,47 +488,47 @@ They can be thought of as a tree-based structure, in which the tree is a complet
 </dl>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.heap.Heap.prettyprint">
-<code class="sig-name descname">prettyprint</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/heap.html#Heap.prettyprint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.heap.Heap.prettyprint" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prettyprint</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/heap.html#Heap.prettyprint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.heap.Heap.prettyprint" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-<dl class="py class">
+<dl class="class">
 <dt id="AKDSFramework.structure.heap.MaxHeap">
-<em class="property">class </em><code class="sig-prename descclassname">AKDSFramework.structure.heap.</code><code class="sig-name descname">MaxHeap</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">array</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/heap.html#MaxHeap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.heap.MaxHeap" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">AKDSFramework.structure.heap.</code><code class="descname">MaxHeap</code><span class="sig-paren">(</span><em>array</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/heap.html#MaxHeap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.heap.MaxHeap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#AKDSFramework.structure.heap.Heap" title="AKDSFramework.structure.heap.Heap"><code class="xref py py-class docutils literal notranslate"><span class="pre">AKDSFramework.structure.heap.Heap</span></code></a></p>
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.heap.MaxHeap.build">
-<code class="sig-name descname">build</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/heap.html#MaxHeap.build"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.heap.MaxHeap.build" title="Permalink to this definition">¶</a></dt>
+<code class="descname">build</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/heap.html#MaxHeap.build"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.heap.MaxHeap.build" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build operation is called when the heap violates the heap property, Such as
 during adding new element at the end of heap with .add() method or initializing the heap
 for the first time. This takes O(log N) time.</p>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.heap.MaxHeap.heapify">
-<code class="sig-name descname">heapify</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">index</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/heap.html#MaxHeap.heapify"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.heap.MaxHeap.heapify" title="Permalink to this definition">¶</a></dt>
+<code class="descname">heapify</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/heap.html#MaxHeap.heapify"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.heap.MaxHeap.heapify" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-<dl class="py class">
+<dl class="class">
 <dt id="AKDSFramework.structure.heap.MinHeap">
-<em class="property">class </em><code class="sig-prename descclassname">AKDSFramework.structure.heap.</code><code class="sig-name descname">MinHeap</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">array</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/heap.html#MinHeap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.heap.MinHeap" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">AKDSFramework.structure.heap.</code><code class="descname">MinHeap</code><span class="sig-paren">(</span><em>array</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/heap.html#MinHeap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.heap.MinHeap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#AKDSFramework.structure.heap.Heap" title="AKDSFramework.structure.heap.Heap"><code class="xref py py-class docutils literal notranslate"><span class="pre">AKDSFramework.structure.heap.Heap</span></code></a></p>
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.heap.MinHeap.build">
-<code class="sig-name descname">build</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/heap.html#MinHeap.build"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.heap.MinHeap.build" title="Permalink to this definition">¶</a></dt>
+<code class="descname">build</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/heap.html#MinHeap.build"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.heap.MinHeap.build" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build operation is called when the heap violates the heap property, Such as
 during adding new element at the end of heap with .add() method or initializing the heap
 for the first time. This takes O(log N) time.</p>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.heap.MinHeap.heapify">
-<code class="sig-name descname">heapify</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">index</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/heap.html#MinHeap.heapify"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.heap.MinHeap.heapify" title="Permalink to this definition">¶</a></dt>
+<code class="descname">heapify</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/heap.html#MinHeap.heapify"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.heap.MinHeap.heapify" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -514,25 +539,33 @@ for the first time. This takes O(log N) time.</p>
 <p>This is the beginning of Linked list data structure module.
 We currently support singly linked list and doubly linked list.</p>
 <p>&#64;author: theroyakash</p>
-<dl class="py class">
+<dl class="class">
+<dt id="AKDSFramework.structure.linkedlist.DoublyNode">
+<em class="property">class </em><code class="descclassname">AKDSFramework.structure.linkedlist.</code><code class="descname">DoublyNode</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/linkedlist.html#DoublyNode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.linkedlist.DoublyNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
 <dt id="AKDSFramework.structure.linkedlist.Node">
-<em class="property">class </em><code class="sig-prename descclassname">AKDSFramework.structure.linkedlist.</code><code class="sig-name descname">Node</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/linkedlist.html#Node"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.linkedlist.Node" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">AKDSFramework.structure.linkedlist.</code><code class="descname">Node</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/linkedlist.html#Node"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.linkedlist.Node" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 </dd></dl>
 
-<dl class="py class">
+<dl class="class">
 <dt id="AKDSFramework.structure.linkedlist.SinglyLinkedList">
-<em class="property">class </em><code class="sig-prename descclassname">AKDSFramework.structure.linkedlist.</code><code class="sig-name descname">SinglyLinkedList</code><a class="reference internal" href="_modules/AKDSFramework/structure/linkedlist.html#SinglyLinkedList"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.linkedlist.SinglyLinkedList" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">AKDSFramework.structure.linkedlist.</code><code class="descname">SinglyLinkedList</code><a class="reference internal" href="_modules/AKDSFramework/structure/linkedlist.html#SinglyLinkedList"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.linkedlist.SinglyLinkedList" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.linkedlist.SinglyLinkedList.add">
-<code class="sig-name descname">add</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em>, <em class="sig-param"><span class="n">at_end</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">position</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/linkedlist.html#SinglyLinkedList.add"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.linkedlist.SinglyLinkedList.add" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>Adds any element to the linked list</dt><dd><dl class="simple">
-<dt>Args:</dt><dd><ul class="simple">
-<li><p>value (Any): Put in the value you want to add.</p></li>
-<li><p>at_end (bool): If you want to add to the end of the list leave this blank. Defaults to adding at the end.</p></li>
-<li><p>position (int): If you choose <code class="docutils literal notranslate"><span class="pre">at_end</span></code> = False then add the position where you want to add new value.</p></li>
+<code class="descname">add</code><span class="sig-paren">(</span><em>value</em>, <em>at_end=True</em>, <em>position=0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/linkedlist.html#SinglyLinkedList.add"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.linkedlist.SinglyLinkedList.add" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Adds any element to the linked list</dt>
+<dd><dl class="first last docutils">
+<dt>Args:</dt>
+<dd><ul class="first last simple">
+<li>value (Any): Put in the value you want to add.</li>
+<li>at_end (bool): If you want to add to the end of the list leave this blank. Defaults to adding at the end.</li>
+<li>position (int): If you choose <code class="docutils literal notranslate"><span class="pre">at_end</span></code> = False then add the position where you want to add new value.</li>
 </ul>
 </dd>
 </dl>
@@ -540,13 +573,15 @@ We currently support singly linked list and doubly linked list.</p>
 </dl>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.linkedlist.SinglyLinkedList.count">
-<code class="sig-name descname">count</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/linkedlist.html#SinglyLinkedList.count"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.linkedlist.SinglyLinkedList.count" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>Get the size of the linked list. How many Nodes are there in the linked list.</dt><dd><dl class="simple">
-<dt>Returns:</dt><dd><ul class="simple">
-<li><p>The number of nodes in the linked list.</p></li>
+<code class="descname">count</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/linkedlist.html#SinglyLinkedList.count"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.linkedlist.SinglyLinkedList.count" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Get the size of the linked list. How many Nodes are there in the linked list.</dt>
+<dd><dl class="first last docutils">
+<dt>Returns:</dt>
+<dd><ul class="first last simple">
+<li>The number of nodes in the linked list.</li>
 </ul>
 </dd>
 </dl>
@@ -554,13 +589,15 @@ We currently support singly linked list and doubly linked list.</p>
 </dl>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.linkedlist.SinglyLinkedList.get_head">
-<code class="sig-name descname">get_head</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/linkedlist.html#SinglyLinkedList.get_head"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.linkedlist.SinglyLinkedList.get_head" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>Get the head node value of the linked list</dt><dd><dl class="simple">
-<dt>Returns:</dt><dd><ul class="simple">
-<li><p>The node value for the head</p></li>
+<code class="descname">get_head</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/linkedlist.html#SinglyLinkedList.get_head"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.linkedlist.SinglyLinkedList.get_head" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Get the head node value of the linked list</dt>
+<dd><dl class="first last docutils">
+<dt>Returns:</dt>
+<dd><ul class="first last simple">
+<li>The node value for the head</li>
 </ul>
 </dd>
 </dl>
@@ -568,13 +605,15 @@ We currently support singly linked list and doubly linked list.</p>
 </dl>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.linkedlist.SinglyLinkedList.isEmpty">
-<code class="sig-name descname">isEmpty</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/linkedlist.html#SinglyLinkedList.isEmpty"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.linkedlist.SinglyLinkedList.isEmpty" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>Checks if linked list is empty or not.</dt><dd><dl class="simple">
-<dt>Returns:</dt><dd><ul class="simple">
-<li><p>Bool: Return True if linkedlist is empty else False.</p></li>
+<code class="descname">isEmpty</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/linkedlist.html#SinglyLinkedList.isEmpty"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.linkedlist.SinglyLinkedList.isEmpty" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Checks if linked list is empty or not.</dt>
+<dd><dl class="first last docutils">
+<dt>Returns:</dt>
+<dd><ul class="first last simple">
+<li>Bool: Return True if linkedlist is empty else False.</li>
 </ul>
 </dd>
 </dl>
@@ -582,18 +621,20 @@ We currently support singly linked list and doubly linked list.</p>
 </dl>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.linkedlist.SinglyLinkedList.prettyprint">
-<code class="sig-name descname">prettyprint</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/linkedlist.html#SinglyLinkedList.prettyprint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.linkedlist.SinglyLinkedList.prettyprint" title="Permalink to this definition">¶</a></dt>
+<code class="descname">prettyprint</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/linkedlist.html#SinglyLinkedList.prettyprint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.linkedlist.SinglyLinkedList.prettyprint" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.linkedlist.SinglyLinkedList.removeAt">
-<code class="sig-name descname">removeAt</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">index</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/linkedlist.html#SinglyLinkedList.removeAt"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.linkedlist.SinglyLinkedList.removeAt" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>Remove any node from linked list</dt><dd><dl class="simple">
-<dt>Returns:</dt><dd><ul class="simple">
-<li><p>value (Any): returns the value at the node</p></li>
+<code class="descname">removeAt</code><span class="sig-paren">(</span><em>index=0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/linkedlist.html#SinglyLinkedList.removeAt"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.linkedlist.SinglyLinkedList.removeAt" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Remove any node from linked list</dt>
+<dd><dl class="first last docutils">
+<dt>Returns:</dt>
+<dd><ul class="first last simple">
+<li>value (Any): returns the value at the node</li>
 </ul>
 </dd>
 </dl>
@@ -606,32 +647,36 @@ We currently support singly linked list and doubly linked list.</p>
 </div>
 <div class="section" id="module-AKDSFramework.structure.queue">
 <span id="akdsframework-structure-queue-module"></span><h2>AKDSFramework.structure.queue module<a class="headerlink" href="#module-AKDSFramework.structure.queue" title="Permalink to this headline">¶</a></h2>
-<dl class="py class">
+<dl class="class">
 <dt id="AKDSFramework.structure.queue.ArrayQueue">
-<em class="property">class </em><code class="sig-prename descclassname">AKDSFramework.structure.queue.</code><code class="sig-name descname">ArrayQueue</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">capacity</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/queue.html#ArrayQueue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.queue.ArrayQueue" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">AKDSFramework.structure.queue.</code><code class="descname">ArrayQueue</code><span class="sig-paren">(</span><em>capacity</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/queue.html#ArrayQueue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.queue.ArrayQueue" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#AKDSFramework.structure.queue.QueueADT" title="AKDSFramework.structure.queue.QueueADT"><code class="xref py py-class docutils literal notranslate"><span class="pre">AKDSFramework.structure.queue.QueueADT</span></code></a></p>
-<dl class="simple">
-<dt>Intialize an Queue using Array</dt><dd><dl class="simple">
-<dt>Args:</dt><dd><ul class="simple">
-<li><p>capacity (int): Creates a None value static array with specified capacity.</p></li>
+<dl class="docutils">
+<dt>Intialize an Queue using Array</dt>
+<dd><dl class="first last docutils">
+<dt>Args:</dt>
+<dd><ul class="first last simple">
+<li>capacity (int): Creates a None value static array with specified capacity.</li>
 </ul>
 </dd>
 </dl>
 </dd>
 </dl>
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.queue.ArrayQueue.dequeue">
-<code class="sig-name descname">dequeue</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/queue.html#ArrayQueue.dequeue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.queue.ArrayQueue.dequeue" title="Permalink to this definition">¶</a></dt>
+<code class="descname">dequeue</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/queue.html#ArrayQueue.dequeue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.queue.ArrayQueue.dequeue" title="Permalink to this definition">¶</a></dt>
 <dd><p>Dequeue from the beginning of the Queue following the FIFO policy</p>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.queue.ArrayQueue.enqueue">
-<code class="sig-name descname">enqueue</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/queue.html#ArrayQueue.enqueue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.queue.ArrayQueue.enqueue" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>Enqueue an element into the Queue Object</dt><dd><dl class="simple">
-<dt>Args:</dt><dd><ul class="simple">
-<li><p>value (Any): Pass in the object you want to enqueue</p></li>
+<code class="descname">enqueue</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/queue.html#ArrayQueue.enqueue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.queue.ArrayQueue.enqueue" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Enqueue an element into the Queue Object</dt>
+<dd><dl class="first last docutils">
+<dt>Args:</dt>
+<dd><ul class="first last simple">
+<li>value (Any): Pass in the object you want to enqueue</li>
 </ul>
 </dd>
 </dl>
@@ -639,36 +684,36 @@ We currently support singly linked list and doubly linked list.</p>
 </dl>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.queue.ArrayQueue.expand">
-<code class="sig-name descname">expand</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/queue.html#ArrayQueue.expand"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.queue.ArrayQueue.expand" title="Permalink to this definition">¶</a></dt>
+<code class="descname">expand</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/queue.html#ArrayQueue.expand"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.queue.ArrayQueue.expand" title="Permalink to this definition">¶</a></dt>
 <dd><p>Expands the size of the array with linear time complexity, Meant for usage in internal state. Don’t use this operation outside.</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="py class">
+<dl class="class">
 <dt id="AKDSFramework.structure.queue.QueueADT">
-<em class="property">class </em><code class="sig-prename descclassname">AKDSFramework.structure.queue.</code><code class="sig-name descname">QueueADT</code><a class="reference internal" href="_modules/AKDSFramework/structure/queue.html#QueueADT"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.queue.QueueADT" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">AKDSFramework.structure.queue.</code><code class="descname">QueueADT</code><a class="reference internal" href="_modules/AKDSFramework/structure/queue.html#QueueADT"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.queue.QueueADT" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.queue.QueueADT.dequeue">
-<code class="sig-name descname">dequeue</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/queue.html#QueueADT.dequeue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.queue.QueueADT.dequeue" title="Permalink to this definition">¶</a></dt>
+<code class="descname">dequeue</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/queue.html#QueueADT.dequeue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.queue.QueueADT.dequeue" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.queue.QueueADT.enqueue">
-<code class="sig-name descname">enqueue</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/queue.html#QueueADT.enqueue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.queue.QueueADT.enqueue" title="Permalink to this definition">¶</a></dt>
+<code class="descname">enqueue</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/queue.html#QueueADT.enqueue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.queue.QueueADT.enqueue" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.queue.QueueADT.isEmpty">
-<code class="sig-name descname">isEmpty</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/queue.html#QueueADT.isEmpty"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.queue.QueueADT.isEmpty" title="Permalink to this definition">¶</a></dt>
+<code class="descname">isEmpty</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/queue.html#QueueADT.isEmpty"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.queue.QueueADT.isEmpty" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.queue.QueueADT.peek">
-<code class="sig-name descname">peek</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/queue.html#QueueADT.peek"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.queue.QueueADT.peek" title="Permalink to this definition">¶</a></dt>
+<code class="descname">peek</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/queue.html#QueueADT.peek"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.queue.QueueADT.peek" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -676,37 +721,39 @@ We currently support singly linked list and doubly linked list.</p>
 </div>
 <div class="section" id="module-AKDSFramework.structure.stack">
 <span id="akdsframework-structure-stack-module"></span><h2>AKDSFramework.structure.stack module<a class="headerlink" href="#module-AKDSFramework.structure.stack" title="Permalink to this headline">¶</a></h2>
-<dl class="py class">
+<dl class="class">
 <dt id="AKDSFramework.structure.stack.ListBasedStack">
-<em class="property">class </em><code class="sig-prename descclassname">AKDSFramework.structure.stack.</code><code class="sig-name descname">ListBasedStack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">array</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/stack.html#ListBasedStack"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.stack.ListBasedStack" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">AKDSFramework.structure.stack.</code><code class="descname">ListBasedStack</code><span class="sig-paren">(</span><em>array=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/stack.html#ListBasedStack"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.stack.ListBasedStack" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.stack.ListBasedStack.clear">
-<code class="sig-name descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/stack.html#ListBasedStack.clear"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.stack.ListBasedStack.clear" title="Permalink to this definition">¶</a></dt>
+<code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/stack.html#ListBasedStack.clear"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.stack.ListBasedStack.clear" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.stack.ListBasedStack.clone">
-<code class="sig-name descname">clone</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/stack.html#ListBasedStack.clone"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.stack.ListBasedStack.clone" title="Permalink to this definition">¶</a></dt>
+<code class="descname">clone</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/stack.html#ListBasedStack.clone"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.stack.ListBasedStack.clone" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.stack.ListBasedStack.peek">
-<code class="sig-name descname">peek</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/stack.html#ListBasedStack.peek"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.stack.ListBasedStack.peek" title="Permalink to this definition">¶</a></dt>
+<code class="descname">peek</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/stack.html#ListBasedStack.peek"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.stack.ListBasedStack.peek" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.stack.ListBasedStack.pop">
-<code class="sig-name descname">pop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/stack.html#ListBasedStack.pop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.stack.ListBasedStack.pop" title="Permalink to this definition">¶</a></dt>
+<code class="descname">pop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/stack.html#ListBasedStack.pop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.stack.ListBasedStack.pop" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.stack.ListBasedStack.push">
-<code class="sig-name descname">push</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/stack.html#ListBasedStack.push"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.stack.ListBasedStack.push" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>Push data onto the stack.</dt><dd><dl class="simple">
-<dt>Args:</dt><dd><ul class="simple">
-<li><p>value (Any): Pass in the value you want to push</p></li>
+<code class="descname">push</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/stack.html#ListBasedStack.push"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.stack.ListBasedStack.push" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Push data onto the stack.</dt>
+<dd><dl class="first last docutils">
+<dt>Args:</dt>
+<dd><ul class="first last simple">
+<li>value (Any): Pass in the value you want to push</li>
 </ul>
 </dd>
 </dl>
@@ -714,24 +761,26 @@ We currently support singly linked list and doubly linked list.</p>
 </dl>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.stack.ListBasedStack.searchFor">
-<code class="sig-name descname">searchFor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">element</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/stack.html#ListBasedStack.searchFor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.stack.ListBasedStack.searchFor" title="Permalink to this definition">¶</a></dt>
+<code class="descname">searchFor</code><span class="sig-paren">(</span><em>element</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/stack.html#ListBasedStack.searchFor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.stack.ListBasedStack.searchFor" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-<dl class="py class">
+<dl class="class">
 <dt id="AKDSFramework.structure.stack.Stack">
-<em class="property">class </em><code class="sig-prename descclassname">AKDSFramework.structure.stack.</code><code class="sig-name descname">Stack</code><a class="reference internal" href="_modules/AKDSFramework/structure/stack.html#Stack"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.stack.Stack" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">AKDSFramework.structure.stack.</code><code class="descname">Stack</code><a class="reference internal" href="_modules/AKDSFramework/structure/stack.html#Stack"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.stack.Stack" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.stack.Stack.isEmpty">
-<code class="sig-name descname">isEmpty</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/stack.html#Stack.isEmpty"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.stack.Stack.isEmpty" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>Says whether the stack is empty or not</dt><dd><dl class="simple">
-<dt>Returns:</dt><dd><ul class="simple">
-<li><p>Bool: True if no elements in the stack else False.</p></li>
+<code class="descname">isEmpty</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/stack.html#Stack.isEmpty"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.stack.Stack.isEmpty" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Says whether the stack is empty or not</dt>
+<dd><dl class="first last docutils">
+<dt>Returns:</dt>
+<dd><ul class="first last simple">
+<li>Bool: True if no elements in the stack else False.</li>
 </ul>
 </dd>
 </dl>
@@ -739,13 +788,15 @@ We currently support singly linked list and doubly linked list.</p>
 </dl>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.stack.Stack.peak_top">
-<code class="sig-name descname">peak_top</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/stack.html#Stack.peak_top"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.stack.Stack.peak_top" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>Quickly peak at the very top of the stack</dt><dd><dl class="simple">
-<dt>Returns:</dt><dd><ul class="simple">
-<li><p>The top most element of the stack</p></li>
+<code class="descname">peak_top</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/stack.html#Stack.peak_top"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.stack.Stack.peak_top" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Quickly peak at the very top of the stack</dt>
+<dd><dl class="first last docutils">
+<dt>Returns:</dt>
+<dd><ul class="first last simple">
+<li>The top most element of the stack</li>
 </ul>
 </dd>
 </dl>
@@ -753,13 +804,15 @@ We currently support singly linked list and doubly linked list.</p>
 </dl>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.stack.Stack.pop">
-<code class="sig-name descname">pop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/stack.html#Stack.pop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.stack.Stack.pop" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>pops out the last value from the stack.</dt><dd><dl class="simple">
-<dt>Returns:</dt><dd><ul class="simple">
-<li><p>Element that just popped off the stack</p></li>
+<code class="descname">pop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/stack.html#Stack.pop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.stack.Stack.pop" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>pops out the last value from the stack.</dt>
+<dd><dl class="first last docutils">
+<dt>Returns:</dt>
+<dd><ul class="first last simple">
+<li>Element that just popped off the stack</li>
 </ul>
 </dd>
 </dl>
@@ -767,13 +820,14 @@ We currently support singly linked list and doubly linked list.</p>
 </dl>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="AKDSFramework.structure.stack.Stack.push">
-<code class="sig-name descname">push</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/stack.html#Stack.push"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.stack.Stack.push" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>Push some value on to the stack</dt><dd><dl class="simple">
-<dt>Args:</dt><dd><p>value (Any): Any value you want to push to the stack.</p>
-</dd>
+<code class="descname">push</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/stack.html#Stack.push"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.stack.Stack.push" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Push some value on to the stack</dt>
+<dd><dl class="first last docutils">
+<dt>Args:</dt>
+<dd>value (Any): Any value you want to push to the stack.</dd>
 </dl>
 </dd>
 </dl>
