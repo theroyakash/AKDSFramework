@@ -190,3 +190,22 @@ class SinglyLinkedList:
             current = current.next
 
         print(''.join(array[:-1]))
+
+
+
+# Doubly Linked List
+
+class DoublyNode:
+    def __init__(self, value):
+        """
+        Individual node in a doubly linked list
+            Args:
+                - value (any): Value of the node
+        """
+        self.value = value
+        self.previous = None
+        self.next = None
+
+    def __str__(self):
+        return str(self.value)
+
