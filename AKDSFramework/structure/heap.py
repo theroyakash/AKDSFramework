@@ -137,7 +137,7 @@ class MaxHeap(Heap):
         r"""
         Build operation is called when the heap violates the heap property, Such as
         during adding new element at the end of heap with .add() method or initializing the heap
-        for the first time. Or deleting with ``delete_root()`` method. This takes upto :math:`O(\log N)` time per build.
+        for the first time. Or deleting with ``delete_root()`` method. This takes upto :math:`O (N * \log N)` time per build.
         """
         self.size = len(self.heap)
         self.heap = list(self.heap)
@@ -189,7 +189,7 @@ class MinHeap(Heap):
         r"""
         Build operation is called when the heap violates the heap property, Such as
         during adding new element at the end of heap with .add() method or initializing the heap
-        for the first time. Or deleting with ``delete_root()`` method. This takes upto :math:`O(\log N)` time per build.
+        for the first time. Or deleting with ``delete_root()`` method. This takes upto :math:`O (N * \log N)` time per build.
         """
         self.size = len(self.heap)
         self.heap = list(self.heap)
