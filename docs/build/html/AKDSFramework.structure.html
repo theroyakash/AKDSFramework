@@ -403,8 +403,7 @@ use <code class="docutils literal notranslate"><span class="pre">GraphDictionary
 </div>
 <div class="section" id="module-AKDSFramework.structure.heap">
 <span id="akdsframework-structure-heap-module"></span><h2>AKDSFramework.structure.heap module<a class="headerlink" href="#module-AKDSFramework.structure.heap" title="Permalink to this headline">¶</a></h2>
-<p>Heap Implementation
-&#64;author: theroyakash</p>
+<p>Heap Implementation</p>
 <p>Heaps are advanced data structures and are mostly implemented using priority queues.
 They can be thought of as a tree-based structure, in which the tree is a complete binary tree.</p>
 <dl class="docutils">
@@ -434,11 +433,11 @@ They can be thought of as a tree-based structure, in which the tree is a complet
 <dt id="AKDSFramework.structure.heap.Heap.get_left_child">
 <code class="descname">get_left_child</code><span class="sig-paren">(</span><em>i</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/heap.html#Heap.get_left_child"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.heap.Heap.get_left_child" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="docutils">
-<dt>Get right child’s index for parent i</dt>
+<dt>Get right child’s index for parent <code class="docutils literal notranslate"><span class="pre">i</span></code></dt>
 <dd><dl class="first last docutils">
 <dt>Args:</dt>
 <dd><ul class="first last simple">
-<li>i (int): Index whose left child’s index you want</li>
+<li><code class="docutils literal notranslate"><span class="pre">i</span></code> (int): Index whose left child’s index you want</li>
 </ul>
 </dd>
 <dt>Returns:</dt>
@@ -459,7 +458,7 @@ They can be thought of as a tree-based structure, in which the tree is a complet
 <dd><dl class="first last docutils">
 <dt>Args:</dt>
 <dd><ul class="first last simple">
-<li>i (int): Index whose right child you want</li>
+<li><code class="docutils literal notranslate"><span class="pre">i</span></code> (int): Index whose right child you want</li>
 </ul>
 </dd>
 <dt>Returns:</dt>
@@ -476,7 +475,7 @@ They can be thought of as a tree-based structure, in which the tree is a complet
 <dt id="AKDSFramework.structure.heap.Heap.get_root">
 <code class="descname">get_root</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/heap.html#Heap.get_root"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.heap.Heap.get_root" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="docutils">
-<dt>Returning the root node value of the max heap in O(1) time.</dt>
+<dt>Returning the root node value of the max heap in <span class="math notranslate nohighlight">\(O(1)\)</span> time.</dt>
 <dd><dl class="first last docutils">
 <dt>Returns:</dt>
 <dd><ul class="first last simple">
@@ -504,7 +503,7 @@ They can be thought of as a tree-based structure, in which the tree is a complet
 <code class="descname">build</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/heap.html#MaxHeap.build"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.heap.MaxHeap.build" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build operation is called when the heap violates the heap property, Such as
 during adding new element at the end of heap with .add() method or initializing the heap
-for the first time. This takes O(log N) time.</p>
+for the first time. Or deleting with <code class="docutils literal notranslate"><span class="pre">delete_root()</span></code> method. This takes upto <span class="math notranslate nohighlight">\(O(\log N)\)</span> time per build.</p>
 </dd></dl>
 
 <dl class="method">
@@ -523,7 +522,7 @@ for the first time. This takes O(log N) time.</p>
 <code class="descname">build</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/heap.html#MinHeap.build"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.heap.MinHeap.build" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build operation is called when the heap violates the heap property, Such as
 during adding new element at the end of heap with .add() method or initializing the heap
-for the first time. This takes O(log N) time.</p>
+for the first time. Or deleting with <code class="docutils literal notranslate"><span class="pre">delete_root()</span></code> method. This takes upto <span class="math notranslate nohighlight">\(O(\log N)\)</span> time per build.</p>
 </dd></dl>
 
 <dl class="method">

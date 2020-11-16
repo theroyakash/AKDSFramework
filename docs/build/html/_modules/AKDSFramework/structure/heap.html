@@ -150,7 +150,6 @@
   <h1>Source code for AKDSFramework.structure.heap</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">Heap Implementation</span>
-<span class="sd">@author: theroyakash</span>
 
 <span class="sd">Heaps are advanced data structures and are mostly implemented using priority queues.</span>
 <span class="sd">They can be thought of as a tree-based structure, in which the tree is a complete binary tree.</span>
@@ -190,8 +189,8 @@
             <span class="k">raise</span> <span class="n">HeapNotBuildError</span></div>
 
 <div class="viewcode-block" id="Heap.get_root"><a class="viewcode-back" href="../../../AKDSFramework.structure.html#AKDSFramework.structure.heap.Heap.get_root">[docs]</a>    <span class="k">def</span> <span class="nf">get_root</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Returning the root node value of the max heap in O(1) time.</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returning the root node value of the max heap in :math:`O(1)` time.</span>
 <span class="sd">            Returns:</span>
 <span class="sd">                - The root node which is the maximum value in the heap.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -205,7 +204,7 @@
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get right child for index i</span>
 <span class="sd">            Args:</span>
-<span class="sd">                - i (int): Index whose right child you want</span>
+<span class="sd">                - ``i`` (int): Index whose right child you want</span>
 <span class="sd">            Returns:</span>
 <span class="sd">                - Returns the right child of any node, if not possible returns None</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -217,9 +216,9 @@
 
 <div class="viewcode-block" id="Heap.get_left_child"><a class="viewcode-back" href="../../../AKDSFramework.structure.html#AKDSFramework.structure.heap.Heap.get_left_child">[docs]</a>    <span class="k">def</span> <span class="nf">get_left_child</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Get right child&#39;s index for parent i</span>
+<span class="sd">        Get right child&#39;s index for parent ``i``</span>
 <span class="sd">            Args:</span>
-<span class="sd">                - i (int): Index whose left child&#39;s index you want</span>
+<span class="sd">                - ``i`` (int): Index whose left child&#39;s index you want</span>
 <span class="sd">            Returns:</span>
 <span class="sd">                - Returns the right child of any node, if not possible returns None</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -240,35 +239,39 @@
 
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">built</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The MaxHeap has not built yet or may have changed after a successful build, consider using the .build() method to build the heap first.&#39;</span><span class="p">)</span>
-            <span class="k">raise</span> <span class="n">HeapNotBuildError</span>
+            <span class="k">raise</span> <span class="n">HeapNotBuildError</span><span class="p">(</span>
+                <span class="s1">&#39;The MaxHeap has not built yet or may have changed after a successful build, consider using the .build() method to build the heap first.&#39;</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">heap</span><span class="p">)</span>
 
 <div class="viewcode-block" id="Heap.prettyprint"><a class="viewcode-back" href="../../../AKDSFramework.structure.html#AKDSFramework.structure.heap.Heap.prettyprint">[docs]</a>    <span class="k">def</span> <span class="nf">prettyprint</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">table</span> <span class="o">=</span> <span class="p">[</span>
-            <span class="p">[</span><span class="s1">&#39;Head Node Value&#39;</span><span class="p">,</span> <span class="s1">&#39;left child&#39;</span><span class="p">,</span> <span class="s1">&#39;right child&#39;</span><span class="p">]</span>
-        <span class="p">]</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">built</span><span class="p">:</span>
+            <span class="n">table</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="p">[</span><span class="s1">&#39;Head Node Value&#39;</span><span class="p">,</span> <span class="s1">&#39;left child&#39;</span><span class="p">,</span> <span class="s1">&#39;right child&#39;</span><span class="p">]</span>
+            <span class="p">]</span>
 
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">heap</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">):</span>
-            <span class="n">entry</span> <span class="o">=</span> <span class="p">[]</span>
-            <span class="n">head</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">heap</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-            <span class="n">entry</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">head</span><span class="p">)</span>
-            <span class="k">try</span><span class="p">:</span>
-                <span class="n">lc</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">heap</span><span class="p">[</span><span class="n">i</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
-            <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
-                <span class="n">lc</span> <span class="o">=</span> <span class="s1">&#39;None&#39;</span>
-            <span class="k">try</span><span class="p">:</span>
-                <span class="n">rc</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">heap</span><span class="p">[</span><span class="n">i</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="p">]</span>
-            <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
-                <span class="n">rc</span> <span class="o">=</span> <span class="s1">&#39;None&#39;</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">heap</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">):</span>
+                <span class="n">entry</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="n">head</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">heap</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                <span class="n">entry</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">head</span><span class="p">)</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">lc</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">heap</span><span class="p">[</span><span class="n">i</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+                <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+                    <span class="n">lc</span> <span class="o">=</span> <span class="s1">&#39;None&#39;</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">rc</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">heap</span><span class="p">[</span><span class="n">i</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="p">]</span>
+                <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+                    <span class="n">rc</span> <span class="o">=</span> <span class="s1">&#39;None&#39;</span>
 
-            <span class="n">entry</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">lc</span><span class="p">))</span>
-            <span class="n">entry</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">rc</span><span class="p">))</span>
-            <span class="n">table</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
+                <span class="n">entry</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">lc</span><span class="p">))</span>
+                <span class="n">entry</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">rc</span><span class="p">))</span>
+                <span class="n">table</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
 
-        <span class="n">termtable</span> <span class="o">=</span> <span class="n">AsciiTable</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">termtable</span><span class="o">.</span><span class="n">table</span><span class="p">)</span></div></div>
+            <span class="n">termtable</span> <span class="o">=</span> <span class="n">AsciiTable</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">termtable</span><span class="o">.</span><span class="n">table</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">HeapNotBuildError</span><span class="p">(</span>
+                <span class="s1">&#39;The MaxHeap has not built yet or may have changed after a successful build, consider using the .build() method to build the heap first.&#39;</span><span class="p">)</span></div></div>
 
 
 <div class="viewcode-block" id="MaxHeap"><a class="viewcode-back" href="../../../AKDSFramework.structure.html#AKDSFramework.structure.heap.MaxHeap">[docs]</a><span class="k">class</span> <span class="nc">MaxHeap</span><span class="p">(</span><span class="n">Heap</span><span class="p">):</span>
@@ -281,10 +284,10 @@
         <span class="nb">super</span><span class="p">(</span><span class="n">MaxHeap</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">array</span><span class="p">)</span>
 
 <div class="viewcode-block" id="MaxHeap.build"><a class="viewcode-back" href="../../../AKDSFramework.structure.html#AKDSFramework.structure.heap.MaxHeap.build">[docs]</a>    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Build operation is called when the heap violates the heap property, Such as</span>
 <span class="sd">        during adding new element at the end of heap with .add() method or initializing the heap</span>
-<span class="sd">        for the first time. This takes O(log N) time.</span>
+<span class="sd">        for the first time. Or deleting with ``delete_root()`` method. This takes upto :math:`O(\log N)` time per build.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">heap</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">heap</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">heap</span><span class="p">)</span>
@@ -333,10 +336,10 @@
                 <span class="bp">self</span><span class="o">.</span><span class="n">heapify</span><span class="p">(</span><span class="n">smallest</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="MinHeap.build"><a class="viewcode-back" href="../../../AKDSFramework.structure.html#AKDSFramework.structure.heap.MinHeap.build">[docs]</a>    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Build operation is called when the heap violates the heap property, Such as</span>
 <span class="sd">        during adding new element at the end of heap with .add() method or initializing the heap</span>
-<span class="sd">        for the first time. This takes O(log N) time.</span>
+<span class="sd">        for the first time. Or deleting with ``delete_root()`` method. This takes upto :math:`O(\log N)` time per build.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">heap</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">heap</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">heap</span><span class="p">)</span>
