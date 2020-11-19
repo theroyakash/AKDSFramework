@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://github.iamroyakash.com/AKDSFramework-docs"><img src="https://i.imgur.com/uDSHEhr.png" alt="AKDSFramework" width="400"></a>
+  <a href="https://github.iamroyakash.com/AKDSFramework-docs"><img src="https://i.imgur.com/uDSHEhr.png" alt="AKDSFramework" width="800"></a>
   <br>
   AKDSFramework
   <br>
