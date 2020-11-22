@@ -138,6 +138,8 @@ class MaxHeap(Heap):
         Build operation is called when the heap violates the heap property, Such as
         during adding new element at the end of heap with .add() method or initializing the heap
         for the first time. Or deleting with ``delete_root()`` method. This takes upto :math:`O (N * \log N)` time per build.
+
+        Watch MIT 6.006 video on heap and heap sort to know more on build operations here https://youtu.be/B7hVxCmfPtM
         """
         self.size = len(self.heap)
         self.heap = list(self.heap)
@@ -151,6 +153,9 @@ class MaxHeap(Heap):
         self.built = True
 
     def heapify(self, index):
+        """
+        Correct a single violation of the heap property in subtree's root. Watch MIT 6.006 video on heap and heap sort to know more on build operations here https://youtu.be/B7hVxCmfPtM
+        """
         if index < self.size:
             largest = index
             left_child = self.get_left_child(index)
@@ -190,6 +195,8 @@ class MinHeap(Heap):
         Build operation is called when the heap violates the heap property, Such as
         during adding new element at the end of heap with .add() method or initializing the heap
         for the first time. Or deleting with ``delete_root()`` method. This takes upto :math:`O (N * \log N)` time per build.
+
+        Watch MIT 6.006 video on heap and heap sort to know more on build operations here https://youtu.be/B7hVxCmfPtM
         """
         self.size = len(self.heap)
         self.heap = list(self.heap)
