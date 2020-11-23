@@ -2,6 +2,7 @@ import cProfile
 import pstats
 import io
 
+
 def benchmark(func):
     """
     AKDSFramework default benchmark profiler. Implemented with cProfile and pstats.
@@ -19,8 +20,9 @@ def benchmark(func):
         print(stringIO.getvalue())
 
         return returnvalue
-    
+
     return profiler
+
 
 def cached(func):
     """
