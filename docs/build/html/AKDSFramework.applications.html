@@ -185,6 +185,22 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
+<div class="section" id="module-AKDSFramework.applications.decorators">
+<span id="akdsframework-applications-decorators-module"></span><h2>AKDSFramework.applications.decorators module<a class="headerlink" href="#module-AKDSFramework.applications.decorators" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="AKDSFramework.applications.decorators.benchmark">
+<code class="descclassname">AKDSFramework.applications.decorators.</code><code class="descname">benchmark</code><span class="sig-paren">(</span><em>func</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/applications/decorators.html#benchmark"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.applications.decorators.benchmark" title="Permalink to this definition">¶</a></dt>
+<dd><p>AKDSFramework default benchmark profiler. Implemented with cProfile and pstats.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="AKDSFramework.applications.decorators.cached">
+<code class="descclassname">AKDSFramework.applications.decorators.</code><code class="descname">cached</code><span class="sig-paren">(</span><em>func</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/applications/decorators.html#cached"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.applications.decorators.cached" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default caching decorator for AKDSFramework. Maintains a dictionary with hashable arguments to cache data.
+Ensures constant look-up time when cache hit occurs.</p>
+</dd></dl>
+
+</div>
 <div class="section" id="module-AKDSFramework.applications.search">
 <span id="akdsframework-applications-search-module"></span><h2>AKDSFramework.applications.search module<a class="headerlink" href="#module-AKDSFramework.applications.search" title="Permalink to this headline">¶</a></h2>
 <p>AKDSFramework searching package. Implements Linear, Binary Search</p>
@@ -221,6 +237,58 @@
 </dd>
 <dt>Returns:</dt>
 <dd>None if no element found or dictionary of {index, target} of the element where it’s found</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-AKDSFramework.applications.singlesourceshortestpath">
+<span id="akdsframework-applications-singlesourceshortestpath-module"></span><h2>AKDSFramework.applications.singlesourceshortestpath module<a class="headerlink" href="#module-AKDSFramework.applications.singlesourceshortestpath" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="AKDSFramework.applications.singlesourceshortestpath.compute_bellmanford">
+<code class="descclassname">AKDSFramework.applications.singlesourceshortestpath.</code><code class="descname">compute_bellmanford</code><span class="sig-paren">(</span><em>graph: AKDSFramework.structure.graph.GraphDictionaryRepresented</em>, <em>starting_vertex: str</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/applications/singlesourceshortestpath.html#compute_bellmanford"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.applications.singlesourceshortestpath.compute_bellmanford" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Computes single source shortest path algorithms using bellman ford algorithm</dt>
+<dd><dl class="first last docutils">
+<dt>Args:</dt>
+<dd><ul class="first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">graph</span></code> (GraphDictionaryRepresented): Graph you want to work on</li>
+<li><code class="docutils literal notranslate"><span class="pre">starting_vertex</span></code> (str): Starting Vertex of the graph to compute bellman ford</li>
+</ul>
+</dd>
+<dt>Algorithms:</dt>
+<dd><ul class="first last simple">
+<li>Prepare distance and predecessor for each node</li>
+<li>Relax all the edges <span class="math notranslate nohighlight">\(|V|-1\)</span> times</li>
+<li>Run the loop one more time to check for if there is any negative edge cycle.</li>
+</ul>
+</dd>
+<dt>Time complexity:</dt>
+<dd>Time complexity is <span class="math notranslate nohighlight">\(O(V * E)\)</span> where V is the number of vertices and E is the number of edges</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="AKDSFramework.applications.singlesourceshortestpath.compute_dijkstra">
+<code class="descclassname">AKDSFramework.applications.singlesourceshortestpath.</code><code class="descname">compute_dijkstra</code><span class="sig-paren">(</span><em>graph: AKDSFramework.structure.graph.GraphDictionaryRepresented</em>, <em>starting_vertex: str</em><span class="sig-paren">)</span> &#x2192; dict<a class="reference internal" href="_modules/AKDSFramework/applications/singlesourceshortestpath.html#compute_dijkstra"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.applications.singlesourceshortestpath.compute_dijkstra" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Computes dijkstra single source shortest path algorithm. Requires GraphDictionaryRepresented dictionary build with Vertex class.</dt>
+<dd><dl class="first last docutils">
+<dt>Args:</dt>
+<dd><ul class="first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">graph</span></code> (GraphDictionaryRepresented): Graph on which you want to operate</li>
+<li><code class="docutils literal notranslate"><span class="pre">starting_vertex</span></code>: Starting vertex name in a string.</li>
+</ul>
+</dd>
+<dt>Time complexity:</dt>
+<dd>Building distances dictionary takes <span class="math notranslate nohighlight">\(O(V)\)</span> time. The while loop is executed once for every entry that gets added to the priority queue (Min Heap). 
+An entry can only be added when we explore an edge, so there are at most <span class="math notranslate nohighlight">\(O(E)\)</span> iterations of the while loop.
+The for loop is executed at most once for every vertex, since the <code class="docutils literal notranslate"><span class="pre">current_distance</span> <span class="pre">&gt;</span> <span class="pre">distances[current_vertex]</span></code> check ensures that we only process a vertex once.
+The for loop iterates over outgoing edges, so among all iterations of the while loop, the body of the for loop executes at most <span class="math notranslate nohighlight">\(O(E)\)</span> times.
+Finally, if we consider that each priority queue operation (adding or removing an entry) is <span class="math notranslate nohighlight">\(O(\log E)\)</span>, we can say the total running time is <span class="math notranslate nohighlight">\(O(V + E \log E)\)</span>.</dd>
 </dl>
 </dd>
 </dl>

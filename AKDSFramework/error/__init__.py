@@ -1,2 +1,2 @@
 from .error import HeapNotBuildError, NotFoundError, InvalidOperationError
-from .error import EmptyStackError, BadVertexTypeError
+from .error import EmptyStackError, BadVertexTypeError, NegativeEdgeCycleWarning

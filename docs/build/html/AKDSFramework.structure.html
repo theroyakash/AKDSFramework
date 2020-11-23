@@ -248,7 +248,7 @@
 <em class="property">class </em><code class="descclassname">AKDSFramework.structure.graph.</code><code class="descname">GraphDictionaryRepresented</code><a class="reference internal" href="_modules/AKDSFramework/structure/graph.html#GraphDictionaryRepresented"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.graph.GraphDictionaryRepresented" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="docutils">
-<dt>Dictionary representation of Graph</dt>
+<dt>Dictionary representation of Graph. Total storage space <span class="math notranslate nohighlight">\(O(V+E)\)</span>.</dt>
 <dd><dl class="first last docutils">
 <dt>Examples:</dt>
 <dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">AKDSFramework.structure.graph</span> <span class="kn">import</span> <span class="n">Vertex</span>
@@ -503,13 +503,16 @@ They can be thought of as a tree-based structure, in which the tree is a complet
 <code class="descname">build</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/heap.html#MaxHeap.build"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.heap.MaxHeap.build" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build operation is called when the heap violates the heap property, Such as
 during adding new element at the end of heap with .add() method or initializing the heap
-for the first time. Or deleting with <code class="docutils literal notranslate"><span class="pre">delete_root()</span></code> method. This takes upto <span class="math notranslate nohighlight">\(O (N * \log N)\)</span> time per build.</p>
+for the first time. Or deleting with <code class="docutils literal notranslate"><span class="pre">delete_root()</span></code> method. This takes upto <span class="math notranslate nohighlight">\(O (N)\)</span> time per build.</p>
+<p>Watch MIT 6.006 video on heap and heap sort to know more on build operations here <a class="reference external" href="https://youtu.be/B7hVxCmfPtM">https://youtu.be/B7hVxCmfPtM</a></p>
 </dd></dl>
 
 <dl class="method">
 <dt id="AKDSFramework.structure.heap.MaxHeap.heapify">
 <code class="descname">heapify</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/heap.html#MaxHeap.heapify"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.heap.MaxHeap.heapify" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Correct a single violation of the heap property in subtree’s root. This takes upto order <span class="math notranslate nohighlight">\(O(\log n)\)</span> time.
+Watch MIT 6.006 video on heap and heap sort to know more on build operations here <a class="reference external" href="https://youtu.be/B7hVxCmfPtM">https://youtu.be/B7hVxCmfPtM</a></p>
+</dd></dl>
 
 </dd></dl>
 
@@ -521,8 +524,9 @@ for the first time. Or deleting with <code class="docutils literal notranslate">
 <dt id="AKDSFramework.structure.heap.MinHeap.build">
 <code class="descname">build</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AKDSFramework/structure/heap.html#MinHeap.build"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#AKDSFramework.structure.heap.MinHeap.build" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build operation is called when the heap violates the heap property, Such as
-during adding new element at the end of heap with .add() method or initializing the heap
-for the first time. Or deleting with <code class="docutils literal notranslate"><span class="pre">delete_root()</span></code> method. This takes upto <span class="math notranslate nohighlight">\(O (N * \log N)\)</span> time per build.</p>
+during adding new element at the end of heap with <cite>.add()</cite> method or initializing the heap
+for the first time. Or deleting with <code class="docutils literal notranslate"><span class="pre">delete_root()</span></code> method. This takes <span class="math notranslate nohighlight">\(O (N)\)</span> time per build.</p>
+<p>Watch MIT 6.006 video on heap and heap sort to know more on build operations here <a class="reference external" href="https://youtu.be/B7hVxCmfPtM">https://youtu.be/B7hVxCmfPtM</a></p>
 </dd></dl>
 
 <dl class="method">

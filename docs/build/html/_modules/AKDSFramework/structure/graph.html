@@ -256,8 +256,8 @@
 
 
 <div class="viewcode-block" id="GraphDictionaryRepresented"><a class="viewcode-back" href="../../../AKDSFramework.structure.html#AKDSFramework.structure.graph.GraphDictionaryRepresented">[docs]</a><span class="k">class</span> <span class="nc">GraphDictionaryRepresented</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Dictionary representation of Graph</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Dictionary representation of Graph. Total storage space :math:`O(V+E)`.</span>
 <span class="sd">        Examples:</span>
 <span class="sd">            &gt;&gt;&gt; from AKDSFramework.structure.graph import Vertex</span>
 <span class="sd">            &gt;&gt;&gt; g = GraphDictionaryRepresented()</span>
@@ -287,7 +287,7 @@
             <span class="k">raise</span> <span class="n">BadVertexTypeError</span></div>
 
 <div class="viewcode-block" id="GraphDictionaryRepresented.register_edge"><a class="viewcode-back" href="../../../AKDSFramework.structure.html#AKDSFramework.structure.graph.GraphDictionaryRepresented.register_edge">[docs]</a>    <span class="k">def</span> <span class="nf">register_edge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">init</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">directed</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">directed</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">directed</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">init</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">vertices</span> <span class="ow">and</span> <span class="n">stop</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">vertices</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">vertices</span><span class="p">[</span><span class="n">init</span><span class="p">]</span><span class="o">.</span><span class="n">add_neighbor</span><span class="p">(</span><span class="n">stop</span><span class="p">,</span> <span class="n">weight</span><span class="p">)</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">vertices</span><span class="p">[</span><span class="n">stop</span><span class="p">]</span><span class="o">.</span><span class="n">add_neighbor</span><span class="p">(</span><span class="n">init</span><span class="p">,</span> <span class="n">weight</span><span class="p">)</span>

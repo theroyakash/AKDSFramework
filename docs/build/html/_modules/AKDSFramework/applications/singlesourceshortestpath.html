@@ -1,0 +1,277 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>AKDSFramework.applications.singlesourceshortestpath &mdash; AKDSFramework 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home" alt="Documentation Home"> AKDSFramework
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">AKDSFramework</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">AKDSFramework</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>AKDSFramework.applications.singlesourceshortestpath</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for AKDSFramework.applications.singlesourceshortestpath</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">AKDSFramework.structure.graph</span> <span class="kn">import</span> <span class="n">GraphDictionaryRepresented</span><span class="p">,</span> <span class="n">Vertex</span>
+<span class="kn">from</span> <span class="nn">AKDSFramework.structure.heap</span> <span class="kn">import</span> <span class="n">MinHeap</span>
+<span class="kn">from</span> <span class="nn">AKDSFramework.error</span> <span class="kn">import</span> <span class="n">NegativeEdgeCycleWarning</span>
+
+<span class="c1"># We&#39;ll use minheap for maintaining min priority queue and getting the next smallest edge.</span>
+<div class="viewcode-block" id="compute_dijkstra"><a class="viewcode-back" href="../../../AKDSFramework.applications.html#AKDSFramework.applications.singlesourceshortestpath.compute_dijkstra">[docs]</a><span class="k">def</span> <span class="nf">compute_dijkstra</span><span class="p">(</span><span class="n">graph</span><span class="p">:</span> <span class="n">GraphDictionaryRepresented</span><span class="p">,</span> <span class="n">starting_vertex</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Computes dijkstra single source shortest path algorithm. Requires GraphDictionaryRepresented dictionary build with Vertex class.</span>
+<span class="sd">        Args:</span>
+<span class="sd">            - ``graph`` (GraphDictionaryRepresented): Graph on which you want to operate</span>
+<span class="sd">            -  ``starting_vertex``: Starting vertex name in a string.</span>
+<span class="sd">        Time complexity:</span>
+<span class="sd">            Building distances dictionary takes :math:`O(V)` time. The while loop is executed once for every entry that gets added to the priority queue (Min Heap). </span>
+<span class="sd">            An entry can only be added when we explore an edge, so there are at most :math:`O(E)` iterations of the while loop.</span>
+<span class="sd">            The for loop is executed at most once for every vertex, since the ``current_distance &gt; distances[current_vertex]`` check ensures that we only process a vertex once.</span>
+<span class="sd">            The for loop iterates over outgoing edges, so among all iterations of the while loop, the body of the for loop executes at most :math:`O(E)` times.</span>
+<span class="sd">            Finally, if we consider that each priority queue operation (adding or removing an entry) is :math:`O(\log E)`, we can say the total running time is :math:`O(V + E \log E)`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Set distance from current vertex to all vertex as inf</span>
+    <span class="n">distances</span> <span class="o">=</span> <span class="p">{</span><span class="n">vertex</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;infinity&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">vertex</span> <span class="ow">in</span> <span class="n">graph</span><span class="o">.</span><span class="n">vertices</span><span class="p">}</span>
+    <span class="c1"># Set distances from the starting vertex to starting vertex as 0</span>
+    <span class="n">distances</span><span class="p">[</span><span class="n">starting_vertex</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c1"># Now make and maintain a min priority queue</span>
+    <span class="n">prQueue</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="n">starting_vertex</span><span class="p">)]</span>
+    <span class="n">prQueue</span> <span class="o">=</span> <span class="n">MinHeap</span><span class="p">(</span><span class="n">prQueue</span><span class="p">)</span>
+    <span class="n">prQueue</span><span class="o">.</span><span class="n">build</span><span class="p">()</span>   <span class="c1"># O(V)</span>
+
+    <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">prQueue</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">current_distance</span><span class="p">,</span> <span class="n">current_vertex</span> <span class="o">=</span> <span class="n">prQueue</span><span class="o">.</span><span class="n">delete_root</span><span class="p">()</span>
+        <span class="n">prQueue</span><span class="o">.</span><span class="n">build</span><span class="p">()</span>
+        
+        <span class="k">if</span> <span class="n">current_distance</span> <span class="o">&gt;</span> <span class="n">distances</span><span class="p">[</span><span class="n">current_vertex</span><span class="p">]:</span>
+            <span class="k">continue</span>
+
+        <span class="k">for</span> <span class="n">adjacent_vertex</span> <span class="ow">in</span> <span class="n">graph</span><span class="o">.</span><span class="n">vertices</span><span class="p">[</span><span class="n">current_vertex</span><span class="p">]</span><span class="o">.</span><span class="n">neighbors</span><span class="p">:</span>
+            <span class="n">distance</span> <span class="o">=</span> <span class="n">current_distance</span> <span class="o">+</span> <span class="n">adjacent_vertex</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># adjacent_vertex[1] is the weight</span>
+
+            <span class="k">if</span> <span class="n">distance</span> <span class="o">&lt;</span> <span class="n">distances</span><span class="p">[</span><span class="n">adjacent_vertex</span><span class="p">[</span><span class="mi">0</span><span class="p">]]:</span>
+                <span class="n">distances</span><span class="p">[</span><span class="n">adjacent_vertex</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="n">distance</span>
+                <span class="n">prQueue</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">distance</span><span class="p">,</span> <span class="n">adjacent_vertex</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+                <span class="n">prQueue</span><span class="o">.</span><span class="n">build</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">distances</span></div>
+
+<div class="viewcode-block" id="compute_bellmanford"><a class="viewcode-back" href="../../../AKDSFramework.applications.html#AKDSFramework.applications.singlesourceshortestpath.compute_bellmanford">[docs]</a><span class="k">def</span> <span class="nf">compute_bellmanford</span><span class="p">(</span><span class="n">graph</span><span class="p">:</span> <span class="n">GraphDictionaryRepresented</span><span class="p">,</span> <span class="n">starting_vertex</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Computes single source shortest path algorithms using bellman ford algorithm</span>
+<span class="sd">        Args:</span>
+<span class="sd">            - ``graph`` (GraphDictionaryRepresented): Graph you want to work on</span>
+<span class="sd">            - ``starting_vertex`` (str): Starting Vertex of the graph to compute bellman ford</span>
+
+<span class="sd">        Algorithms:</span>
+<span class="sd">            - Prepare distance and predecessor for each node</span>
+<span class="sd">            - Relax all the edges :math:`|V|-1` times</span>
+<span class="sd">            - Run the loop one more time to check for if there is any negative edge cycle.</span>
+
+<span class="sd">        Time complexity:</span>
+<span class="sd">            Time complexity is :math:`O(V * E)` where V is the number of vertices and E is the number of edges</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">distances</span> <span class="o">=</span> <span class="p">{</span><span class="n">vertex</span> <span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;infinity&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">vertex</span> <span class="ow">in</span> <span class="n">graph</span><span class="o">.</span><span class="n">vertices</span><span class="p">}</span>
+    <span class="n">distances</span><span class="p">[</span><span class="n">starting_vertex</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c1"># Run relaxation of edges for |V| - 1 times</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">graph</span><span class="o">.</span><span class="n">number_of_vertices</span><span class="p">):</span>
+        <span class="c1"># Go through each edge and relax them</span>
+        <span class="k">for</span> <span class="n">vertex</span> <span class="ow">in</span> <span class="n">graph</span><span class="o">.</span><span class="n">vertices</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">adjacent_vertex</span> <span class="ow">in</span> <span class="n">graph</span><span class="o">.</span><span class="n">vertices</span><span class="p">[</span><span class="n">vertex</span><span class="p">]</span><span class="o">.</span><span class="n">neighbors</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">distances</span><span class="p">[</span><span class="n">adjacent_vertex</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">&gt;</span> <span class="n">distances</span><span class="p">[</span><span class="n">vertex</span><span class="p">]</span> <span class="o">+</span> <span class="n">adjacent_vertex</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+                    <span class="n">distances</span><span class="p">[</span><span class="n">adjacent_vertex</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="n">distances</span><span class="p">[</span><span class="n">vertex</span><span class="p">]</span> <span class="o">+</span> <span class="n">adjacent_vertex</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="c1"># Run this one more time to check if there is more relaxation then raise Negative edge Warning</span>
+    <span class="k">for</span> <span class="n">vertex</span> <span class="ow">in</span> <span class="n">graph</span><span class="o">.</span><span class="n">vertices</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="k">for</span> <span class="n">adjacent_vertex</span> <span class="ow">in</span> <span class="n">graph</span><span class="o">.</span><span class="n">vertices</span><span class="p">[</span><span class="n">vertex</span><span class="p">]</span><span class="o">.</span><span class="n">neighbors</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">distances</span><span class="p">[</span><span class="n">adjacent_vertex</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">&gt;</span> <span class="n">distances</span><span class="p">[</span><span class="n">vertex</span><span class="p">]</span> <span class="o">+</span> <span class="n">adjacent_vertex</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+                <span class="k">raise</span> <span class="n">NegativeEdgeCycleWarning</span><span class="p">(</span><span class="s2">&quot;Negative Edge cycle detected&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">distances</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, theroyakash
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

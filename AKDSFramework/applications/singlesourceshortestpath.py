@@ -1,5 +1,6 @@
 from AKDSFramework.structure.graph import GraphDictionaryRepresented, Vertex
 from AKDSFramework.structure.heap import MinHeap
+from AKDSFramework.error import NegativeEdgeCycleWarning
 
 # We'll use minheap for maintaining min priority queue and getting the next smallest edge.
 def compute_dijkstra(graph: GraphDictionaryRepresented, starting_vertex: str) -> dict:
@@ -39,5 +40,39 @@ def compute_dijkstra(graph: GraphDictionaryRepresented, starting_vertex: str) ->
                 distances[adjacent_vertex[0]] = distance
                 prQueue.add((distance, adjacent_vertex[0]))
                 prQueue.build()
+
+    return distances
+
+def compute_bellmanford(graph: GraphDictionaryRepresented, starting_vertex: str):
+    r"""
+    Computes single source shortest path algorithms using bellman ford algorithm
+        Args:
+            - ``graph`` (GraphDictionaryRepresented): Graph you want to work on
+            - ``starting_vertex`` (str): Starting Vertex of the graph to compute bellman ford
+
+        Algorithms:
+            - Prepare distance and predecessor for each node
+            - Relax all the edges :math:`|V|-1` times
+            - Run the loop one more time to check for if there is any negative edge cycle.
+
+        Time complexity:
+            Time complexity is :math:`O(V * E)` where V is the number of vertices and E is the number of edges
+    """
+    distances = {vertex : float('infinity') for vertex in graph.vertices}
+    distances[starting_vertex] = 0
+
+    # Run relaxation of edges for |V| - 1 times
+    for _ in range(0, graph.number_of_vertices):
+        # Go through each edge and relax them
+        for vertex in graph.vertices.keys():
+            for adjacent_vertex in graph.vertices[vertex].neighbors:
+                if distances[adjacent_vertex[0]] > distances[vertex] + adjacent_vertex[1]:
+                    distances[adjacent_vertex[0]] = distances[vertex] + adjacent_vertex[1]
+
+    # Run this one more time to check if there is more relaxation then raise Negative edge Warning
+    for vertex in graph.vertices.keys():
+        for adjacent_vertex in graph.vertices[vertex].neighbors:
+            if distances[adjacent_vertex[0]] > distances[vertex] + adjacent_vertex[1]:
+                raise NegativeEdgeCycleWarning("Negative Edge cycle detected")
 
     return distances

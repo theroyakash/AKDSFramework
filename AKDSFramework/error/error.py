@@ -12,3 +12,6 @@ class EmptyStackError(Exception):
 
 class BadVertexTypeError(Exception):
     pass
+
+class NegativeEdgeCycleWarning(UserWarning):
+	pass
