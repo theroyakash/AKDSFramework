@@ -23,6 +23,10 @@ def benchmark(func):
     return profiler
 
 def cached(func):
+    """
+    Default caching decorator for AKDSFramework. Maintains a dictionary with hashable arguments to cache data.
+    Ensures constant look-up time when cache hit occurs.
+    """
     cache = dict()
 
     def caching(*args):
