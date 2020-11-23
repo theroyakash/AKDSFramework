@@ -106,8 +106,8 @@ class Vertex:
 
 
 class GraphDictionaryRepresented:
-    """
-    Dictionary representation of Graph
+    r"""
+    Dictionary representation of Graph. Total storage space :math:`O(V+E)`.
         Examples:
             >>> from AKDSFramework.structure.graph import Vertex
             >>> g = GraphDictionaryRepresented()
@@ -137,7 +137,7 @@ class GraphDictionaryRepresented:
             raise BadVertexTypeError
 
     def register_edge(self, init, stop, weight=1, directed=True):
-        if directed:
+        if not directed:
             if init in self.vertices and stop in self.vertices:
                 self.vertices[init].add_neighbor(stop, weight)
                 self.vertices[stop].add_neighbor(init, weight)
