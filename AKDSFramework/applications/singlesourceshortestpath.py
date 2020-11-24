@@ -24,8 +24,9 @@ def compute_dijkstra(graph: GraphDictionaryRepresented, starting_vertex: str) ->
     # Now make and maintain a min priority queue
     prQueue = [(0, starting_vertex)]
     prQueue = MinHeap(prQueue)
-    prQueue.build()   # O(V)
+    prQueue.build()   # O(1) because pushing only one element in a empty heap is constant time
 
+    # This while loop is running O(V) times.
     while len(prQueue) > 0:
         current_distance, current_vertex = prQueue.delete_root()
         prQueue.build()
@@ -76,3 +77,4 @@ def compute_bellmanford(graph: GraphDictionaryRepresented, starting_vertex: str)
                 raise NegativeEdgeCycleWarning("Negative Edge cycle detected")
 
     return distances
+
