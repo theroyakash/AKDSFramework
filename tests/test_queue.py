@@ -1,5 +1,5 @@
 import unittest
-from AKDSFramework.structure.queue import ArrayQueue
+from AKDSFramework.structure import ArrayQueue
 
 class Test(unittest.TestCase):
     def setUp(self):

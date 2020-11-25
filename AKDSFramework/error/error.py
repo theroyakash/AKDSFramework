@@ -15,3 +15,6 @@ class BadVertexTypeError(Exception):
 
 class NegativeEdgeCycleWarning(UserWarning):
 	pass
+
+class BadOrderingError(Exception):
+	pass

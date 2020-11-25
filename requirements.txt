@@ -2,3 +2,4 @@ numpy==1.19.4
 terminaltables==3.1.0
 tqdm
 matplotlib
+pillow

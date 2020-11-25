@@ -1,10 +1,10 @@
 import numpy as np
-from AKDSFramework.structure.queue import ArrayQueue
-from AKDSFramework.error import BadVertexTypeError
+from AKDSFramework.structure import ArrayQueue
+from AKDSFramework.error import BadVertexTypeError, BadOrderingError
 
 
 class GraphMatrixRepresented:
-    """
+    r"""
     Matrix representation of Graph
         Args:
             - ``vertices`` (int): Number of total vertices in the graph
@@ -42,7 +42,7 @@ class GraphMatrixRepresented:
         self.number_of_edges = 0
 
     def add_edge_between(self, start, end, weight):
-        """
+        r"""
         Adds edge between two points in a graph. If the graph is not directed then one edge b/w start and end and one b/w end and start will be added which has the same weight.
             Args:
                 - ``start`` (int): Starting Index where the edge starts
@@ -205,3 +205,47 @@ class GraphDictionaryRepresented:
 
         dfs(startFromVertex)
         return traversal_table
+
+
+# Require for drawing graphs.
+import base64
+import requests, io
+from PIL import Image
+import matplotlib.pyplot as plt
+
+def draw_graph(g: GraphDictionaryRepresented, order='LR'):
+    """
+    Draw a graph from a GraphDictionaryRepresented graph. Internet connection required.
+        Args:
+            - ``graph``: GraphDictionaryRepresented graph object
+            - ``order``: Either LR or TD. LR is left to right design and TD is top-down drawing of graph.
+    """
+
+    if order != 'LR' and order !='TD':
+        raise BadOrderingError
+    
+    graph = f"""
+    graph {order};
+    """
+
+    edges = g.raw_dict()
+
+    for key in edges.keys():
+        if edges[key].neighbors != []:
+            arrow = ' -->'
+            neighbor = [neighbor[0] for neighbor in edges[key].neighbors]
+        else:
+            arrow = ''
+            neighbor = ['']
+
+        graph += '    ' + str(key) + arrow + ' & '.join(neighbor) + ';\n'
+
+    graphbytes = graph.encode("ascii")
+
+    base64_bytes = base64.b64encode(graphbytes)
+    base64_string = base64_bytes.decode("ascii")
+
+
+    img = Image.open(io.BytesIO(requests.get('https://mermaid.ink/img/' + base64_string).content))
+    plt.imshow(img)
+    plt.show()
