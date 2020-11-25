@@ -1,5 +1,5 @@
 import numpy as np
-from AKDSFramework.structure import ArrayQueue
+from AKDSFramework.structure.ArrayQueue import ArrayQueue
 from AKDSFramework.error import BadVertexTypeError, BadOrderingError
 
 
