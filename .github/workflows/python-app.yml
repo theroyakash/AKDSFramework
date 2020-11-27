@@ -24,10 +24,4 @@ jobs:
         pip install -e .
     - name: testing AKDSFramework modules
       run: |
-        python tests/test_heap.py
-        python tests/test_linkedlist.py
-        python tests/test_sort.py
-        python tests/test_queue.py
-        python tests/tests_graph.py
-        python tests/test_dijkstra.py
-        python tests/tests_bellman.py
+        python -m unittest discover
