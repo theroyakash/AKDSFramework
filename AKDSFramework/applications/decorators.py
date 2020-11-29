@@ -26,8 +26,9 @@ def benchmark(func):
 
 def cached(func):
     """
-    Default caching decorator for AKDSFramework. Maintains a dictionary with hashable arguments to cache data.
-    Ensures constant look-up time when cache hit occurs.
+    Default dictionary based caching decorator for AKDSFramework. 
+    Maintains a dictionary with hashable arguments to cache data.
+    Ensures constant look-up time when a cache hit occurs.
     """
     cache = dict()
 
