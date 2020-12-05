@@ -195,17 +195,47 @@ class SinglyLinkedList:
 
 # Doubly Linked List
 
-class DoublyNode:
-    def __init__(self, value):
+class _DNode(object):
+    """
+    Lightweight non public class for doubly linked node.
+    """
+    __slots__ = '_element' , '_prev' , '_next'
+
+    def __init__(self, element, prev, next):
         """
-        Individual node in a doubly linked list
+        Initialization of a doubly linked node.
             Args:
-                - value (any): Value of the node
+                - element: Element data
+                - prev: Previous Node
+                - next: Next Node.
         """
-        self.value = value
-        self.previous = None
-        self.next = None
+        self._element = element
+        self._prev = prev
+        self._next = next
 
-    def __str__(self):
-        return str(self.value)
 
+class DoublyLinkedListBase(object):
+    """
+    Base class for doubly linked list
+    """
+    def __init__(self):
+        self._header = _DNode(None, None, None)
+        self._trailer = _DNode(None, None, None)
+        self._header._next = self._trailer
+        self._trailer._prev = self._header
+        self.size = 0
+
+    def __len__(self):
+        return self.size
+
+    def isEmpty(self):
+        """
+        Returns if the list is empty
+        """
+        return self.size == 0
+
+    def add(self, element):
+        """
+        Add element at the end of list
+        """
+        raise NotImplementedError
