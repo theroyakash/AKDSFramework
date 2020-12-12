@@ -51,7 +51,7 @@ def compute_bellmanford(graph: GraphDictionaryRepresented, starting_vertex: str)
             - ``graph`` (GraphDictionaryRepresented): Graph you want to work on
             - ``starting_vertex`` (str): Starting Vertex of the graph to compute bellman ford
 
-        Algorithms:
+        Algorithm:
             - Prepare distance and predecessor for each node
             - Relax all the edges :math:`|V|-1` times
             - Run the loop one more time to check for if there is any negative edge cycle.
