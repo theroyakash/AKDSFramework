@@ -10,8 +10,8 @@
 
 <p align="center">
   <a href="https://github.iamroyakash.com/AKDSFramework-docs/">Getting started</a> •
-  <a href="https://github.iamroyakash.com/AKDSFramework-docs/docs/data-structures">Data Structures</a> •
-  <a href="https://github.iamroyakash.com/AKDSFramework-docs/docs/algorithms">Algorithms</a> •
+  <a href="https://github.iamroyakash.com/AKDSFramework-docs/docs/ds.html">Data Structures</a> •
+  <a href="https://github.iamroyakash.com/AKDSFramework-docs/docs/searching.html">Algorithms</a> •
   <a href="https://github.com/theroyakash/AKDSFramework/blob/main/LICENSE">License</a>
 </p>
 
