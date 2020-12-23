@@ -1,4 +1,14 @@
 import random
 
-def generatorIntegers(min_, max_, size):
-    return [random.randint(min_, max_) for _ in range(size)]
+def generatorIntegers(lb, ub, size):
+    """
+    Sequence of Integer generator
+        Args:
+            - lb: Lower bound of the generated array
+            - ub: Upper bound of the generated array
+            - size: Size of the generated array
+
+        Returns:
+            - Array of Integers
+    """
+    return [random.randint(lb, ub) for _ in range(size)]
