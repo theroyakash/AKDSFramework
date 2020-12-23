@@ -30,9 +30,16 @@ def runtimedict(func, pumping_lower_bound, pumping_upper_bound, total_measuremen
     
     pumping_data_sizes = np.linspace(pumping_lower_bound, pumping_upper_bound, total_measurements).astype('int64')
     for _, pumping_data_size in enumerate(pumping_data_sizes):
-        timer = Timer(Wrapper(pumping_data_size))
-        meantime = np.mean(np.array(timer.repeat(10, 100)))
-        runtime_dictionary[pumping_data_size] = meantime
+        
+        exec_times = np.zeros(10)
+
+        for i in range(10):
+            start = time.perf_counter()
+            Wrapper(pumping_data_size)
+            end = time.perf_counter()
+            exec_times[i] = end - start
+
+        runtime_dictionary[pumping_data_size] = np.min(exec_times)
 
     return runtime_dictionary
 
