@@ -1,6 +1,6 @@
 from AKDSFramework.applications.complexity_analysis import Constant, Linear, Linearithmetic, Logarithmic, Quadratic
-import time, types
-from timeit import Timer
+import time
+from tqdm import tqdm
 from AKDSFramework.applications.complexity_analysis import generatorIntegers
 import numpy as np
 
@@ -29,26 +29,18 @@ def runtimedict(func, pumping_lower_bound, pumping_upper_bound, total_measuremen
 
     
     pumping_data_sizes = np.linspace(pumping_lower_bound, pumping_upper_bound, total_measurements).astype('int64')
-    for _, pumping_data_size in enumerate(pumping_data_sizes):
+
+    for _, pumping_data_size in tqdm(enumerate(pumping_data_sizes), total=len(pumping_data_sizes), desc='Processing'):
         
         exec_times = np.zeros(10)
 
         for i in range(10):
-            start = time.perf_counter()
+            start = time.time()
             Wrapper(pumping_data_size)
-            end = time.perf_counter()
-            exec_times[i] = end - start
+            end = time.time()
+            exec_times[i] = (end - start) * 1000
 
+        # Execution time in milliseconds
         runtime_dictionary[pumping_data_size] = np.min(exec_times)
 
     return runtime_dictionary
-
-
-# Example code for testing
-# def find(array, target):
-#     for i in array:
-#         if i == target:
-#             return i
-
-# integer_generator = lambda x: generatorIntegers(lb=0, ub=1000, size=x)
-# print(runtimedict(find, 100, 100000, 30, pumping='array', array=integer_generator, target=100))

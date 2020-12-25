@@ -1,3 +1,5 @@
+import numpy as np
+
 class ComplexityAbstractClass(object):
     """
     Abstract Complexity class
@@ -46,16 +48,33 @@ class Linear(ComplexityAbstractClass):
 
 class Logarithmic(ComplexityAbstractClass):
     priority_rank = 2
+
+    def set_complexity(self, n):
+        return np.log(n)
+
     def __str__(self):
         return "O(log N)"
 
 
 class Linearithmetic(ComplexityAbstractClass):
     priority_rank = 3
+
+    def set_complexity(self, n):
+        return n * np.log(n)
+
     def __str__(self):
         return "O(N log N)"
 
 class Quadratic(ComplexityAbstractClass):
     priority_rank = 4
+
+    def set_complexity(self, n):
+        return n ** 2
+
     def __str__(self):
         return "O(N^2)"
+
+class Ploynomial(ComplexityAbstractClass):
+    priority_rank = 5
+    def __str__(self):
+        return "Polynomial time"
