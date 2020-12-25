@@ -9,6 +9,9 @@ class ComplexityAbstractClass(object):
     def __init__(self):
         super(ComplexityAbstractClass, self).__init__()
 
+    def adjust_time(self, time):
+        return time
+
     def __str__(self):
         raise NotImplementedError()
 
@@ -42,6 +45,13 @@ class Constant(ComplexityAbstractClass):
 
 class Linear(ComplexityAbstractClass):
     priority_rank = 1
+
+    def adjust_for_complexity(self, n):
+        """
+        See Documentation here https://numpy.org/doc/stable/reference/generated/numpy.linalg.lstsq.html
+        """
+        return np.ones((len(n), 1))
+
     def __str__(self):
         return "O(N)"
 
@@ -49,8 +59,11 @@ class Linear(ComplexityAbstractClass):
 class Logarithmic(ComplexityAbstractClass):
     priority_rank = 2
 
-    def set_complexity(self, n):
-        return np.log(n)
+    def adjust_for_complexity(self, n):
+        """
+        See Documentation here https://numpy.org/doc/stable/reference/generated/numpy.linalg.lstsq.html
+        """
+        return np.vstack([np.ones(len(n)), np.log(n)])
 
     def __str__(self):
         return "O(log N)"
@@ -59,8 +72,11 @@ class Logarithmic(ComplexityAbstractClass):
 class Linearithmetic(ComplexityAbstractClass):
     priority_rank = 3
 
-    def set_complexity(self, n):
-        return n * np.log(n)
+    def adjust_for_complexity(self, n):
+        """
+        See Documentation here https://numpy.org/doc/stable/reference/generated/numpy.linalg.lstsq.html
+        """
+        return np.vstack([np.ones(len(n)), n * np.log(n)]).T
 
     def __str__(self):
         return "O(N log N)"
@@ -68,13 +84,42 @@ class Linearithmetic(ComplexityAbstractClass):
 class Quadratic(ComplexityAbstractClass):
     priority_rank = 4
 
-    def set_complexity(self, n):
-        return n ** 2
+    def adjust_for_complexity(self, n):
+        """
+        See Documentation here https://numpy.org/doc/stable/reference/generated/numpy.linalg.lstsq.html
+        """
+        return np.vstack([np.ones(len(n)), n ** 2]).T
 
     def __str__(self):
         return "O(N^2)"
 
-class Ploynomial(ComplexityAbstractClass):
+
+class Cubic(ComplexityAbstractClass):
     priority_rank = 5
+
+    def adjust_for_complexity(self, n):
+        """
+        See Documentation here https://numpy.org/doc/stable/reference/generated/numpy.linalg.lstsq.html
+        """
+        return np.vstack([np.ones(len(n)), n ** 3]).T
+
+class Ploynomial(ComplexityAbstractClass):
+    priority_rank = 6
     def __str__(self):
         return "Polynomial time"
+
+
+class Exponential(ComplexityAbstractClass):
+    priority_rank = 7
+
+    def adjust_for_complexity(self, n):
+        """
+        See Documentation here https://numpy.org/doc/stable/reference/generated/numpy.linalg.lstsq.html
+        """
+        return np.vstack([np.ones(len(n)), n]).T      # Linear if the time is brought down to Linear.
+
+    def adjust_time(self, time):
+        return np.log(time)
+
+    def __str__(self):
+        return "Exponential time"
