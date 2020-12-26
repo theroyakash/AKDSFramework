@@ -25,6 +25,10 @@ AKDSFramework is a Purely written in Python library containing implementations o
 
 Our Package will allow user to focus on developing algorithms and not worry about finding python-compatible implementations of classic data structures like linked list, heap and others.
 
+# Useful links
+- **Documentation** We've written a comprehensive documentation for our framework AKDSFramework. Have a look at it [here](https://github.iamroyakash.com/AKDSFramework-docs) and a read-the-docs version is also available [here](https://akdsframework.readthedocs.io/en/latest/)
+- See what's in the **works** now [here](https://www.notion.so/theroyakash/8a9998cb8b7f4d318e05dfce28fbcfda?v=b8c3cf3084a8426394f7307a2005c945).
+
 ## Setup
 - First download/clone this repo like git clone `https://github.com/theroyakash/AKDSFramework.git`
 - Now uninstall if any previous version installed `pip3 uninstall AKDSFramework`
@@ -56,8 +60,6 @@ print(lkl)   # ---> 20 --> 120 --> 7102 --> 773 --> None
 # Now reverse this linked list:
 print(reversed(lkl))
 ```
-# Documentation
-We've written a comprehensive documentation for our framework AKDSFramework. Have a look at it [here](https://github.iamroyakash.com/AKDSFramework-docs) and a read-the-docs version is also available [here](https://akdsframework.readthedocs.io/en/latest/)
 
 ### Contributing
 [![GitHub license](https://img.shields.io/badge/CONTRIBUTING-Welcome-blue)](https://github.com/theroyakash/AKDSFramework/pulls)
