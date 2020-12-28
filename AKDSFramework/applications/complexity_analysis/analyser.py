@@ -1,10 +1,9 @@
-from AKDSFramework.applications.complexity_analysis import Constant, Linear, Linearithmetic, Logarithmic, Quadratic
+from AKDSFramework.applications.complexity_analysis import Constant, Linear, Logarithmic, Linearithmetic, Quadratic, Cubic, Polynomial, Exponential
 import time
+from timeit import Timer
 from tqdm import tqdm
 from AKDSFramework.applications.complexity_analysis import generatorIntegers
 import numpy as np
-
-complexities = [Constant, Linear, Linearithmetic, Logarithmic, Quadratic]
 
 def runtimedict(func, pumping_lower_bound, pumping_upper_bound, total_measurements, pumping, **kwargs):
     """
@@ -32,15 +31,46 @@ def runtimedict(func, pumping_lower_bound, pumping_upper_bound, total_measuremen
 
     for _, pumping_data_size in tqdm(enumerate(pumping_data_sizes), total=len(pumping_data_sizes), desc='Processing'):
         
-        exec_times = np.zeros(10)
+        timer = Timer(Wrapper(pumping_data_size))
+        exec_times = timer.repeat(1, 5)
+        runtime_dictionary[pumping_data_size] = np.min(np.array(exec_times))
 
-        for i in range(10):
-            start = time.time()
-            Wrapper(pumping_data_size)
-            end = time.time()
-            exec_times[i] = (end - start) * 1000
+        # exec_times = np.zeros(10)
 
-        # Execution time in milliseconds
-        runtime_dictionary[pumping_data_size] = np.min(exec_times)
+        # for i in range(10):
+        #     start = time.time()
+        #     Wrapper(pumping_data_size)
+        #     end = time.time()
+        #     exec_times[i] = (end - start) * 1000
+
+        # # Execution time in milliseconds
+        # runtime_dictionary[pumping_data_size] = np.min(exec_times)
 
     return runtime_dictionary
+
+
+def run_inference_on_complexity(rtdc):
+    """
+    Fit to a complexity from the runtime dictionary.
+        Args:
+            - rtdc: the runtime dictionary
+
+        Returns:
+            - Fitted class. If not possible raises NotFittedError.
+    """
+
+    complexities = [Constant, Linear, Logarithmic, Linearithmetic, Quadratic, Cubic, Exponential]
+
+    x = np.array([data for data in rtdc.keys()])       # Size of N
+    y = np.array([data for data in rtdc.values()])     # Execution time with respect to size of N
+    
+    fit_dict = dict()
+
+    for complexity in tqdm(complexities, total=7, desc="Calculating complexity: "):
+        complexity_objc = complexity()
+        residuals = complexity_objc.fit(x, y)
+        fit_dict[residuals] = f"{complexity_objc}"
+    
+    minimum_residual = min(np.array([data for data in fit_dict.keys()]))
+
+    return fit_dict[minimum_residual]
