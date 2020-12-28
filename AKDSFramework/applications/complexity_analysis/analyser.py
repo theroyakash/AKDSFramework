@@ -2,7 +2,6 @@ from AKDSFramework.applications.complexity_analysis import Constant, Linear, Log
 import time
 from timeit import Timer
 from tqdm import tqdm
-from AKDSFramework.applications.complexity_analysis import generatorIntegers
 import numpy as np
 
 def runtimedict(func, pumping_lower_bound, pumping_upper_bound, total_measurements, pumping, **kwargs):
@@ -35,6 +34,7 @@ def runtimedict(func, pumping_lower_bound, pumping_upper_bound, total_measuremen
         exec_times = timer.repeat(1, 5)
         runtime_dictionary[pumping_data_size] = np.min(np.array(exec_times))
 
+        # Alternate way to measure the execution time but it has huge error factor.
         # exec_times = np.zeros(10)
 
         # for i in range(10):
