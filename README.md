@@ -64,20 +64,20 @@ print(reversed(lkl))
 
 | Supporting API                             | Scope                      |
 |--------------------------------------------|----------------------------|
-| Singly Linked List                         | Data Structures            |
-| Graph                                      | Data Structures            |
-| Priority Queues with heap                  | Data Structures            |
-| Queues                                     | Data Structures            |
-| Stacks                                     | Data Structures            |
-| Graphs (Adjacency Matrix)                  | Graph Structures           |
-| Graphs (Adjacency List)                    | Graph Structures           |
-| BFS and DFS                                | Graph Algorithms           |
-| Single Source Shortest paths               | Graph Algorithms           |
-| Representing a graph with drawings         | Graph Algorithms           |
+| [Singly Linked List](https://github.iamroyakash.com/AKDSFramework-docs/docs/linked-lists.html)                         | Data Structures            |
+| [Graph](https://github.iamroyakash.com/AKDSFramework-docs/docs/graphs.html)                                      | Data Structures            |
+| Priority Queues with [heap](https://github.iamroyakash.com/AKDSFramework-docs/docs/heaps.html)                  | Data Structures            |
+| [Queues](https://github.iamroyakash.com/AKDSFramework-docs/docs/queue.html)                                     | Data Structures            |
+| [Stacks](https://github.iamroyakash.com/AKDSFramework-docs/docs/stacks.html)                                     | Data Structures            |
+| [Graphs](https://github.iamroyakash.com/AKDSFramework-docs/docs/graphs.html) (Adjacency Matrix)                  | Graph Structures           |
+| [Graphs](https://github.iamroyakash.com/AKDSFramework-docs/docs/graphs.html) (Adjacency List)                    | Graph Structures           |
+| [BFS and DFS](https://github.iamroyakash.com/AKDSFramework-docs/docs/graphs.html#bfs-dfs)                                | Graph Algorithms           |
+| [Single Source Shortest paths](https://github.com/theroyakash/AKDSFramework/blob/main/AKDSFramework/applications/singlesourceshortestpath.py)               | Graph Algorithms           |
+| [Representing a graph with drawings](https://github.iamroyakash.com/AKDSFramework-docs/docs/graphs.html#visualize-the-graph)         | Graph Algorithms           |
 | Dictionary (Hash Table)                    | Data Structures            |
 | Linear Search and Binary Search            | Search Algorithms          |
-| Big O complexity analysis                  | General purpose Algorithms |
-| Merge, Quick, Bubble, Insertion, Heap Sort | Sorting Algorithms         |
+| [Big O complexity analysis](https://publications.iamroyakash.com/introducing-an-efficient-big-o-analyzer)                  | General purpose Algorithms |
+| Merge, Quick, Bubble, Insertion, Heap [Sort](https://github.iamroyakash.com/AKDSFramework-docs/docs/sorting.html) | Sorting Algorithms         |
 
 ### Contributing
 [![GitHub license](https://img.shields.io/badge/CONTRIBUTING-Welcome-blue)](https://github.com/theroyakash/AKDSFramework/pulls)
