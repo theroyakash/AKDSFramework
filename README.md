@@ -60,6 +60,24 @@ print(lkl)   # ---> 20 --> 120 --> 7102 --> 773 --> None
 # Now reverse this linked list:
 print(reversed(lkl))
 ```
+## Currnetly supporting APIs
+
+| Supporting API                             | Scope                      |
+|--------------------------------------------|----------------------------|
+| Singly Linked List                         | Data Structures            |
+| Graph                                      | Data Structures            |
+| Priority Queues with heap                  | Data Structures            |
+| Queues                                     | Data Structures            |
+| Stacks                                     | Data Structures            |
+| Graphs (Adjacency Matrix)                  | Graph Structures           |
+| Graphs (Adjacency List)                    | Graph Structures           |
+| BFS and DFS                                | Graph Algorithms           |
+| Single Source Shortest paths               | Graph Algorithms           |
+| Representing a graph with drawings         | Graph Algorithms           |
+| Dictionary (Hash Table)                    | Data Structures            |
+| Linear Search and Binary Search            | Search Algorithms          |
+| Big O complexity analysis                  | General purpose Algorithms |
+| Merge, Quick, Bubble, Insertion, Heap Sort | Sorting Algorithms         |
 
 ### Contributing
 [![GitHub license](https://img.shields.io/badge/CONTRIBUTING-Welcome-blue)](https://github.com/theroyakash/AKDSFramework/pulls)
