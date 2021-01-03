@@ -1,5 +1,5 @@
-from AKDSFramework.applications.singlesourceshortestpath import compute_bellmanford
-from AKDSFramework.structure.graph import GraphDictionaryRepresented, Vertex
+from AKDSFramework.applications import compute_bellmanford
+from AKDSFramework.structure import GraphDictionaryRepresented, Vertex
 from AKDSFramework.error import NegativeEdgeCycleWarning
 
 import unittest

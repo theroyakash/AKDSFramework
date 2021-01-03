@@ -1,5 +1,5 @@
 import unittest
-from AKDSFramework.structure.graph import GraphDictionaryRepresented, Vertex
+from AKDSFramework.structure import GraphDictionaryRepresented, Vertex
 
 class Test(unittest.TestCase):
     def setUp(self):

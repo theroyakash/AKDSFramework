@@ -1,7 +1,6 @@
 import unittest
-from AKDSFramework.applications.singlesourceshortestpath import compute_dijkstra
-from AKDSFramework.structure.graph import GraphDictionaryRepresented, Vertex
-from AKDSFramework.structure.heap import MinHeap
+from AKDSFramework.applications import compute_dijkstra
+from AKDSFramework.structure import GraphDictionaryRepresented, Vertex
 
 class Test(unittest.TestCase):
     def setUp(self):
