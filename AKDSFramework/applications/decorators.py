@@ -1,7 +1,7 @@
 import cProfile
 import pstats
 import io
-
+import functools, time
 
 def benchmark(func):
     """
@@ -40,3 +40,20 @@ def cached(func):
         return result
 
     return caching
+
+
+def exectime(func):
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        start = time.time()
+        returnValue = func(*args, **kwargs)
+        end = time.time()
+
+        if int(end - start) > 0:
+            print(f"Run time for {func.__name__}: {(end - start):0.2f}s")
+        else:
+            print(f"Run time for {func.__name__}: {(end - start)*1000:0.2f}ms")
+        
+        return returnValue
+
+    return wrapper
