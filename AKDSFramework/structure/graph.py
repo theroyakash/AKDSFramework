@@ -41,7 +41,7 @@ class GraphMatrixRepresented:
         self.is_directed = is_directed
         self.number_of_edges = 0
 
-    def add_edge_between(self, start, end, weight):
+    def add_edge_between(self, start: int, end: int, weight: int):
         r"""
         Adds edge between two points in a graph. If the graph is not directed then one edge b/w start and end and one b/w end and start will be added which has the same weight.
             Args:
@@ -102,7 +102,7 @@ class Vertex:
             self.neighbors.sort()
 
     def __repr__(self):
-        return f"<AKDSFramework.structure.graph.Vertex object {self.name} with neighbors: {self.neighbors}>"
+        return f"<AKDSFramework.structure.graph.Vertex> object {self.name} with neighbors: {self.neighbors}"
 
 
 class GraphDictionaryRepresented:
