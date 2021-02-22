@@ -7,3 +7,4 @@ from .complexity_analysis import runtimedict, run_inference_on_complexity
 from .decorators import benchmark, cached
 from .singlesourceshortestpath import compute_dijkstra, compute_bellmanford
 from .sorting import bubblesort, insertionsort, heapsort, quicksort, merge_sort
+from .factorials import factorials
