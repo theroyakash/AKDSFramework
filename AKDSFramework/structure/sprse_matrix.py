@@ -77,6 +77,11 @@ class SparseMatrix:
         return numpyarray
 
     def shape(self):
+        """
+        Returns:
+            Shape of the matrix, stored with key inside the data structure when building the SparseMatrix.
+            The actual sparse graph is not stored as it takes O(n^2) space.
+        """
         return self.matrix['size']
 
     def __str__(self):
