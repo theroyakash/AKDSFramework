@@ -12,16 +12,16 @@ class Stack:
     def push(self, value):
         """
         Push some value on to the stack
-            Args:
-                value (Any): Any value you want to push to the stack.
+        Args:
+            value (Any): Any value you want to push to the stack.
         """
         self.stack.add(value)
 
     def pop(self):
         """
         pops out the last value from the stack.
-            Returns:
-                - Element that just popped off the stack
+        Returns:
+            - Element that just popped off the stack
         """
         if self.stack.count() != 0:
             return self.stack.removeAt(self.stack.count() - 1)
@@ -38,8 +38,8 @@ class Stack:
     def peak_top(self):
         """
         Quickly peak at the very top of the stack
-            Returns:
-                - The top most element of the stack
+        Returns:
+            - The top most element of the stack
         """
         return self.stack.get_head()
 
@@ -49,16 +49,16 @@ class Stack:
     def isEmpty(self):
         """
         Says whether the stack is empty or not
-            Returns:
-                - Bool: True if no elements in the stack else False.
+        Returns:
+            - Bool: True if no elements in the stack else False.
         """
         return True if self.stack.count() == 0 else False
 
     def __str__(self):
         """
         This is the string representation of the stack element's values
-            Returns:
-                - String representation of the stack element's values
+        Returns:
+            - String representation of the stack element's values
         """
 
         array = []
@@ -75,8 +75,8 @@ class ListBasedStack:
     def __init__(self, array=None):
         """
         Create a Stack based on array.
-            Args:
-                - array (list): Pass in an array to initialize the stack. If nothing is passed a blank stack is intialized.
+        Args:
+            - array (list): Pass in an array to initialize the stack. If nothing is passed a blank stack is intialized.
         """
         if array is None:
             self.stack = []
@@ -86,8 +86,8 @@ class ListBasedStack:
     def push(self, value):
         """
         Push data onto the stack.
-            Args:
-                - value (Any): Pass in the value you want to push
+        Args:
+            - value (Any): Pass in the value you want to push
         """
         self.stack.append(value)
 

@@ -41,8 +41,8 @@ class Heap:
     def get_root(self):
         r"""
         Returning the root node value of the max heap in :math:`O(1)` time.
-            Returns:
-                - The root node which is the maximum value in the heap.
+        Returns:
+            - The root node which is the maximum value in the heap.
         """
         if self.built:
             return self.heap[0]
@@ -53,10 +53,10 @@ class Heap:
     def get_right_child(self, i):
         """
         Get right child for index i
-            Args:
-                - ``i`` (int): Index whose right child you want
-            Returns:
-                - Returns the right child of any node, if not possible returns None
+        Args:
+            - ``i`` (int): Index whose right child you want
+        Returns:
+            - Returns the right child of any node, if not possible returns None
         """
         right_index = i * 2 + 2
         if right_index < self.size:
@@ -67,10 +67,10 @@ class Heap:
     def get_left_child(self, i):
         """
         Get right child's index for parent ``i``
-            Args:
-                - ``i`` (int): Index whose left child's index you want
-            Returns:
-                - Returns the right child of any node, if not possible returns None
+        Args:
+            - ``i`` (int): Index whose left child's index you want
+        Returns:
+            - Returns the right child of any node, if not possible returns None
         """
         left_index = i * 2 + 1
         if left_index < self.size:
@@ -128,8 +128,8 @@ class MaxHeap(Heap):
     def __init__(self, array):
         """
         Heap Initialization with unsorted or sorted array whatever.
-            Args:
-                - array (list): Unsorted array to initialize the heap
+        Args:
+            - array (list): Unsorted array to initialize the heap
         """
         super(MaxHeap, self).__init__(array)
 

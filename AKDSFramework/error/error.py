@@ -18,3 +18,6 @@ class NegativeEdgeCycleWarning(UserWarning):
 
 class BadOrderingError(Exception):
 	pass
+
+class NotValidMatrixError(Exception):
+    pass
