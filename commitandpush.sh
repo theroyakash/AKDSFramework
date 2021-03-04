@@ -16,8 +16,10 @@ banner "Starting the Commit Job"
 
 read -p "Commit Message: " cmessage
 
+read -p "Add a description: " desc
+
 read -p "Continue commiting $cmessage? (Y/N): " confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
 
 git add -A # Add all the files
-git commit -m "$cmessage"
+git commit -m "$cmessage" -m "$desc"
 git push
