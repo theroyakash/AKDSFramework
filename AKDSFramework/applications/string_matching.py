@@ -8,3 +8,6 @@ def KMP():
 
 def naiveStringMatcher():
     raise NotImplementedError
+
+def robinkarp():
+    raise NotImplementedError
