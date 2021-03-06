@@ -69,6 +69,9 @@ class ArrayQueue(QueueADT):
             pointer += 1
             yield self.array[pointer]
 
+    def __getitem__(self, index):
+        return self.array[index]
+
     def expand(self):
         """
         Expands the size of the array with linear time complexity, Meant for usage in internal state. Don't use this operation outside.
