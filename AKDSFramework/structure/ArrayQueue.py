@@ -40,7 +40,7 @@ class ArrayQueue(QueueADT):
             Args:
                 - value (Any): Pass in the object you want to enqueue
         """
-        if self.rear == len(self.array):
+        if (self.rear + 1) == len(self.array):
             self.expand()
         self.array[self.rear] = value
         self.size += 1
@@ -56,18 +56,21 @@ class ArrayQueue(QueueADT):
         self.array[self.front] = None
         self.front += 1
         self.size -= 1
+        for index in range(len(self.array)):
+            if index != len(self.array) - 1:
+                self.array[index] = self.array[index + 1]
+            else:
+                self.array[index] = None
         return val
 
     def __iter__(self):
         """
         Iterable in a for and while loop
         """
-        pointer = self.front
-        while True:
-            if pointer == self.rear:
+        for index in range(len(self.array)):
+            if index == self.rear:
                 return
-            pointer += 1
-            yield self.array[pointer]
+            yield self.array[index]
 
     def __getitem__(self, index):
         return self.array[index]
@@ -79,4 +82,10 @@ class ArrayQueue(QueueADT):
         self.array += [None] * len(self.array)
 
     def __str__(self):
-        return str(self.array)
+        returnable_array = []
+        for index in range(len(self.array)):
+            if self.array[index]==None:
+                break
+            else:
+                returnable_array.append(self.array[index])
+        return str(returnable_array)

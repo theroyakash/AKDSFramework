@@ -6,11 +6,11 @@ class Test(unittest.TestCase):
         self.q = ArrayQueue(4)
 
     def test_queue_build(self):
-        self.assertEqual('[None, None, None, None]', str(self.q))
+        self.assertEqual('[]', str(self.q))
     
     def test_queue_enqueue(self):
         self.q.enqueue(12)
-        self.assertEqual('[12, None, None, None]', str(self.q))
+        self.assertEqual('[12]', str(self.q))
     
     def test_dequeue(self):
         self.q.enqueue(12)
@@ -22,6 +22,14 @@ class Test(unittest.TestCase):
         self.q.enqueue(12)
         self.q.enqueue(13)
         self.assertEqual(13, self.q[1])
+
+    def test_iteration(self):
+        self.q.enqueue(12)
+        self.q.enqueue(13)
+        testing_string = ''
+        for data in self.q:
+            testing_string += str(data) + ' '
+        self.assertEqual('12 13 ', testing_string)
 
 if __name__ == '__main__':
     print('Queue Tests Running')

@@ -169,11 +169,12 @@ class GraphDictionaryRepresented:
         while queue:
             vertex = queue.dequeue()
             # loop through all adjacent vertex and enqueue it if not yet visited
-            for adjacent_vertex in self.vertices[vertex]:
-                if adjacent_vertex not in visited_set:
-                    queue.enqueue(adjacent_vertex)
+            if vertex != None:
+                for adjacent_vertex in self.vertices[vertex]:
                     if adjacent_vertex not in visited_set:
-                        visited_set.append(adjacent_vertex)
+                        queue.enqueue(adjacent_vertex)
+                        if adjacent_vertex not in visited_set:
+                            visited_set.append(adjacent_vertex)
 
         return visited_set
 
