@@ -60,15 +60,15 @@ class Stack:
         Returns:
             - String representation of the stack element's values
         """
+        return str(self.stack)
+        # array = []
+        # current = self.stack.get_head()
 
-        array = []
-        current = self.stack.get_head()
+        # while current:
+        #     array.append(current.value)
+        #     current = current.next
 
-        while current:
-            array.append(current.value)
-            current = current.next
-
-        return str(array)
+        # return str(array)
 
 
 class ListBasedStack:
