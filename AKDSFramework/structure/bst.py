@@ -6,7 +6,7 @@ class Node(object):
         self.data = data
         self.left = left
         self.right = right
-    
+
 
     def __str__(self):
         if self.left is None and self.right is None:
@@ -25,7 +25,7 @@ class BinarySearchTree(object):
         Args:
             - root: Optional Root of the search tree. If not provided, returns an empty tree
     """
-    
+
     def __init__(self, root=None):
         self.root = root
 
@@ -40,7 +40,7 @@ class BinarySearchTree(object):
         Insert Method for internal usage only.
         """
         new = Node(value, None, None)
-        
+
         # Set the root as the value if the search tree is empty
         if self.isEmpty():
             self.root = new
@@ -60,18 +60,18 @@ class BinarySearchTree(object):
                         break
                     else:
                         parent_node = parent_node.right
-            
+
     def insert(self, *values):
         """
         Insert a series of values into the binary search tree
         """
         for value in values:
             self.__insert(value)
-    
+
     def search(self, value):
         if self.isEmpty():
             raise IndexError("Empty binary search tree")
-        
+
         else:
             root_node = self.root
             while root_node is not None and root_node.data is not None:
