@@ -14,6 +14,7 @@
   <a href="https://github.iamroyakash.com/AKDSFramework-docs/docs/searching.html">Algorithms</a> •
   <a href="https://github.com/theroyakash/AKDSFramework/blob/main/LICENSE">License</a>
 </p>
+
 [![Build Status](https://github.com/theroyakash/AKDSFramework/workflows/AKDSFramework/badge.svg)](https://github.com/theroyakash/AKDSFramework/actions)
 [![Python3](https://img.shields.io/badge/python-3.8-blue.svg)](https://github.com/theroyakash/reddit-api)
 [![GitHub license](https://img.shields.io/badge/LICENSE-MIT-orange)](https://github.com/theroyakash/AKDSFramework/blob/master/LICENSE)
