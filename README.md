@@ -14,12 +14,12 @@
   <a href="https://github.iamroyakash.com/AKDSFramework-docs/docs/searching.html">Algorithms</a> •
   <a href="https://github.com/theroyakash/AKDSFramework/blob/main/LICENSE">License</a>
 </p>
-
-[![AttentionNet Build Status](https://github.com/theroyakash/AKDSFramework/workflows/AKDSFramework/badge.svg)](https://github.com/theroyakash/AKDSFramework/actions)
+[![Build Status](https://github.com/theroyakash/AKDSFramework/workflows/AKDSFramework/badge.svg)](https://github.com/theroyakash/AKDSFramework/actions)
 [![Python3](https://img.shields.io/badge/python-3.8-blue.svg)](https://github.com/theroyakash/reddit-api)
 [![GitHub license](https://img.shields.io/badge/LICENSE-MIT-orange)](https://github.com/theroyakash/AKDSFramework/blob/master/LICENSE)
 [![Discord Server](https://img.shields.io/badge/Support-theroyakash-red)](https://www.iamroyakash.com/contact)
 [![GitHub license](https://img.shields.io/badge/Privacy-Policy-blue)](https://www.iamroyakash.com/privacy)
+![Code Size](https://img.shields.io/github/languages/code-size/theroyakash/AKDSFramework?color=green&logo=python&logoColor=white)
 
 AKDSFramework is a Purely written in Python library containing implementations of various data structures.
 
