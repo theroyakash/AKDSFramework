@@ -8,8 +8,8 @@ The 2 main characteristics of Heaps are the followings
     - It should be a completely binary tree
     - Nodes must be according to the min-max order property
 """
-
-from terminaltables import AsciiTable
+from rich.console import Console
+from rich.table import Table
 from AKDSFramework.error import InvalidOperationError, HeapNotBuildError
 
 
@@ -96,14 +96,14 @@ class Heap:
 
     def prettyprint(self):
         if self.built:
-            table = [
-                ['Head Node Value', 'left child', 'right child']
-            ]
+            table = Table(title="Heap structure")
+            table.add_column("Node Value", style="red")
+            table.add_column("left child", justify="right", style="magenta")
+            table.add_column("right child", justify="right", style="magenta")
+
 
             for i in range(len(self.heap) // 2):
-                entry = []
                 head = self.heap[i]
-                entry.append(head)
                 try:
                     lc = self.heap[i * 2 + 1]
                 except IndexError:
@@ -113,12 +113,9 @@ class Heap:
                 except IndexError:
                     rc = 'None'
 
-                entry.append(str(lc))
-                entry.append(str(rc))
-                table.append(entry)
-
-            termtable = AsciiTable(table)
-            print(termtable.table)
+                table.add_row(str(head), str(lc), str(rc))
+            console = Console()
+            console.print(table)
         else:
             raise HeapNotBuildError(
                 'The MaxHeap has not built yet or may have changed after a successful build, consider using the .build() method to build the heap first.')

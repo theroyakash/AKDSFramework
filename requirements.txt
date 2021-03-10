@@ -1,6 +1,6 @@
 numpy
-terminaltables
 tqdm
 matplotlib
 pillow
 requests
+rich
