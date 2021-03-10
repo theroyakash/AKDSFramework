@@ -1,7 +1,7 @@
 import numpy as np
 from AKDSFramework.structure.ArrayQueue import ArrayQueue
 from AKDSFramework.error import BadVertexTypeError, BadOrderingError
-
+from rich.console import Console
 
 class GraphMatrixRepresented:
     r"""
@@ -102,7 +102,7 @@ class Vertex:
             self.neighbors.sort()
 
     def __repr__(self):
-        return f"<AKDSFramework.structure.graph.Vertex> object {self.name} with neighbors: {self.neighbors}"
+        return f"<AKDSFramework.Vertex> object {self.name} with neighbors: {self.neighbors}"
 
 
 class GraphDictionaryRepresented:
@@ -152,11 +152,13 @@ class GraphDictionaryRepresented:
                 return False
 
     def prettyprint(self):
+        console = Console()
         for key in sorted(list(self.vertices.keys())):
-            print(key + ' -> ' + str(self.vertices[key].neighbors))
+            console.print(key + ' -> ' + str(self.vertices[key].neighbors))
 
     def raw_dict(self):
-        return self.vertices
+        console = Console()
+        console.print(self.vertices)
 
     def BFS(self, startFromVertex):
         visited_set = []
@@ -224,12 +226,12 @@ def draw_graph(g: GraphDictionaryRepresented, order='LR'):
 
     if order != 'LR' and order !='TD':
         raise BadOrderingError
-    
+
     graph = f"""
     graph {order};
     """
 
-    edges = g.raw_dict()
+    edges = g.vertices
 
     for key in edges.keys():
         if edges[key].neighbors != []:
