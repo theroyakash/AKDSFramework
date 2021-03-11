@@ -8,4 +8,5 @@ We currently have these implemented
 - Graphs
 - Stacks
 - Queue(Based on arrays)
+- Dictionary
 - More coming soon
