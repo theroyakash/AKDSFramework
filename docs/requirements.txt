@@ -1,0 +1,3 @@
+sphinx
+jupyter-book
+sphinxcontrib-bibtex==1.0.0
