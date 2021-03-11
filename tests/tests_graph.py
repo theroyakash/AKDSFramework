@@ -8,7 +8,7 @@ class Test(unittest.TestCase):
             self.g.register_vertex(Vertex(f'{i}'))
 
         edges = ['15', '14', '12', '27', '26', '23']
-        
+
         for edge in edges:
             self.g.register_edge(edge[:1], edge[1:], directed=False)
 

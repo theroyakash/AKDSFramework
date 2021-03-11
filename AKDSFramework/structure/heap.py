@@ -10,6 +10,7 @@ The 2 main characteristics of Heaps are the followings
 """
 from rich.console import Console
 from rich.table import Table
+from AKDSFramework.utils import notify
 from AKDSFramework.error import InvalidOperationError, HeapNotBuildError
 
 
@@ -117,6 +118,7 @@ class Heap:
             console = Console()
             console.print(table)
         else:
+            notify("yeae", "mp3")
             raise HeapNotBuildError(
                 'The MaxHeap has not built yet or may have changed after a successful build, consider using the .build() method to build the heap first.')
 

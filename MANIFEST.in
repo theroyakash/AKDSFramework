@@ -1,0 +1,2 @@
+include AKDSFramework/utils/sounds/*.wav
+include AKDSFramework/utils/sounds/*.mp3

@@ -1,3 +1,5 @@
+from AKDSFramework.utils import notify
+
 class InvalidOperationError(Exception):
     pass
 
@@ -17,7 +19,7 @@ class NegativeEdgeCycleWarning(UserWarning):
 	pass
 
 class BadOrderingError(Exception):
-	pass
+    pass
 
 class NotValidMatrixError(Exception):
     pass
