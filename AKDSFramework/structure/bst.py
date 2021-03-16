@@ -71,7 +71,7 @@ class BinarySearchTree(object):
     def search(self, value):
         if self.isEmpty():
             raise IndexError("Empty binary search tree")
-
+        
         else:
             root_node = self.root
             while root_node is not None and root_node.data is not None:
