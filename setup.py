@@ -17,8 +17,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 fast_inv_sq_module = Extension(
     'AKDSFramework.c.fsis',
-    sources=['./AKDSFramework/c/fsis.c'],
-    include_dirs=['./c'],
+    sources=['./AKDSFramework/c/fsis.c']
 )
 
 setup(
