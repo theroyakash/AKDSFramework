@@ -44,7 +44,7 @@ static PyMethodDef methods[] = {
 
 static struct PyModuleDef fastInverseSquare = {
     PyModuleDef_HEAD_INIT,
-    "AKDSFramework.c.fsis",
+    "fsis",
     docs,
     -1,
     methods

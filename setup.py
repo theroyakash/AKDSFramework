@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages, Extension
 from os import path
 
-__version__ = '1.0.0'
+__version__ = '1.0'
 
 here = path.abspath(path.dirname(__file__))
 
@@ -17,7 +17,8 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 fast_inv_sq_module = Extension(
     'AKDSFramework.c.fsis',
-    sources=['./AKDSFramework/c/fsis.c']
+    sources=['AKDSFramework/c/fsis.c'],
+    include_dirs=['AKDSFramework']
 )
 
 setup(
@@ -32,7 +33,7 @@ setup(
     packages=find_packages(include=["AKDSFramework", "AKDSFramework.*"]),
     include_package_data=True,
     package_data={
-        "AKDSFramework.c": ["*.c"]
+        "AKDSFramework.c.fsis": ["*.c"]
     },
     install_requires=install_requires,
     setup_requires=['numpy'],
