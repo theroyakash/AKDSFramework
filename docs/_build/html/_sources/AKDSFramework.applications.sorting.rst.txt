@@ -4,7 +4,7 @@ AKDSFramework.applications.sorting package
 Submodules
 ----------
 
-AKDSFramework.applications.sorting.sort module
+Sorting module
 ----------------------------------------------
 
 .. automodule:: AKDSFramework.applications.sorting.sort

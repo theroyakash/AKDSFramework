@@ -1,18 +1,18 @@
 AKDSFramework.structure package
 ===============================
 
-Submodules
-----------
+Data structures
+----------------------------------
 
-AKDSFramework.structure.ArrayQueue module
------------------------------------------
+ArrayQueue
+-----------------
 
 .. automodule:: AKDSFramework.structure.ArrayQueue
    :members:
    :undoc-members:
    :show-inheritance:
 
-AKDSFramework.structure.bst module
+Binary Search Tree
 ----------------------------------
 
 .. automodule:: AKDSFramework.structure.bst
@@ -20,7 +20,7 @@ AKDSFramework.structure.bst module
    :undoc-members:
    :show-inheritance:
 
-AKDSFramework.structure.dictionary module
+Dictionary
 -----------------------------------------
 
 .. automodule:: AKDSFramework.structure.dictionary
@@ -28,7 +28,7 @@ AKDSFramework.structure.dictionary module
    :undoc-members:
    :show-inheritance:
 
-AKDSFramework.structure.graph module
+Graph
 ------------------------------------
 
 .. automodule:: AKDSFramework.structure.graph
@@ -36,7 +36,7 @@ AKDSFramework.structure.graph module
    :undoc-members:
    :show-inheritance:
 
-AKDSFramework.structure.heap module
+Heaps
 -----------------------------------
 
 .. automodule:: AKDSFramework.structure.heap
@@ -44,7 +44,7 @@ AKDSFramework.structure.heap module
    :undoc-members:
    :show-inheritance:
 
-AKDSFramework.structure.linkedlist module
+linkedlist
 -----------------------------------------
 
 .. automodule:: AKDSFramework.structure.linkedlist
@@ -52,7 +52,7 @@ AKDSFramework.structure.linkedlist module
    :undoc-members:
    :show-inheritance:
 
-AKDSFramework.structure.sprse\_matrix module
+Sparse Matrix
 --------------------------------------------
 
 .. automodule:: AKDSFramework.structure.sprse_matrix
@@ -60,18 +60,10 @@ AKDSFramework.structure.sprse\_matrix module
    :undoc-members:
    :show-inheritance:
 
-AKDSFramework.structure.stack module
+Stack
 ------------------------------------
 
 .. automodule:: AKDSFramework.structure.stack
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Module contents
----------------
-
-.. automodule:: AKDSFramework.structure
    :members:
    :undoc-members:
    :show-inheritance:

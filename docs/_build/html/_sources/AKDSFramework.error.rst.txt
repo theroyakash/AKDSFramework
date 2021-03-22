@@ -4,7 +4,7 @@ AKDSFramework.error package
 Submodules
 ----------
 
-AKDSFramework.error.error module
+Error module
 --------------------------------
 
 .. automodule:: AKDSFramework.error.error

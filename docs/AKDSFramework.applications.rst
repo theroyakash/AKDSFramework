@@ -13,7 +13,7 @@ Subpackages
 Submodules
 ----------
 
-AKDSFramework.applications.decorators module
+Decorators module
 --------------------------------------------
 
 .. automodule:: AKDSFramework.applications.decorators
@@ -21,7 +21,7 @@ AKDSFramework.applications.decorators module
    :undoc-members:
    :show-inheritance:
 
-AKDSFramework.applications.factorials module
+Factorials module
 --------------------------------------------
 
 .. automodule:: AKDSFramework.applications.factorials
@@ -29,7 +29,7 @@ AKDSFramework.applications.factorials module
    :undoc-members:
    :show-inheritance:
 
-AKDSFramework.applications.invsqrt module
+Fast Inverse Square Root with C
 -----------------------------------------
 
 .. automodule:: AKDSFramework.applications.invsqrt
@@ -37,7 +37,7 @@ AKDSFramework.applications.invsqrt module
    :undoc-members:
    :show-inheritance:
 
-AKDSFramework.applications.moving\_average module
+Moving average module
 -------------------------------------------------
 
 .. automodule:: AKDSFramework.applications.moving_average
@@ -45,7 +45,7 @@ AKDSFramework.applications.moving\_average module
    :undoc-members:
    :show-inheritance:
 
-AKDSFramework.applications.search module
+Searching
 ----------------------------------------
 
 .. automodule:: AKDSFramework.applications.search
@@ -53,7 +53,7 @@ AKDSFramework.applications.search module
    :undoc-members:
    :show-inheritance:
 
-AKDSFramework.applications.singlesourceshortestpath module
+Single source shortestpath module
 ----------------------------------------------------------
 
 .. automodule:: AKDSFramework.applications.singlesourceshortestpath
@@ -61,7 +61,7 @@ AKDSFramework.applications.singlesourceshortestpath module
    :undoc-members:
    :show-inheritance:
 
-AKDSFramework.applications.string\_matching module
+String\_matching module
 --------------------------------------------------
 
 .. automodule:: AKDSFramework.applications.string_matching

@@ -1,18 +1,18 @@
-AKDSFramework.applications.complexity\_analysis package
+AKDSFramework's built in completely analyser package
 =======================================================
 
 Submodules
 ----------
 
-AKDSFramework.applications.complexity\_analysis.analyser module
----------------------------------------------------------------
+complexity\_analysis.analyser
+--------------------------------
 
 .. automodule:: AKDSFramework.applications.complexity_analysis.analyser
    :members:
    :undoc-members:
    :show-inheritance:
 
-AKDSFramework.applications.complexity\_analysis.complexity\_classes module
+complexity\_analysis.complexity\_classes module
 --------------------------------------------------------------------------
 
 .. automodule:: AKDSFramework.applications.complexity_analysis.complexity_classes
@@ -20,7 +20,7 @@ AKDSFramework.applications.complexity\_analysis.complexity\_classes module
    :undoc-members:
    :show-inheritance:
 
-AKDSFramework.applications.complexity\_analysis.data\_generators module
+complexity\_analysis.data\_generators module
 -----------------------------------------------------------------------
 
 .. automodule:: AKDSFramework.applications.complexity_analysis.data_generators
