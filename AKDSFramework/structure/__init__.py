@@ -5,3 +5,4 @@ from .graph import GraphMatrixRepresented, GraphDictionaryRepresented, Vertex
 from .ArrayQueue import ArrayQueue
 from .bst import BinarySearchTree
 from .dictionary import Hash
+from .trie import Trie

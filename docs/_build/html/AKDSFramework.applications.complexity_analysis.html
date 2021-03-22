@@ -1,0 +1,505 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>AKDSFramework.applications.complexity_analysis package &mdash; AKDSFramework 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="AKDSFramework.applications.sorting package" href="AKDSFramework.applications.sorting.html" />
+    <link rel="prev" title="AKDSFramework.applications package" href="AKDSFramework.applications.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> AKDSFramework
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">AKDSFramework</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="AKDSFramework.html">AKDSFramework package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="AKDSFramework.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="AKDSFramework.applications.html">AKDSFramework.applications package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="AKDSFramework.error.html">AKDSFramework.error package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="AKDSFramework.structure.html">AKDSFramework.structure package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="AKDSFramework.utils.html">AKDSFramework.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="AKDSFramework.html#module-AKDSFramework">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AKDSFramework</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">AKDSFramework</a> &raquo;</li>
+        
+          <li><a href="AKDSFramework.html">AKDSFramework package</a> &raquo;</li>
+        
+          <li><a href="AKDSFramework.applications.html">AKDSFramework.applications package</a> &raquo;</li>
+        
+      <li>AKDSFramework.applications.complexity_analysis package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/AKDSFramework.applications.complexity_analysis.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="akdsframework-applications-complexity-analysis-package">
+<h1>AKDSFramework.applications.complexity_analysis package<a class="headerlink" href="#akdsframework-applications-complexity-analysis-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-AKDSFramework.applications.complexity_analysis.analyser">
+<span id="akdsframework-applications-complexity-analysis-analyser-module"></span><h2>AKDSFramework.applications.complexity_analysis.analyser module<a class="headerlink" href="#module-AKDSFramework.applications.complexity_analysis.analyser" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="AKDSFramework.applications.complexity_analysis.analyser.run_inference_on_complexity">
+<code class="sig-prename descclassname"><span class="pre">AKDSFramework.applications.complexity_analysis.analyser.</span></code><code class="sig-name descname"><span class="pre">run_inference_on_complexity</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rtdc</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#AKDSFramework.applications.complexity_analysis.analyser.run_inference_on_complexity" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Fit to a complexity from the runtime dictionary.</dt><dd><dl class="simple">
+<dt>Args:</dt><dd><ul class="simple">
+<li><p>rtdc: the runtime dictionary</p></li>
+</ul>
+</dd>
+<dt>Returns:</dt><dd><ul class="simple">
+<li><p>Fitted class. If not possible raises NotFittedError.</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="AKDSFramework.applications.complexity_analysis.analyser.runtimedict">
+<code class="sig-prename descclassname"><span class="pre">AKDSFramework.applications.complexity_analysis.analyser.</span></code><code class="sig-name descname"><span class="pre">runtimedict</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pumping_lower_bound</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pumping_upper_bound</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">total_measurements</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pumping</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#AKDSFramework.applications.complexity_analysis.analyser.runtimedict" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Measure exec time for increasing size of n</dt><dd><p>Args:
+- <code class="docutils literal notranslate"><span class="pre">pumping</span></code>: Variable name which will be used for growth of the function
+- <code class="docutils literal notranslate"><span class="pre">total_measurements</span></code>: Number of measurements, defaults set to 20
+- and put all the arguments for the main function
+Returns:
+- A dictionary of executing time with respect to the size of some data of size N.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-AKDSFramework.applications.complexity_analysis.complexity_classes">
+<span id="akdsframework-applications-complexity-analysis-complexity-classes-module"></span><h2>AKDSFramework.applications.complexity_analysis.complexity_classes module<a class="headerlink" href="#module-AKDSFramework.applications.complexity_analysis.complexity_classes" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="AKDSFramework.applications.complexity_analysis.complexity_classes.ComplexityAbstractClass">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">AKDSFramework.applications.complexity_analysis.complexity_classes.</span></code><code class="sig-name descname"><span class="pre">ComplexityAbstractClass</span></code><a class="headerlink" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.ComplexityAbstractClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Abstract Complexity class</p>
+<dl class="py method">
+<dt id="AKDSFramework.applications.complexity_analysis.complexity_classes.ComplexityAbstractClass.adjust_for_complexity">
+<code class="sig-name descname"><span class="pre">adjust_for_complexity</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.ComplexityAbstractClass.adjust_for_complexity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="AKDSFramework.applications.complexity_analysis.complexity_classes.ComplexityAbstractClass.adjust_time">
+<code class="sig-name descname"><span class="pre">adjust_time</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.ComplexityAbstractClass.adjust_time" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="AKDSFramework.applications.complexity_analysis.complexity_classes.ComplexityAbstractClass.fit">
+<code class="sig-name descname"><span class="pre">fit</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.ComplexityAbstractClass.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrun the squared Euclidean 2-norm for each column in ||b - a*x||. If the rank of a is &lt; N or M &lt;= N, this is an empty array.
+If b is 1-dimensional, this is a (1,) shape array.
+Otherwise the shape is (K,)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="AKDSFramework.applications.complexity_analysis.complexity_classes.ComplexityAbstractClass.priority_rank">
+<code class="sig-name descname"><span class="pre">priority_rank</span></code><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.ComplexityAbstractClass.priority_rank" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="AKDSFramework.applications.complexity_analysis.complexity_classes.Constant">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">AKDSFramework.applications.complexity_analysis.complexity_classes.</span></code><code class="sig-name descname"><span class="pre">Constant</span></code><a class="headerlink" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.Constant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.ComplexityAbstractClass" title="AKDSFramework.applications.complexity_analysis.complexity_classes.ComplexityAbstractClass"><code class="xref py py-class docutils literal notranslate"><span class="pre">AKDSFramework.applications.complexity_analysis.complexity_classes.ComplexityAbstractClass</span></code></a></p>
+<dl class="py method">
+<dt id="AKDSFramework.applications.complexity_analysis.complexity_classes.Constant.adjust_for_complexity">
+<code class="sig-name descname"><span class="pre">adjust_for_complexity</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.Constant.adjust_for_complexity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="AKDSFramework.applications.complexity_analysis.complexity_classes.Constant.priority_rank">
+<code class="sig-name descname"><span class="pre">priority_rank</span></code><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.Constant.priority_rank" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="AKDSFramework.applications.complexity_analysis.complexity_classes.Cubic">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">AKDSFramework.applications.complexity_analysis.complexity_classes.</span></code><code class="sig-name descname"><span class="pre">Cubic</span></code><a class="headerlink" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.Cubic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.ComplexityAbstractClass" title="AKDSFramework.applications.complexity_analysis.complexity_classes.ComplexityAbstractClass"><code class="xref py py-class docutils literal notranslate"><span class="pre">AKDSFramework.applications.complexity_analysis.complexity_classes.ComplexityAbstractClass</span></code></a></p>
+<dl class="py method">
+<dt id="AKDSFramework.applications.complexity_analysis.complexity_classes.Cubic.adjust_for_complexity">
+<code class="sig-name descname"><span class="pre">adjust_for_complexity</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.Cubic.adjust_for_complexity" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Documentation here <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.linalg.lstsq.html">https://numpy.org/doc/stable/reference/generated/numpy.linalg.lstsq.html</a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="AKDSFramework.applications.complexity_analysis.complexity_classes.Cubic.priority_rank">
+<code class="sig-name descname"><span class="pre">priority_rank</span></code><em class="property"> <span class="pre">=</span> <span class="pre">5</span></em><a class="headerlink" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.Cubic.priority_rank" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="AKDSFramework.applications.complexity_analysis.complexity_classes.Exponential">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">AKDSFramework.applications.complexity_analysis.complexity_classes.</span></code><code class="sig-name descname"><span class="pre">Exponential</span></code><a class="headerlink" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.Exponential" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.ComplexityAbstractClass" title="AKDSFramework.applications.complexity_analysis.complexity_classes.ComplexityAbstractClass"><code class="xref py py-class docutils literal notranslate"><span class="pre">AKDSFramework.applications.complexity_analysis.complexity_classes.ComplexityAbstractClass</span></code></a></p>
+<dl class="py method">
+<dt id="AKDSFramework.applications.complexity_analysis.complexity_classes.Exponential.adjust_for_complexity">
+<code class="sig-name descname"><span class="pre">adjust_for_complexity</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.Exponential.adjust_for_complexity" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Documentation here <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.linalg.lstsq.html">https://numpy.org/doc/stable/reference/generated/numpy.linalg.lstsq.html</a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="AKDSFramework.applications.complexity_analysis.complexity_classes.Exponential.adjust_time">
+<code class="sig-name descname"><span class="pre">adjust_time</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.Exponential.adjust_time" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="AKDSFramework.applications.complexity_analysis.complexity_classes.Exponential.priority_rank">
+<code class="sig-name descname"><span class="pre">priority_rank</span></code><em class="property"> <span class="pre">=</span> <span class="pre">7</span></em><a class="headerlink" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.Exponential.priority_rank" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="AKDSFramework.applications.complexity_analysis.complexity_classes.Linear">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">AKDSFramework.applications.complexity_analysis.complexity_classes.</span></code><code class="sig-name descname"><span class="pre">Linear</span></code><a class="headerlink" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.Linear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.ComplexityAbstractClass" title="AKDSFramework.applications.complexity_analysis.complexity_classes.ComplexityAbstractClass"><code class="xref py py-class docutils literal notranslate"><span class="pre">AKDSFramework.applications.complexity_analysis.complexity_classes.ComplexityAbstractClass</span></code></a></p>
+<dl class="py method">
+<dt id="AKDSFramework.applications.complexity_analysis.complexity_classes.Linear.adjust_for_complexity">
+<code class="sig-name descname"><span class="pre">adjust_for_complexity</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.Linear.adjust_for_complexity" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Documentation here <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.linalg.lstsq.html">https://numpy.org/doc/stable/reference/generated/numpy.linalg.lstsq.html</a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="AKDSFramework.applications.complexity_analysis.complexity_classes.Linear.priority_rank">
+<code class="sig-name descname"><span class="pre">priority_rank</span></code><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.Linear.priority_rank" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="AKDSFramework.applications.complexity_analysis.complexity_classes.Linearithmetic">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">AKDSFramework.applications.complexity_analysis.complexity_classes.</span></code><code class="sig-name descname"><span class="pre">Linearithmetic</span></code><a class="headerlink" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.Linearithmetic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.ComplexityAbstractClass" title="AKDSFramework.applications.complexity_analysis.complexity_classes.ComplexityAbstractClass"><code class="xref py py-class docutils literal notranslate"><span class="pre">AKDSFramework.applications.complexity_analysis.complexity_classes.ComplexityAbstractClass</span></code></a></p>
+<dl class="py method">
+<dt id="AKDSFramework.applications.complexity_analysis.complexity_classes.Linearithmetic.adjust_for_complexity">
+<code class="sig-name descname"><span class="pre">adjust_for_complexity</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.Linearithmetic.adjust_for_complexity" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Documentation here <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.linalg.lstsq.html">https://numpy.org/doc/stable/reference/generated/numpy.linalg.lstsq.html</a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="AKDSFramework.applications.complexity_analysis.complexity_classes.Linearithmetic.priority_rank">
+<code class="sig-name descname"><span class="pre">priority_rank</span></code><em class="property"> <span class="pre">=</span> <span class="pre">3</span></em><a class="headerlink" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.Linearithmetic.priority_rank" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="AKDSFramework.applications.complexity_analysis.complexity_classes.Logarithmic">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">AKDSFramework.applications.complexity_analysis.complexity_classes.</span></code><code class="sig-name descname"><span class="pre">Logarithmic</span></code><a class="headerlink" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.Logarithmic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.ComplexityAbstractClass" title="AKDSFramework.applications.complexity_analysis.complexity_classes.ComplexityAbstractClass"><code class="xref py py-class docutils literal notranslate"><span class="pre">AKDSFramework.applications.complexity_analysis.complexity_classes.ComplexityAbstractClass</span></code></a></p>
+<dl class="py method">
+<dt id="AKDSFramework.applications.complexity_analysis.complexity_classes.Logarithmic.adjust_for_complexity">
+<code class="sig-name descname"><span class="pre">adjust_for_complexity</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.Logarithmic.adjust_for_complexity" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Documentation here <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.linalg.lstsq.html">https://numpy.org/doc/stable/reference/generated/numpy.linalg.lstsq.html</a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="AKDSFramework.applications.complexity_analysis.complexity_classes.Logarithmic.priority_rank">
+<code class="sig-name descname"><span class="pre">priority_rank</span></code><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.Logarithmic.priority_rank" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="AKDSFramework.applications.complexity_analysis.complexity_classes.Polynomial">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">AKDSFramework.applications.complexity_analysis.complexity_classes.</span></code><code class="sig-name descname"><span class="pre">Polynomial</span></code><a class="headerlink" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.Polynomial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.ComplexityAbstractClass" title="AKDSFramework.applications.complexity_analysis.complexity_classes.ComplexityAbstractClass"><code class="xref py py-class docutils literal notranslate"><span class="pre">AKDSFramework.applications.complexity_analysis.complexity_classes.ComplexityAbstractClass</span></code></a></p>
+<dl class="py attribute">
+<dt id="AKDSFramework.applications.complexity_analysis.complexity_classes.Polynomial.priority_rank">
+<code class="sig-name descname"><span class="pre">priority_rank</span></code><em class="property"> <span class="pre">=</span> <span class="pre">6</span></em><a class="headerlink" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.Polynomial.priority_rank" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="AKDSFramework.applications.complexity_analysis.complexity_classes.Quadratic">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">AKDSFramework.applications.complexity_analysis.complexity_classes.</span></code><code class="sig-name descname"><span class="pre">Quadratic</span></code><a class="headerlink" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.Quadratic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.ComplexityAbstractClass" title="AKDSFramework.applications.complexity_analysis.complexity_classes.ComplexityAbstractClass"><code class="xref py py-class docutils literal notranslate"><span class="pre">AKDSFramework.applications.complexity_analysis.complexity_classes.ComplexityAbstractClass</span></code></a></p>
+<dl class="py method">
+<dt id="AKDSFramework.applications.complexity_analysis.complexity_classes.Quadratic.adjust_for_complexity">
+<code class="sig-name descname"><span class="pre">adjust_for_complexity</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.Quadratic.adjust_for_complexity" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Documentation here <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.linalg.lstsq.html">https://numpy.org/doc/stable/reference/generated/numpy.linalg.lstsq.html</a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="AKDSFramework.applications.complexity_analysis.complexity_classes.Quadratic.priority_rank">
+<code class="sig-name descname"><span class="pre">priority_rank</span></code><em class="property"> <span class="pre">=</span> <span class="pre">4</span></em><a class="headerlink" href="#AKDSFramework.applications.complexity_analysis.complexity_classes.Quadratic.priority_rank" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-AKDSFramework.applications.complexity_analysis.data_generators">
+<span id="akdsframework-applications-complexity-analysis-data-generators-module"></span><h2>AKDSFramework.applications.complexity_analysis.data_generators module<a class="headerlink" href="#module-AKDSFramework.applications.complexity_analysis.data_generators" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="AKDSFramework.applications.complexity_analysis.data_generators.float_sequence">
+<code class="sig-prename descclassname"><span class="pre">AKDSFramework.applications.complexity_analysis.data_generators.</span></code><code class="sig-name descname"><span class="pre">float_sequence</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ub</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#AKDSFramework.applications.complexity_analysis.data_generators.float_sequence" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Sequnce of floating point numbers</dt><dd><dl class="simple">
+<dt>Args:</dt><dd><ul class="simple">
+<li><p>lb: Lower bound of the generated array</p></li>
+<li><p>ub: Upper bound of the generated array</p></li>
+<li><p>size: Size of the generated array</p></li>
+</ul>
+</dd>
+<dt>Returns:</dt><dd><ul class="simple">
+<li><p>Array of floating points</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="AKDSFramework.applications.complexity_analysis.data_generators.integer_sequence">
+<code class="sig-prename descclassname"><span class="pre">AKDSFramework.applications.complexity_analysis.data_generators.</span></code><code class="sig-name descname"><span class="pre">integer_sequence</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ub</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#AKDSFramework.applications.complexity_analysis.data_generators.integer_sequence" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Sequence of Integer generator</dt><dd><dl class="simple">
+<dt>Args:</dt><dd><ul class="simple">
+<li><p>lb: Lower bound of the generated array</p></li>
+<li><p>ub: Upper bound of the generated array</p></li>
+<li><p>size: Size of the generated array</p></li>
+</ul>
+</dd>
+<dt>Returns:</dt><dd><ul class="simple">
+<li><p>Array of Integers</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="AKDSFramework.applications.complexity_analysis.data_generators.large_integer_sequence">
+<code class="sig-prename descclassname"><span class="pre">AKDSFramework.applications.complexity_analysis.data_generators.</span></code><code class="sig-name descname"><span class="pre">large_integer_sequence</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ub</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#AKDSFramework.applications.complexity_analysis.data_generators.large_integer_sequence" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Sequence of Large Integer generator</dt><dd><dl class="simple">
+<dt>Args:</dt><dd><ul class="simple">
+<li><p>lb: Lower bound of the generated array</p></li>
+<li><p>ub: Upper bound of the generated array</p></li>
+<li><p>size: Size of the generated array</p></li>
+</ul>
+</dd>
+<dt>Returns:</dt><dd><ul class="simple">
+<li><p>Array of Integers</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="AKDSFramework.applications.complexity_analysis.data_generators.one_integer">
+<code class="sig-prename descclassname"><span class="pre">AKDSFramework.applications.complexity_analysis.data_generators.</span></code><code class="sig-name descname"><span class="pre">one_integer</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#AKDSFramework.applications.complexity_analysis.data_generators.one_integer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate only one integer</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-AKDSFramework.applications.complexity_analysis">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-AKDSFramework.applications.complexity_analysis" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="AKDSFramework.applications.sorting.html" class="btn btn-neutral float-right" title="AKDSFramework.applications.sorting package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="AKDSFramework.applications.html" class="btn btn-neutral float-left" title="AKDSFramework.applications package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, theroyakash.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -40,5 +40,6 @@ class Trie():
             for child in current_node.children:
                 if child.character == character:
                     # We found the character
+                    pass
 
         current_node.endOfWord = True
