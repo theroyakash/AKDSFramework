@@ -156,19 +156,20 @@ class MaxHeap(Heap):
         Correct a single violation of the heap property in subtree's root. This takes upto order :math:`O(\log n)` time.
         Watch MIT 6.006 video on heap and heap sort to know more on build operations here https://youtu.be/B7hVxCmfPtM
         """
-        if index < self.size:
-            largest = index
-            left_child = self.get_left_child(index)
-            right_child = self.get_right_child(index)
+        if index >= self.size:
+            return
+        largest = index
+        left_child = self.get_left_child(index)
+        right_child = self.get_right_child(index)
 
-            if left_child is not None and self.heap[left_child] > self.heap[largest]:
-                largest = left_child
-            if right_child is not None and self.heap[right_child] > self.heap[largest]:
-                largest = right_child
+        if left_child is not None and self.heap[left_child] > self.heap[largest]:
+            largest = left_child
+        if right_child is not None and self.heap[right_child] > self.heap[largest]:
+            largest = right_child
 
-            if largest != index:
-                self.heap[largest], self.heap[index] = self.heap[index], self.heap[largest]
-                self.heapify(largest)
+        if largest != index:
+            self.heap[largest], self.heap[index] = self.heap[index], self.heap[largest]
+            self.heapify(largest)
 
 
 class MinHeap(Heap):

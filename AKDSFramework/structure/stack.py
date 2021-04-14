@@ -52,7 +52,7 @@ class Stack:
         Returns:
             - Bool: True if no elements in the stack else False.
         """
-        return True if self.stack.count() == 0 else False
+        return self.stack.count() == 0
 
     def __str__(self):
         """
@@ -78,10 +78,7 @@ class ListBasedStack:
         Args:
             - array (list): Pass in an array to initialize the stack. If nothing is passed a blank stack is intialized.
         """
-        if array is None:
-            self.stack = []
-        else:
-            self.stack = array
+        self.stack = [] if array is None else array
 
     def push(self, value):
         """
