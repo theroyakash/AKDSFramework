@@ -177,19 +177,20 @@ class MinHeap(Heap):
         super(MinHeap, self).__init__(array)
 
     def heapify(self, index):
-        if index < self.size:
-            smallest = index
-            left_child = self.get_left_child(index)
-            right_child = self.get_right_child(index)
+        if index >= self.size:
+            return
+        smallest = index
+        left_child = self.get_left_child(index)
+        right_child = self.get_right_child(index)
 
-            if left_child is not None and self.heap[left_child] < self.heap[smallest]:
-                smallest = left_child
-            if right_child is not None and self.heap[right_child] < self.heap[smallest]:
-                smallest = right_child
+        if left_child is not None and self.heap[left_child] < self.heap[smallest]:
+            smallest = left_child
+        if right_child is not None and self.heap[right_child] < self.heap[smallest]:
+            smallest = right_child
 
-            if smallest != index:
-                self.heap[smallest], self.heap[index] = self.heap[index], self.heap[smallest]
-                self.heapify(smallest)
+        if smallest != index:
+            self.heap[smallest], self.heap[index] = self.heap[index], self.heap[smallest]
+            self.heapify(smallest)
 
     def build(self):
         r"""
