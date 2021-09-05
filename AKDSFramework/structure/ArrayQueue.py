@@ -1,4 +1,9 @@
-class QueueADT:
+from typing import Any
+
+
+class QueueADT():
+    size: int
+
     def __init__(self):
         self.size = 0
 
@@ -28,13 +33,18 @@ class ArrayQueue(QueueADT):
             - capacity (int): Creates a None value static array with specified capacity.
     """
 
-    def __init__(self, capacity):
+    front: int
+    rear: int
+    size: int
+
+    def __init__(self, capacity: int) -> None:
         super(ArrayQueue, self).__init__()
         self.array = [None] * capacity
 
-        self.front, self.rear = 0, 0
+        self.front = 0
+        self.rear = 0
 
-    def enqueue(self, value):
+    def enqueue(self, value: Any) -> None:
         """
         Enqueue an element into the Queue Object
             Args:
@@ -46,7 +56,7 @@ class ArrayQueue(QueueADT):
         self.size += 1
         self.rear += 1
 
-    def dequeue(self):
+    def dequeue(self) -> Any:
         """
         Dequeue from the beginning of the Queue following the FIFO policy
         """
@@ -84,7 +94,7 @@ class ArrayQueue(QueueADT):
     def __str__(self):
         returnable_array = []
         for index in range(len(self.array)):
-            if self.array[index]==None:
+            if self.array[index] is None:
                 break
             else:
                 returnable_array.append(self.array[index])
