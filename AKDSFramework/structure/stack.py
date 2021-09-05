@@ -1,15 +1,19 @@
 from AKDSFramework.structure.linkedlist import SinglyLinkedList
 from AKDSFramework.error import EmptyStackError
+from typing import Any
 
 
 class Stack:
+
+    stack: SinglyLinkedList
+
     def __init__(self):
         """
         Stack Implementation with Linked List
         """
         self.stack = SinglyLinkedList()
 
-    def push(self, value):
+    def push(self, value: Any) -> None:
         """
         Push some value on to the stack
         Args:
@@ -17,7 +21,7 @@ class Stack:
         """
         self.stack.add(value)
 
-    def pop(self):
+    def pop(self) -> Any:
         """
         pops out the last value from the stack.
         Returns:
@@ -26,9 +30,9 @@ class Stack:
         if self.stack.count() != 0:
             return self.stack.removeAt(self.stack.count() - 1)
         else:
-            raise LookupError('Not enough element to pop')
+            raise LookupError('Stack Underflow')
 
-    def __reversed__(self):
+    def __reversed__(self) -> SinglyLinkedList:
         return reversed(self.stack)
 
     def __iter__(self):
@@ -61,17 +65,12 @@ class Stack:
             - String representation of the stack element's values
         """
         return str(self.stack)
-        # array = []
-        # current = self.stack.get_head()
-
-        # while current:
-        #     array.append(current.value)
-        #     current = current.next
-
-        # return str(array)
 
 
 class ListBasedStack:
+
+    array: list[Any]
+
     def __init__(self, array=None):
         """
         Create a Stack based on array.
@@ -80,7 +79,7 @@ class ListBasedStack:
         """
         self.stack = [] if array is None else array
 
-    def push(self, value):
+    def push(self, value: Any) -> None:
         """
         Push data onto the stack.
         Args:
@@ -88,28 +87,31 @@ class ListBasedStack:
         """
         self.stack.append(value)
 
-    def pop(self):
+    def pop(self) -> Any:
         if len(self.stack) == 0:
             raise EmptyStackError('Stack may be empty')
         else:
             self.stack.pop(-1)
 
-    def clear(self):
+    def clear(self) -> None:
+        """
+        Clears the entire stack
+        """
         self.stack = []
 
-    def __len__(self):
+    def __len__(self) -> int:
         return len(self.stack)
 
     def clone(self):
         return self.stack.copy()
 
-    def peek(self):
+    def peek(self) -> Any:
         if len(self.stack) == 0:
             raise EmptyStackError('Stack may be empty')
         else:
             return self.stack[-1]
 
-    def searchFor(self, element):
+    def search(self, element: Any) -> Any:
         index = -1
         for i in range(len(self.stack)):
             if self.stack[i] == element:
@@ -117,5 +119,5 @@ class ListBasedStack:
 
         return index
 
-    def __str__(self):
+    def __str__(self) -> str:
         return str(self.stack)
