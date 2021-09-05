@@ -2,13 +2,13 @@ class Node(object):
     """
     A Binary Search Tree Node.
     """
-    def __init__(self, data, left=None, right=None):
+
+    def __init__(self, data, left=None, right=None) -> None:
         self.data = data
         self.left = left
         self.right = right
 
-
-    def __str__(self):
+    def __str__(self) -> str:
         if self.left is None and self.right is None:
             return f'<Node> object {self.data} with no children'
         elif self.left is not None and self.right is None:
@@ -71,15 +71,14 @@ class BinarySearchTree(object):
     def search(self, value):
         if self.isEmpty():
             raise IndexError("Empty binary search tree")
-        
+
         else:
             root_node = self.root
             while root_node is not None and root_node.data is not None:
-                root_node = root_node.left if value<root_node.data else root_node.right
+                root_node = root_node.left if value < root_node.data else root_node.right
 
                 return root_node
 
-
-    def __str__(self):
+    def __str__(self) -> str:
         binary_search_tree_repr = ''
         return binary_search_tree_repr
