@@ -1,6 +1,6 @@
-def factorials(number: int, iteratively=True):
+def factorials(number: int, iteratively=True) -> int:
     """
-    Calculates factorials iteratively as well as recusively. Default iteratively. Takes linear time.
+    Calculates factorials iteratively as well as recursively. Default iteratively. Takes linear time.
         Args:
             - ``number`` (int): Number for which you want to get a factorial.
             - ``iteratively`` (bool): Set this to False you want to perform a recursion factorial calculation. By default calculates iteratively
@@ -19,7 +19,7 @@ def factorials(number: int, iteratively=True):
         return result
     
     else:
-        # If user want's to perform a recusive factorial calculation
+        # If user want's to perform a recursive factorial calculation
         if not (isinstance(number, int) and number >= 0):
             # Raise non negative number error
             raise ValueError("'number' must be a non-negative integer.")

@@ -1,8 +1,10 @@
 """
 AKDSFramework searching package. Implements Linear, Binary Search
 """
+from typing import Any
 
-def linearsearch(array: list, target: any) -> any:
+
+def linearsearch(array: list, target: Any) -> Any:
     r"""
     Implementation of linear search. Use only when your array is not sorted. If you have a sorted array use binary search instead. Running time :math:`O(N)`
         Args:
@@ -19,7 +21,8 @@ def linearsearch(array: list, target: any) -> any:
             }
     return None
 
-def binarysearch(array: list, target: any, require_sorting=False) -> any:
+
+def binarysearch(iterable: list, target: Any, require_sorting=False) -> Any:
     r"""
     Binary search implementation. Use only when your array is sorted. Pass in ``require_sorting`` as ``True`` to sort on the fly.
         Args:
@@ -30,16 +33,16 @@ def binarysearch(array: list, target: any, require_sorting=False) -> any:
     """
 
     if require_sorting:
-        array.sort()
+        iterable.sort()
 
-    if len(array) == 0:
+    if len(iterable) == 0:
         return False
 
-    mid_point = len(array) // 2 
+    mid_point = len(iterable) // 2
     
-    if array[mid_point] == target:
+    if iterable[mid_point] == target:
         return True
-    elif array[mid_point] < target:
-        return binarysearch(array[mid_point + 1:], target)
+    elif iterable[mid_point] < target:
+        return binarysearch(iterable[mid_point + 1:], target)
     else:
-        return binarysearch(array[:mid_point], target)
+        return binarysearch(iterable[:mid_point], target)
