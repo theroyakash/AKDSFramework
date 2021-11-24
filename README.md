@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://docs.akdsframework.iamroyakash.com/"><img src="https://i.imgur.com/uDSHEhr.png" alt="AKDSFramework" width="800"></a>
+  <a href="https://docs.akdsframework.theroyakash.com/"><img src="https://i.imgur.com/uDSHEhr.png" alt="AKDSFramework" width="800"></a>
   <br>
   AKDSFramework
   <br>
@@ -9,17 +9,17 @@
 <h4 align="center">Python Package for all your data structure and algorithm needs.</h4>
 
 <p align="center">
-  <a href="https://docs.akdsframework.iamroyakash.com/">Getting started</a> •
-  <a href="https://docs.akdsframework.iamroyakash.com/docs/ds.html">Data Structures</a> •
-  <a href="https://docs.akdsframework.iamroyakash.com/docs/searching.html">Algorithms</a> •
+  <a href="https://docs.akdsframework.theroyakash.com/">Getting started</a> •
+  <a href="https://docs.akdsframework.theroyakash.com/docs/ds.html">Data Structures</a> •
+  <a href="https://docs.akdsframework.theroyakash.com/docs/searching.html">Algorithms</a> •
   <a href="https://github.com/theroyakash/AKDSFramework/blob/main/LICENSE">License</a>
 </p>
 
 [![Build Status](https://github.com/theroyakash/AKDSFramework/workflows/AKDSFramework/badge.svg)](https://github.com/theroyakash/AKDSFramework/actions)
 [![Python3](https://img.shields.io/badge/python-3.8-blue.svg)](https://github.com/theroyakash/reddit-api)
 [![GitHub license](https://img.shields.io/badge/LICENSE-MIT-orange)](https://github.com/theroyakash/AKDSFramework/blob/master/LICENSE)
-[![Discord Server](https://img.shields.io/badge/Support-theroyakash-red)](https://www.iamroyakash.com/contact)
-[![GitHub license](https://img.shields.io/badge/Privacy-Policy-blue)](https://www.iamroyakash.com/privacy)
+[![Discord Server](https://img.shields.io/badge/Support-theroyakash-red)](https://www.theroyakash.com/contact)
+[![GitHub license](https://img.shields.io/badge/Privacy-Policy-blue)](https://www.theroyakash.com/privacy)
 
 
 AKDSFramework is a Purely written in Python library containing implementations of various data structures.
@@ -27,7 +27,7 @@ AKDSFramework is a Purely written in Python library containing implementations o
 Our Package will allow user to focus on developing algorithms and not worry about finding python-compatible implementations of classic data structures like linked list, heap and others.
 
 # Useful links
-- **Documentation** We've written a comprehensive documentation for our framework AKDSFramework. Have a look at it [here](https://docs.akdsframework.iamroyakash.com/).
+- **Documentation** We've written a comprehensive documentation for our framework AKDSFramework. Have a look at it [here](https://docs.akdsframework.theroyakash.com/).
 - See what's in the **works** now [here](https://www.notion.so/theroyakash/8a9998cb8b7f4d318e05dfce28fbcfda?v=b8c3cf3084a8426394f7307a2005c945).
 
 ## Installation / Setup
@@ -60,20 +60,20 @@ print(reversed(lkl))
 
 | Supporting API                             | Scope                      |
 |--------------------------------------------|----------------------------|
-| [Singly Linked List](https://docs.akdsframework.iamroyakash.com/docs/linked-lists.html)                         | Data Structures            |
-| [Graph](https://docs.akdsframework.iamroyakash.com/docs/graphs.html)                                      | Data Structures            |
-| Priority Queues with [heap](https://docs.akdsframework.iamroyakash.com/docs/heaps.html)                  | Data Structures            |
-| [Queues](https://docs.akdsframework.iamroyakash.com/docs/queue.html)                                     | Data Structures            |
-| [Stacks](https://docs.akdsframework.iamroyakash.com/docs/stacks.html)                                     | Data Structures            |
-| [Graphs](https://docs.akdsframework.iamroyakash.com/docs/graphs.html) (Adjacency Matrix)                  | Graph Structures           |
-| [Graphs](https://docs.akdsframework.iamroyakash.com/docs/graphs.html) (Adjacency List)                    | Graph Structures           |
-| [BFS and DFS](https://docs.akdsframework.iamroyakash.com/docs/graphs.html#bfs-dfs)                                | Graph Algorithms           |
+| [Singly Linked List](https://docs.akdsframework.theroyakash.com/docs/linked-lists.html)                         | Data Structures            |
+| [Graph](https://docs.akdsframework.theroyakash.com/docs/graphs.html)                                      | Data Structures            |
+| Priority Queues with [heap](https://docs.akdsframework.theroyakash.com/docs/heaps.html)                  | Data Structures            |
+| [Queues](https://docs.akdsframework.theroyakash.com/docs/queue.html)                                     | Data Structures            |
+| [Stacks](https://docs.akdsframework.theroyakash.com/docs/stacks.html)                                     | Data Structures            |
+| [Graphs](https://docs.akdsframework.theroyakash.com/docs/graphs.html) (Adjacency Matrix)                  | Graph Structures           |
+| [Graphs](https://docs.akdsframework.theroyakash.com/docs/graphs.html) (Adjacency List)                    | Graph Structures           |
+| [BFS and DFS](https://docs.akdsframework.theroyakash.com/docs/graphs.html#bfs-dfs)                                | Graph Algorithms           |
 | [Single Source Shortest paths](https://github.com/theroyakash/AKDSFramework/blob/main/AKDSFramework/applications/singlesourceshortestpath.py)               | Graph Algorithms           |
-| [Representing a graph with drawings](https://docs.akdsframework.iamroyakash.com/docs/graphs.html#visualize-the-graph)         | Graph Algorithms           |
+| [Representing a graph with drawings](https://docs.akdsframework.theroyakash.com/docs/graphs.html#visualize-the-graph)         | Graph Algorithms           |
 | Dictionary (Hash Table)                    | Data Structures            |
 | Linear Search and Binary Search            | Search Algorithms          |
-| [Big O complexity analysis](https://publications.iamroyakash.com/introducing-an-efficient-big-o-analyzer)                  | General purpose Algorithms |
-| Merge, Quick, Bubble, Insertion, Heap [Sort](https://docs.akdsframework.iamroyakash.com/docs/sorting.html) | Sorting Algorithms         |
+| [Big O complexity analysis](https://publications.theroyakash.com/introducing-an-efficient-big-o-analyzer)                  | General purpose Algorithms |
+| Merge, Quick, Bubble, Insertion, Heap [Sort](https://docs.akdsframework.theroyakash.com/docs/sorting.html) | Sorting Algorithms         |
 
 ### Contributing
 [![GitHub license](https://img.shields.io/badge/CONTRIBUTING-Welcome-blue)](https://github.com/theroyakash/AKDSFramework/pulls)
